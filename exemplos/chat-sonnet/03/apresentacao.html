@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grão do Morro × Vieira & Sato — Café em grão no escritório</title>
+<style>
+:root{--creme:#F6EEDC;--creme2:#EDE0C3;--verde:#1F3A2E;--verde2:#2F5644;--laranja:#C8541B;--tinta:#22302A}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden;background:var(--verde)}
+body{font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;color:var(--tinta)}
+.sans{font-family:"Trebuchet MS","Segoe UI",system-ui,sans-serif}
+#deck{position:fixed;inset:0}
+.slide{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:6vh 8vw 11vh;opacity:0;visibility:hidden;transition:opacity .5s ease,transform .5s ease;transform:translateX(40px);background:var(--creme)}
+.slide.dark{background:var(--verde);color:var(--creme)}
+.slide.on{opacity:1;visibility:visible;transform:none}
+.slide.past{transform:translateX(-40px)}
+.kicker{font-family:"Trebuchet MS",system-ui,sans-serif;letter-spacing:.18em;text-transform:uppercase;font-size:clamp(11px,1.6vh,15px);color:var(--laranja);font-weight:700;margin-bottom:2vh}
+.dark .kicker{color:#F0A36E}
+h1{font-size:clamp(34px,8vh,84px);line-height:1.02;letter-spacing:-.02em;max-width:14em}
+h2{font-size:clamp(28px,6.2vh,62px);line-height:1.06;letter-spacing:-.015em;max-width:15em}
+em{color:var(--laranja);font-style:italic}
+.dark em{color:#F0A36E}
+p.lead{font-size:clamp(16px,3vh,28px);line-height:1.35;max-width:26em;margin-top:2.4vh;opacity:.85}
+.up{opacity:0;transform:translateY(24px)}
+.on .up{animation:up .7s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--d,0)*.12s + .15s)}
+@keyframes up{to{opacity:1;transform:none}}
+.row{display:flex;gap:2.2vw;align-items:center;justify-content:space-between}
+.col{flex:1}
+.xr{position:relative}
+/* cover */
+.cupwrap{width:clamp(180px,34vh,360px);flex:none}
+.cupwrap svg{width:100%;height:auto;display:block}
+.steam{position:absolute;left:16%;top:-6%;width:68%;height:34%;pointer-events:none}
+.steam path{fill:none;stroke:#F6EEDC;stroke-width:5;stroke-linecap:round;opacity:0;animation:steam 3.2s ease-in-out infinite}
+.steam path:nth-child(2){animation-delay:.9s}.steam path:nth-child(3){animation-delay:1.8s}
+@keyframes steam{0%{opacity:0;transform:translateY(14px)}35%{opacity:.85}100%{opacity:0;transform:translateY(-16px)}}
+.beans{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.beans i{position:absolute;top:-6vh;width:2.2vh;height:3.2vh;border-radius:50%;background:#7a4a2b;opacity:.5;animation:fall linear infinite}
+.beans i::after{content:"";position:absolute;left:48%;top:8%;bottom:8%;width:2px;background:#3b2314;border-radius:2px;transform:rotate(12deg)}
+@keyframes fall{to{transform:translateY(115vh) rotate(360deg)}}
+.tag{display:inline-block;font-family:"Trebuchet MS",system-ui,sans-serif;font-size:clamp(11px,1.7vh,15px);padding:.5em 1em;border-radius:99px;background:var(--verde);color:var(--creme);margin-top:3vh}
+/* quote */
+.quote{font-size:clamp(26px,6vh,58px);line-height:1.1;font-style:italic;max-width:12em}
+.quote small{display:block;font-size:.34em;font-style:normal;font-family:"Trebuchet MS",system-ui,sans-serif;margin-top:1.6vh;opacity:.75;letter-spacing:.04em}
+.chips{display:flex;gap:1.2vw;flex-wrap:wrap;margin-top:4vh}
+.chip{font-family:"Trebuchet MS",system-ui,sans-serif;font-weight:700;font-size:clamp(13px,2.4vh,22px);padding:.7em 1.2em;border-radius:14px;background:var(--creme2);border:2px solid var(--verde)}
+.chip b{color:var(--laranja)}
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8vw;margin-top:4vh}
+.card{background:#fff8e8;border:2px solid var(--verde);border-radius:20px;padding:3vh 1.8vw;box-shadow:6px 6px 0 var(--verde)}
+.card .big{font-size:clamp(30px,7vh,68px);font-weight:700;color:var(--laranja);line-height:1}
+.card .lbl{font-family:"Trebuchet MS",system-ui,sans-serif;font-size:clamp(13px,2.3vh,21px);margin-top:1.2vh;line-height:1.3}
+/* numbers */
+.flow{display:flex;align-items:stretch;gap:.8vw;margin-top:4vh}
+.step{flex:1;background:rgba(246,238,220,.08);border:2px solid rgba(246,238,220,.35);border-radius:18px;padding:2.6vh 1.2vw;position:relative}
+.step.calcd{border:2px dashed #F0A36E;background:rgba(240,163,110,.12)}
+.step .num{font-size:clamp(28px,6.4vh,64px);font-weight:700;line-height:1}
+.step .what{font-family:"Trebuchet MS",system-ui,sans-serif;font-size:clamp(12px,2.1vh,19px);margin-top:1vh;opacity:.9}
+.step .how{font-family:"Trebuchet MS",system-ui,sans-serif;font-size:clamp(10px,1.7vh,15px);margin-top:.8vh;opacity:.7}
+.badge{position:absolute;top:-1.5vh;right:.8vw;background:#F0A36E;color:var(--verde);font-family:"Trebuchet MS",system-ui,sans-serif;font-weight:800;font-size:clamp(9px,1.5vh,13px);letter-spacing:.08em;text-transform:uppercase;padding:.3em .8em;border-radius:99px}
+.arrow{align-self:center;font-size:clamp(18px,3.4vh,32px);color:#F0A36E}
+.foot{display:flex;justify-content:space-between;align-items:center;margin-top:3.4vh;font-family:"Trebuchet MS",system-ui,sans-serif;font-size:clamp(12px,2.1vh,19px);gap:2vw}
+.legend{opacity:.85}
+.legend span.badge{position:static;display:inline-block;margin-right:.6em}
+.price b{font-size:1.5em;color:#F0A36E;font-family:Georgia,serif}
+/* free */
+.hero-free{font-size:clamp(70px,24vh,230px);font-weight:700;line-height:.9;color:var(--laranja);letter-spacing:-.04em}
+.hero-free small{font-size:.22em;letter-spacing:0;color:var(--tinta);display:block;margin-top:1vh}
+.checks{list-style:none;margin-top:2vh}
+.checks li{font-size:clamp(16px,3.2vh,30px);padding:1.1vh 0;display:flex;gap:.7em;align-items:center}
+.checks li::before{content:"✓";flex:none;width:1.5em;height:1.5em;border-radius:50%;background:var(--verde);color:var(--creme);display:grid;place-items:center;font-size:.8em;font-family:system-ui}
+/* cta */
+.cta{display:inline-block;margin-top:4vh;font-family:"Trebuchet MS",system-ui,sans-serif;font-weight:800;font-size:clamp(15px,3vh,26px);background:var(--laranja);color:#fff;padding:.9em 1.6em;border-radius:99px;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(200,84,27,.55)}50%{box-shadow:0 0 0 18px rgba(200,84,27,0)}}
+/* chrome */
+#bar{position:fixed;left:0;top:0;height:6px;background:var(--laranja);width:0;transition:width .5s ease;z-index:20}
+#nav{position:fixed;left:0;right:0;bottom:0;height:8vh;display:flex;align-items:center;justify-content:space-between;padding:0 3vw;z-index:20;font-family:"Trebuchet MS",system-ui,sans-serif}
+#nav button{background:rgba(31,58,46,.9);color:var(--creme);border:2px solid var(--creme);border-radius:99px;font:inherit;font-weight:700;font-size:14px;padding:.5em 1.1em;cursor:pointer}
+#nav button:hover{background:var(--laranja)}
+#dots{display:flex;gap:8px}
+#dots i{width:10px;height:10px;border-radius:50%;background:#999;opacity:.5;cursor:pointer}
+#dots i.on{background:var(--laranja);opacity:1;transform:scale(1.3)}
+#navr{display:flex;gap:10px;align-items:center}
+/* raio-x */
+body.xray .xr{outline:3px solid var(--c,#f0f);outline-offset:2px;z-index:5}
+body.xray .xr::after{content:attr(data-l);position:absolute;left:0;top:0;transform:translateY(-100%);background:var(--c,#f0f);color:#fff;font:700 10px/1 "Trebuchet MS",system-ui,sans-serif;padding:3px 6px;white-space:nowrap;border-radius:3px 3px 0 0;z-index:30;text-shadow:0 0 2px rgba(0,0,0,.6)}
+body.xray .beans.xr::after{top:14px;transform:none;border-radius:3px}
+body.xray #xkey{display:flex}
+#xkey{display:none;position:fixed;right:12px;top:14px;z-index:40;background:#fff;border:2px solid #000;border-radius:8px;padding:6px 10px;font:600 11px "Trebuchet MS",system-ui,sans-serif;color:#000;gap:10px;flex-wrap:wrap;max-width:60vw}
+#xkey span::before{content:"";display:inline-block;width:10px;height:10px;margin-right:4px;background:var(--c);vertical-align:-1px}
+@media (max-width:720px){.row{flex-direction:column}.cards{grid-template-columns:1fr}.flow{flex-direction:column}.arrow{transform:rotate(90deg)}.cupwrap{width:30vh}.slide{padding:5vh 6vw 11vh;overflow:auto}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.up{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<div id="xkey"><span style="--c:#d6249f">imagem (SVG)</span><span style="--c:#0a7cff">animação em código</span></div>
+
+<main id="deck">
+
+<!-- 1 CAPA -->
+<section class="slide dark on" id="s0">
+  <div class="beans xr" style="--c:#0a7cff" data-l="anim: grãos caindo (CSS)" id="beans"></div>
+  <div class="row" style="position:relative;z-index:2">
+    <div class="col">
+      <div class="kicker up" style="--d:0">Grão do Morro × Vieira & Sato</div>
+      <h1 class="up" style="--d:1">Café de verdade no escritório. <em>Sem cápsula.</em></h1>
+      <p class="lead up" style="--d:2">Grão fresco, entregue na porta, a cada 2 semanas. Primeiras 2 semanas por nossa conta.</p>
+      <span class="tag up" style="--d:3">Proposta para a Lúcia · 2 minutos de leitura</span>
+    </div>
+    <div class="cupwrap xr up" style="--c:#d6249f;--d:2" data-l="imagem: xícara (SVG)">
+      <svg viewBox="0 0 300 260" role="img" aria-label="Xícara de café">
+        <ellipse cx="140" cy="236" rx="120" ry="16" fill="#142a20"/>
+        <path d="M40 90h200v60a100 90 0 0 1-200 0z" fill="#F6EEDC"/>
+        <path d="M40 90h200v22H40z" fill="#C8541B"/>
+        <path d="M240 106c52-6 52 62 0 62" fill="none" stroke="#F6EEDC" stroke-width="14" stroke-linecap="round"/>
+        <ellipse cx="140" cy="90" rx="100" ry="16" fill="#4a2a17"/>
+        <ellipse cx="140" cy="88" rx="84" ry="10" fill="#6b3d22"/>
+        <text x="140" y="170" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-style="italic" fill="#1F3A2E">Grão do Morro</text>
+      </svg>
+      <div class="steam xr" style="--c:#0a7cff" data-l="anim: vapor (CSS)"><svg viewBox="0 0 200 100" width="100%" height="100%" preserveAspectRatio="none"><path d="M40 90c-14-18 14-30 0-50"/><path d="M100 90c-14-18 14-30 0-50"/><path d="M160 90c-14-18 14-30 0-50"/></svg></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 PROBLEMA -->
+<section class="slide" id="s1">
+  <div class="row">
+    <div class="col">
+      <div class="kicker up" style="--d:0">O problema</div>
+      <div class="quote up" style="--d:1">“O pessoal odeia a máquina de cápsula.”<small>— Lúcia, gerente da Vieira & Sato</small></div>
+      <div class="chips">
+        <div class="chip up" style="--d:2">Sem <b>sujeira</b></div>
+        <div class="chip up" style="--d:3">Sem <b>armadilha</b> de contrato</div>
+        <div class="chip up" style="--d:4">A equipe <b>gosta</b></div>
+      </div>
+      <p class="lead up" style="--d:5">O que a Lúcia pediu é exatamente o que montamos.</p>
+    </div>
+    <div class="cupwrap xr up" style="--c:#e8590c;--d:2" data-l="imagem: cápsula riscada (SVG)">
+      <svg viewBox="0 0 240 260" role="img" aria-label="Cápsula riscada">
+        <path d="M70 60h100l-14 130a30 30 0 0 1-72 0z" fill="#9aa3a0"/>
+        <ellipse cx="120" cy="60" rx="52" ry="12" fill="#c2c9c6"/>
+        <ellipse cx="120" cy="60" rx="34" ry="7" fill="#6e7774"/>
+        <circle cx="120" cy="140" r="104" fill="none" stroke="#C8541B" stroke-width="14"/>
+        <path d="M46 214L194 66" stroke="#C8541B" stroke-width="14" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- 3 SOLUÇÃO -->
+<section class="slide" id="s2">
+  <div class="kicker up" style="--d:0">A solução</div>
+  <h2 class="up" style="--d:1">Café <em>fresco</em>, na porta, sem trabalho.</h2>
+  <div class="cards">
+    <div class="card up" style="--d:2"><div class="big">4 dias</div><div class="lbl">no máximo desde a torra. A gente torra 2x por semana.</div></div>
+    <div class="card up" style="--d:3"><div class="big">2 semanas</div><div class="lbl">entre uma entrega e outra. Você não lembra de pedir.</div></div>
+    <div class="card up" style="--d:4"><div class="big">Moedor grátis</div><div class="lbl">emprestado por nós, ao fechar 6 meses.</div></div>
+  </div>
+</section>
+
+<!-- 4 NÚMEROS -->
+<section class="slide dark" id="s3">
+  <div class="kicker up" style="--d:0">Os números</div>
+  <h2 class="up" style="--d:1">Quanto é isso para a <em>Vieira & Sato</em>?</h2>
+  <div class="flow">
+    <div class="step up" style="--d:2"><div class="num"><span class="cnt" data-to="120">120</span></div><div class="what">pessoas no escritório</div><div class="how">dado das anotações</div></div>
+    <div class="arrow">→</div>
+    <div class="step calcd up" style="--d:3"><span class="badge">calculado</span><div class="num"><span class="cnt" data-to="72">72</span></div><div class="what">tomam café todo dia</div><div class="how">120 × 60% (60% é estimativa da Lúcia)</div></div>
+    <div class="arrow">→</div>
+    <div class="step calcd up" style="--d:4"><span class="badge">calculado</span><div class="num"><span class="cnt" data-to="36">36</span> kg</div><div class="what">de café por mês</div><div class="how">72 × 0,5 kg por pessoa</div></div>
+    <div class="arrow">→</div>
+    <div class="step calcd up" style="--d:5"><span class="badge">calculado</span><div class="num">R$ <span class="cnt" data-to="3204" data-sep="1">3.204</span></div><div class="what">por mês, entregue</div><div class="how">36 kg × R$ 89</div></div>
+  </div>
+  <div class="foot up" style="--d:6">
+    <div class="price">Preço: <b>R$ 89</b> o kg entregue · cerca de R$ <span class="cnt" data-to="44.5" data-dec="2">44,50</span> por pessoa/mês <span class="badge" style="position:static;display:inline-block;margin-left:.4em">calculado</span><span style="opacity:.7"> (0,5 kg × R$ 89)</span></div>
+    <div class="legend"><span class="badge">calculado</span>= conta que fizemos</div>
+  </div>
+</section>
+
+<!-- 5 SEM RISCO -->
+<section class="slide" id="s4">
+  <div class="row">
+    <div class="col">
+      <div class="kicker up" style="--d:0">Sem risco</div>
+      <div class="hero-free up" style="--d:1">2 semanas<small>grátis para testar</small></div>
+      <ul class="checks">
+        <li class="up" style="--d:2">Cancela quando quiser</li>
+        <li class="up" style="--d:3">Sem armadilha de contrato</li>
+        <li class="up" style="--d:4">Já tem 3 escritórios na fila — a Vieira & Sato pode ser a primeira</li>
+      </ul>
+    </div>
+    <div class="cupwrap xr up" style="--c:#7c3aed;--d:3" data-l="imagem: calendário (SVG)">
+      <svg viewBox="0 0 240 260" role="img" aria-label="Calendário com duas semanas">
+        <rect x="20" y="40" width="200" height="190" rx="20" fill="#fff8e8" stroke="#1F3A2E" stroke-width="6"/>
+        <path d="M20 90h200V60a20 20 0 0 0-20-20H40a20 20 0 0 0-20 20z" fill="#C8541B"/>
+        <rect x="64" y="22" width="12" height="36" rx="6" fill="#1F3A2E"/><rect x="164" y="22" width="12" height="36" rx="6" fill="#1F3A2E"/>
+        <g fill="#1F3A2E" opacity=".25"><circle cx="55" cy="125" r="9"/><circle cx="90" cy="125" r="9"/><circle cx="125" cy="125" r="9"/><circle cx="160" cy="125" r="9"/><circle cx="195" cy="125" r="9"/></g>
+        <g fill="#1F3A2E"><circle cx="55" cy="160" r="9"/><circle cx="90" cy="160" r="9"/><circle cx="125" cy="160" r="9"/><circle cx="160" cy="160" r="9"/><circle cx="195" cy="160" r="9"/></g>
+        <g fill="#C8541B"><circle cx="55" cy="195" r="9"/><circle cx="90" cy="195" r="9"/><circle cx="125" cy="195" r="9"/><circle cx="160" cy="195" r="9"/><circle cx="195" cy="195" r="9"/></g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- 6 PRÓXIMO PASSO -->
+<section class="slide dark" id="s5">
+  <div class="kicker up" style="--d:0">Próximo passo</div>
+  <h1 class="up" style="--d:1">Degustação de <em>20 minutos</em>, numa quinta de manhã.</h1>
+  <p class="lead up" style="--d:2">Levamos o café e o moedor até a Vieira & Sato. A equipe prova e decide.</p>
+  <div><span class="cta xr up" style="--c:#0a7cff;--d:3" data-l="anim: pulso (CSS)">Posso marcar a quinta? ☕</span></div>
+</section>
+
+</main>
+
+<div id="nav">
+  <button id="prev" aria-label="Slide anterior">‹</button>
+  <div id="dots"></div>
+  <div id="navr"><button id="xbtn" title="Modo raio-X (tecla X)">raio-X</button><button id="next" aria-label="Próximo slide">›</button></div>
+</div>
+
+<script>
+(function(){
+  var slides=[].slice.call(document.querySelectorAll('.slide')),n=slides.length,cur=0;
+  var dots=document.getElementById('dots'),bar=document.getElementById('bar');
+  slides.forEach(function(_,i){var d=document.createElement('i');d.onclick=function(){go(i)};dots.appendChild(d)});
+  // grãos caindo
+  var b=document.getElementById('beans');
+  for(var i=0;i<14;i++){var e=document.createElement('i');e.style.left=(Math.random()*96)+'%';e.style.animationDuration=(7+Math.random()*7)+'s';e.style.animationDelay=(-Math.random()*12)+'s';e.style.transform='rotate('+(Math.random()*180)+'deg)';b.appendChild(e)}
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function fmt(v,dec,sep){return v.toLocaleString('pt-BR',{minimumFractionDigits:dec,maximumFractionDigits:dec,useGrouping:!!sep||v>=1000})}
+  function count(el){
+    var to=parseFloat(el.dataset.to),dec=parseInt(el.dataset.dec||0,10),sep=el.dataset.sep;
+    if(reduce){el.textContent=fmt(to,dec,sep);return}
+    var t0=null;el.textContent=fmt(0,dec,sep);
+    (function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/1100,1),k=1-Math.pow(1-p,3);el.textContent=fmt(to*k,dec,sep);if(p<1&&slides[cur].contains(el))requestAnimationFrame(step);else el.textContent=fmt(to,dec,sep)})(performance.now());
+  }
+  function go(i){
+    if(i<0||i>=n)return;cur=i;
+    slides.forEach(function(s,k){s.classList.toggle('on',k===i);s.classList.toggle('past',k<i);
+      if(k!==i){[].forEach.call(s.querySelectorAll('.up'),function(u){u.style.animation='none';void u.offsetWidth;u.style.animation=''})}});
+    [].forEach.call(slides[i].querySelectorAll('.cnt'),function(c){setTimeout(function(){count(c)},500)});
+    [].forEach.call(dots.children,function(d,k){d.classList.toggle('on',k===i)});
+    bar.style.width=((i+1)/n*100)+'%';
+    document.getElementById('prev').style.visibility=i?'visible':'hidden';
+    document.getElementById('next').style.visibility=i<n-1?'visible':'hidden';
+    var nv=document.getElementById('nav');nv.style.color=slides[i].classList.contains('dark')?'#F6EEDC':'#1F3A2E';
+  }
+  document.getElementById('prev').onclick=function(){go(cur-1)};
+  document.getElementById('next').onclick=function(){go(cur+1)};
+  function tx(){document.body.classList.toggle('xray')}
+  document.getElementById('xbtn').onclick=tx;
+  document.addEventListener('keydown',function(e){
+    var k=e.key;
+    if(k==='ArrowRight'||k==='ArrowDown'||k==='PageDown'||k===' '){e.preventDefault();go(cur+1)}
+    else if(k==='ArrowLeft'||k==='ArrowUp'||k==='PageUp'){e.preventDefault();go(cur-1)}
+    else if(k==='Home')go(0);else if(k==='End')go(n-1);
+    else if(k==='x'||k==='X')tx();
+  });
+  var sx=null;document.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});
+  document.addEventListener('touchend',function(e){if(sx===null)return;var d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>50)go(cur+(d<0?1:-1));sx=null});
+  go(0);
+})();
+</script>
+</body>
+</html>

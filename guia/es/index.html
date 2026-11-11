@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7 pruebas para cualquier IA: el mismo pedido para un agente, un chat o una persona</title>
+<meta name="description" content="Siete prompts de prueba listos (página de ventas, panel, presentación, explicativo, editor de fotos, juego 3D y central de agentes) en tres formatos: agente con carpeta, ventana de chat como Agnes o ChatGPT y briefing sin IA. Con datos, respuestas correctas y evaluador por script.">
+<link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/sete-provas-ia/guia/">
+<link rel="alternate" hreflang="en" href="https://inematds.github.io/sete-provas-ia/guia/en/">
+<link rel="alternate" hreflang="es" href="https://inematds.github.io/sete-provas-ia/guia/es/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c0c10; --bg2:#14141b; --card:#16161e; --line:#272730;
+    --txt:#e9e9ee; --mut:#9a9aa6; --amb:#E2A23B; --amb2:#f0c070; --sky:#38bdf8; --pro:#cbd5e1;
+    color-scheme:dark;
+  }
+  body.light{
+    --bg:#f6f7f9; --bg2:#eceef2; --card:#ffffff; --line:#e1e3ea;
+    --txt:#1a1a22; --mut:#5b5b68; --amb:#b9791d; --amb2:#a16207; --sky:#0369a1; --pro:#b45309;
+    color-scheme:light;
+  }
+  body.light .hero .glow{opacity:.5}
+  body.light pre{background:#0e0e14;color:#d6d6e0}
+  body.light pre .c{color:#8a8a98}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Sora,sans-serif;line-height:1.15;margin:0}
+  a{color:var(--amb);text-decoration:none}
+  code,pre{font-family:"JetBrains Mono",monospace}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+  .mut{color:var(--mut)} .amb{color:var(--amb)}
+  .chip{display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amb);font-weight:600;font-family:Sora}
+  nav{position:sticky;top:0;z-index:30;backdrop-filter:blur(12px);background:rgba(12,12,16,.78);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:22px;height:60px}
+  nav .brand{display:flex;align-items:center;gap:8px;font-family:Sora;font-weight:800;letter-spacing:-.02em;color:var(--amb)}
+  nav .brand .emoji{font-size:1.25rem}
+  nav .sep{color:var(--mut);opacity:.45}
+  nav .inema{color:var(--sky);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .inema:hover{filter:brightness(1.15)}
+  nav .pro{color:var(--pro);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .pro:hover{filter:brightness(1.15)}
+  nav .clubpro{display:inline-flex;align-items:center;gap:6px}
+  nav .links{margin-left:auto;display:flex;align-items:center;gap:20px;font-size:.92rem}
+  nav .links a.sec{color:var(--mut)} nav .links a.sec:hover{color:var(--txt)}
+  .lang{display:inline-flex;gap:2px;font-family:Sora;font-size:.78rem}
+  .lang a{color:var(--mut);padding:.2em .45em;border-radius:6px} .lang a.on{color:var(--amb);background:rgba(226,162,59,.12)}
+  .tgl{background:var(--bg2);border:1px solid var(--line);color:var(--txt);width:38px;height:38px;border-radius:10px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:1.05rem}
+  .tgl:hover{border-color:var(--amb)}
+  .btn{display:inline-block;background:var(--amb);color:#1a1206;font-weight:600;padding:.6em 1.05em;border-radius:10px;font-family:Sora}
+  .btn.ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
+  @media(max-width:760px){nav .links a.sec{display:none}}
+  @media(max-width:520px){nav .wrap{gap:8px;padding:8px 14px;height:auto;flex-wrap:wrap} nav .links{gap:8px;margin-left:0;width:100%;justify-content:space-between} nav .btn{padding:.45em .7em;font-size:.82rem} .tgl{width:34px;height:34px}}
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero .glow{position:absolute;inset:-40% -20% auto auto;width:70%;height:600px;background:radial-gradient(closest-side,rgba(226,162,59,.22),transparent 70%);pointer-events:none}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:74px 22px}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;letter-spacing:-.025em}
+  .hero p.lead{font-size:1.18rem;color:var(--mut);margin:1.1em 0 1.6em;max-width:34ch}
+  .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .hero figure{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000}
+  .hero figure img{width:100%;height:auto;display:block}
+  .resumo{padding:38px 0 34px;border-bottom:1px solid var(--line)}
+  .resumo p{font-size:1.12rem;line-height:1.7;max-width:74ch;margin:.55em 0 0}
+  @media(max-width:780px){.hero .wrap{grid-template-columns:1fr;padding:48px 22px}}
+  section{padding:62px 0;border-bottom:1px solid var(--line)}
+  section h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;letter-spacing:-.02em}
+  section .sub{color:var(--mut);margin:.6em 0 2em;max-width:62ch}
+  .grid{display:grid;gap:16px}
+  .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)} .g2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:820px){.g3,.g4{grid-template-columns:1fr 1fr}}
+  @media(max-width:540px){.g2,.g3,.g4{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .card h3{font-size:1.05rem;margin-bottom:.4em}
+  .card p{color:var(--mut);font-size:.92rem;margin:0}
+  .num{display:inline-flex;width:30px;height:30px;align-items:center;justify-content:center;border-radius:8px;background:rgba(226,162,59,.14);color:var(--amb);font-family:Sora;font-weight:800;font-size:.9rem;margin-bottom:.7em}
+  .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+  .flow span{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:.45em .9em;font-size:.85rem;font-family:Sora;font-weight:600}
+  .flow .arr{color:var(--amb);border:none;background:none;padding:0 .1em}
+  pre{background:#0a0a0e;border:1px solid var(--line);border-radius:12px;padding:16px 18px;overflow:auto;font-size:.86rem;line-height:1.6;color:#d6d6e0}
+  pre .c{color:#6f6f7c} pre .k{color:var(--amb2)} pre .s{color:#9ece6a}
+  .step{display:grid;grid-template-columns:46px minmax(0,1fr);gap:16px;margin-bottom:26px}
+  .step>div,.card{min-width:0}
+  p code,li code,td code{overflow-wrap:anywhere}
+  .step .b{width:46px;height:46px;border-radius:12px;background:var(--amb);color:#1a1206;font-family:Sora;font-weight:800;font-size:1.25rem;display:flex;align-items:center;justify-content:center}
+  .step h3{font-size:1.12rem;margin-bottom:.3em}
+  .step p{color:var(--mut);margin:.2em 0 .7em}
+  .ex{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:680px){.ex{grid-template-columns:1fr}}
+  .ex figure{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+  .ex figure img{width:100%;height:auto;display:block}
+  .ex figcaption{padding:12px 14px;font-size:.88rem;color:var(--mut);background:var(--card)}
+  .phase{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .phase:last-child{border:none}
+  .phase .tag{flex:0 0 92px;font-family:Sora;font-weight:800;color:var(--amb)}
+  .phase .d strong{display:block;margin-bottom:.2em}
+  .phase .d span{color:var(--mut);font-size:.92rem}
+  footer{padding:46px 0;text-align:center;color:var(--mut);font-size:.9rem}
+  .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.3em .8em;font-size:.78rem;color:var(--mut);margin:0 4px}
+</style>
+<style>
+  .prova{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:18px;min-width:0}
+  .prova-top{display:grid;grid-template-columns:46px minmax(0,1fr);gap:16px}
+  .prova-top .num{width:46px;height:46px;font-size:1.2rem;margin:0}
+  .prova h3{font-size:1.2rem;margin-bottom:.25em}
+  .prova p{margin:.2em 0;color:var(--mut)}
+  .prova .meta{font-size:.9rem}
+  .dificil{margin:14px 0;padding:12px 14px;border-left:3px solid var(--amb);background:var(--bg2);border-radius:0 10px 10px 0;font-size:.95rem}
+  .abas{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 10px}
+  .aba{font:600 .85rem Sora,sans-serif;background:var(--bg2);color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.45em .95em;cursor:pointer}
+  .aba.on{background:var(--amb);color:#1a1206;border-color:var(--amb)}
+  .painel{display:none;position:relative}
+  .painel.on{display:block}
+  .painel .quem{font-size:.85rem;margin:.2em 0 .5em}
+  pre.prompt{white-space:pre-wrap;word-break:break-word;max-height:360px;font-size:.82rem}
+  .copiar{position:absolute;right:10px;top:34px;font:600 .8rem Sora,sans-serif;background:var(--amb);color:#1a1206;border:0;border-radius:8px;padding:.45em .8em;cursor:pointer;z-index:2}
+  .forma{border-top:3px solid var(--amb)}
+  .nota{font-size:.9rem;color:var(--mut);border:1px dashed var(--line);border-radius:12px;padding:12px 14px;margin-top:14px}
+  table.t{width:100%;border-collapse:collapse;font-size:.92rem}
+  table.t th,table.t td{border-bottom:1px solid var(--line);padding:9px 8px;text-align:left;vertical-align:top}
+  table.t th{font-family:Sora;color:var(--amb);font-weight:600}
+  .tabela{overflow-x:auto}
+  @media(max-width:1060px){nav .links{gap:12px}}
+  @media(max-width:940px){nav .links a.sec{display:none}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="brand" href="#top"><span class="emoji">🧪</span> sete-provas-ia</a>
+  <span class="sep">|</span>
+  <span class="clubpro">
+    <a class="inema" href="https://inema.club" target="_blank" rel="noopener">INEMA.CLUB</a>
+    <span class="sep">-</span>
+    <a class="pro" href="https://inema.pro" target="_blank" rel="noopener">PRO</a>
+  </span>
+  <div class="links">
+    <a class="sec" href="#oque">Qué es</a>
+    <a class="sec" href="#provas">Las 7 pruebas</a>
+    <a class="sec" href="#guia">Cómo usarlas</a>
+    <a class="sec" href="#avaliar">Evaluar</a>
+    <span class="lang"><a href="../">PT</a><a href="../en/">EN</a><a class="on" href="./">ES</a></span>
+    <button class="tgl" id="themeToggle" aria-label="Alternar tema" title="Alternar tema">🌙</button>
+    <a class="btn" href="https://github.com/inematds/sete-provas-ia" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="glow"></div>
+  <div class="wrap">
+    <div>
+      <span class="chip">Prompts de prueba · agente, chat o persona</span>
+      <h1>7 PRUEBAS PARA CUALQUIER IA</h1>
+      <p class="lead">El mismo pedido, formulado de la misma manera, para comparar modelos, herramientas o personas. Con respuestas correctas y puntuación por script.</p>
+      <div class="cta">
+        <a class="btn" href="#provas">Ver las 7 pruebas</a>
+        <a class="btn ghost" href="https://github.com/inematds/sete-provas-ia" target="_blank" rel="noopener">Ver en GitHub</a>
+      </div>
+    </div>
+    <figure><img src="../assets/banner-es.jpg" alt="Banner: 7 pruebas para cualquier IA"></figure>
+  </div>
+</header>
+
+<section id="resumo" class="resumo"><div class="wrap">
+  <span class="chip">Resumen</span>
+  <p>Son siete tareas listas para copiar: una página de ventas, un panel de ventas, una presentación, un explicativo animado, un editor de fotos, un juego 3D y una central de agentes. Cada tarea viene en tres formatos: para un agente que trabaja en una carpeta (Claude Code, Codex, Cursor), para una ventana de chat (Agnes, ChatGPT, Gemini) y como briefing para una persona, sin IA. Sirven para comparar modelos, elegir una herramienta o capacitar a un equipo. El kit incluye los datos, las respuestas correctas y el evaluador por script; para usarlo, solo hay que copiar el texto. Para el evaluador se necesita Python 3.</p>
+</div></section>
+
+<section id="oque"><div class="wrap">
+  <span class="chip">Qué es</span>
+  <h2>Una prueba, tres formas de aplicarla</h2>
+  <p class="sub">El núcleo de la tarea es igual en los tres formatos. Solo cambia lo que la herramienta puede hacer: guardar archivos, responder en un chat o trabajar a mano.</p>
+  <figure style="margin:0 0 26px;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000"><img src="../assets/banner-grade-es.jpg" alt="Las siete pruebas: página de ventas, panel, presentación, explicativo, editor de fotos y juego 3D" loading="lazy" style="width:100%;display:block"></figure>
+  <div class="grid g3">
+    <div class="card forma"><h3>🗂️ Agente con carpeta</h3><p>Claude Code, Codex, Cursor, Antigravity, Gemini CLI, OpenCode. El agente lee los datos de la carpeta, guarda los archivos y escribe un ENTREGA.md con un resumen de lo que hizo.</p></div>
+    <div class="card forma"><h3>💬 Ventana de chat</h3><p>Agnes, ChatGPT, Gemini, Claude.ai, DeepSeek, Grok, Copilot. Sin carpeta: la respuesta es un único HTML completo y los datos ya vienen incluidos en la tarea.</p></div>
+    <div class="card forma"><h3>🧑‍💼 Sin IA</h3><p>La misma tarea, presentada como briefing para una persona o equipo, con un tiempo sugerido. Sirve para una clase, seleccionar a un freelancer o comparar personas con máquinas.</p></div>
+  </div>
+  <div class="grid g3" style="margin-top:16px">
+    <div class="card"><h3>🖼️ Imágenes opcionales</h3><p>Si la herramienta genera imágenes o video (por ejemplo, Higgsfield, Agnes, Codex), puede usarlos. Si no, crea los elementos visuales con código. Ninguna prueba depende de un generador.</p></div>
+    <div class="card"><h3>🎯 Trampas intencionales</h3><p>El panel recibe datos sucios a propósito; la presentación incluye anotaciones con un precio que cambió, una suma incorrecta y una cifra prohibida.</p></div>
+    <div class="card"><h3>📏 Evaluación sin IA</h3><p>Un script verifica lo que se puede medir (total correcto, cifra prohibida, herramientas presentes) y una ficha de 10 puntos cubre el resto.</p></div>
+  </div>
+</div></section>
+
+<section id="fluxo"><div class="wrap">
+  <span class="chip">Cómo funciona</span>
+  <h2>Preparar, ejecutar, revisar, comparar</h2>
+  <p class="sub">Para que la comparación sea justa, cada participante recibe la misma prueba, en el mismo formato y en su propia carpeta.</p>
+  <div class="flow">
+    <span>Elige la prueba</span><span class="arr">→</span>
+    <span>Elige el formato</span><span class="arr">→</span>
+    <span>Copia el prompt</span><span class="arr">→</span>
+    <span>El participante trabaja por su cuenta</span><span class="arr">→</span>
+    <span>kit/avaliar.py</span><span class="arr">→</span>
+    <span>Ficha de 10 puntos</span>
+  </div>
+</div></section>
+
+<section id="provas"><div class="wrap">
+  <span class="chip">Las 7 pruebas</span>
+  <h2>Elige la prueba y el formato, y copia</h2>
+  <p class="sub">Cada tarjeta incluye tres versiones de la misma tarea. En el formato «chat», las pruebas 2 y 3 ya incluyen los datos al final del texto.</p>
+<!--PROVAS-->
+<article class="prova" id="prova-1"><div class="prova-top"><span class="num">1</span><div><h3>Página de ventas</h3><p>Una marca de suscripción de café, desde cero. La IA elige el nombre, los textos y el diseño.</p><p class="meta"><b>Archivo principal:</b> <code>index.html</code> · <b>Tiempo sugerido (sin IA):</b> 4 h</p></div></div><div class="dificil"><b>La parte difícil:</b> Un solo objetivo: que el visitante empiece la prueba gratis. Y un momento que haga que deje de desplazarse.</div><div class="abas"><button class="aba on" data-alvo="p1-agente">Para agente con carpeta</button><button class="aba" data-alvo="p1-chat">Para ventana de chat</button><button class="aba" data-alvo="p1-pessoa">Sin IA: briefing para una persona o un equipo</button></div><div class="painel on" id="p1-agente"><p class="quem">Para agente con carpeta (Claude Code, Codex, Cursor, Antigravity, Gemini CLI, OpenCode)</p><button class="copiar" data-de="p1-agente-txt">Copiar</button><pre class="prompt" id="p1-agente-txt"># Prueba 1: Página de ventas
+
+Crea una página de ventas para una marca de suscripción de café.
+
+Tú eliges el nombre de la marca, los textos y el diseño. La página tiene un solo objetivo: que el visitante empiece una prueba gratis. Ningún enlace puede sacar a la persona de ese camino.
+
+Crea un momento que haga que la persona deje de desplazarse: una escena (video o animación) controlada por el desplazamiento. Si la página no se desplaza, esa escena abre la página.
+
+Archivo principal: `index.html`. Tiene que abrirse con dos clics.
+
+## Esmero
+- Haz que se vea realmente bien: quien pase la vista tiene que detenerse y dejar de desplazarse.
+- Usa las herramientas y habilidades que tengas (diseño, animación, generador de imágenes). Tú eliges.
+
+## Imágenes y video (opcional)
+- Si tienes conectado un generador de imágenes o de video (por ejemplo: Higgsfield, Agnes, Codex, un modelo local), úsalo: como máximo 8 imágenes y 1 video corto, guardados como archivos en tu carpeta.
+- Si no tienes, dibuja todo con código (SVG, CSS, canvas). La prueba vale lo mismo.
+- Modo rayos X: la tecla X y un botón pequeño activan los contornos, con un color para cada imagen o video generado y otro para cada animación hecha con código, con una etiqueta pequeña en cada uno.
+
+## Reglas
+- Trabaja por tu cuenta. No hagas preguntas. Termina de una vez.
+- Trabaja solo dentro de tu carpeta.
+- Guarda todo como archivo en la carpeta. No uses archivos de Internet.
+- No publiques, no hagas deploy ni subas nada. Nunca reproduzcas sonido.
+- Al final, escribe ENTREGA.md en la carpeta: qué hiciste, cómo abrirlo y cada imagen o video generado (archivo, qué muestra, qué herramienta lo creó).
+</pre></div><div class="painel" id="p1-chat"><p class="quem">Para ventana de chat (Agnes, ChatGPT, Gemini, Claude.ai, DeepSeek, Grok, Copilot)</p><button class="copiar" data-de="p1-chat-txt">Copiar</button><pre class="prompt" id="p1-chat-txt"># Prueba 1: Página de ventas
+
+Crea una página de ventas para una marca de suscripción de café.
+
+Tú eliges el nombre de la marca, los textos y el diseño. La página tiene un solo objetivo: que el visitante empiece una prueba gratis. Ningún enlace puede sacar a la persona de ese camino.
+
+Crea un momento que haga que la persona deje de desplazarse: una escena (video o animación) controlada por el desplazamiento. Si la página no se desplaza, esa escena abre la página.
+
+Archivo principal: `index.html`. Tiene que abrirse con dos clics.
+
+## Esmero
+- Haz que se vea realmente bien: quien pase la vista tiene que detenerse y dejar de desplazarse.
+- Usa las herramientas y habilidades que tengas (diseño, animación, generador de imágenes). Tú eliges.
+
+## Imágenes (opcional)
+- Si esta interfaz genera imágenes, genera como máximo 4 e indica el nombre de archivo de cada una (img1.jpg, img2.jpg...), para que las guarde junto al HTML. En el HTML, usa &lt;img src=&quot;img1.jpg&quot;&gt; y muestra un dibujo en SVG o CSS en su lugar si el archivo no existe, para que la página nunca abra con una imagen rota.
+- Si no genera, dibuja todo en SVG o CSS dentro del HTML. La prueba vale lo mismo.
+- Modo rayos X: la tecla X y un botón pequeño activan los contornos, con un color para cada imagen y otro para cada animación hecha con código, con una etiqueta pequeña en cada uno.
+
+## Cómo entregar (estás en una ventana de chat, sin carpeta)
+- Responde con UN archivo HTML completo en un único bloque de código, desde &lt;!doctype html&gt; hasta &lt;/html&gt;, con el CSS y JavaScript dentro.
+- El archivo tiene que estar completo. Nada de &quot;el resto sigue igual&quot;.
+- No uses archivos de Internet. Nunca reproduzcas sonido.
+- No hagas preguntas. Termina de una vez.
+- Después del bloque, en hasta 5 líneas: qué hiciste y cómo abrirlo.
+</pre></div><div class="painel" id="p1-pessoa"><p class="quem">Sin IA: briefing para una persona o un equipo</p><button class="copiar" data-de="p1-pessoa-txt">Copiar</button><pre class="prompt" id="p1-pessoa-txt"># Prueba 1: Página de ventas
+
+**Tiempo sugerido:** 4 h · **Perfil:** diseñador web o front-end (el archivo final es HTML)
+
+Crea una página de ventas para una marca de suscripción de café.
+
+Tú eliges el nombre de la marca, los textos y el diseño. La página tiene un solo objetivo: que el visitante empiece una prueba gratis. Ningún enlace puede sacar a la persona de ese camino.
+
+Crea un momento que haga que la persona deje de desplazarse: una escena (video o animación) controlada por el desplazamiento. Si la página no se desplaza, esa escena abre la página.
+
+Archivo principal: `index.html`. Tiene que abrirse con dos clics.
+
+## Esmero
+- Haz que se vea realmente bien: quien pase la vista tiene que detenerse y dejar de desplazarse.
+- Puedes usar lo que quieras: programa de diseño, código, banco de imágenes o ilustración propia.
+
+## Imágenes y video
+- Usa imágenes de donde quieras (tuyas, de un banco gratuito o generadas) y anota el origen de cada una en ENTREGA.md.
+- Modo rayos X (opcional para una persona, punto extra): la tecla X y un botón pequeño activan los contornos, con un color para cada imagen o video y otro para cada animación hecha con código, con una etiqueta pequeña en cada uno.
+
+## Cómo entregar
+- Puedes usar cualquier herramienta, incluso ninguna IA. Al final, indica cuáles usaste.
+- Entrega la carpeta con el archivo principal y un ENTREGA.md: qué hiciste, cómo abrirlo y de dónde salió cada imagen.
+- No publiques nada en Internet. Sin sonido.
+- Si surge una duda durante el trabajo: decide y anota la decisión en ENTREGA.md (la prueba también evalúa esto).
+
+## Cómo se evaluará
+Ficha de 10 puntos (avaliar/ficha.es.md): funciona, la parte difícil, esmero, honestidad y reglas.
+</pre></div></article>
+<article class="prova" id="prova-2"><div class="prova-top"><span class="num">2</span><div><h3>Panel de ventas</h3><p>90 días de ventas de 4 cafeterías se convierten en un panel que la dueña entiende en 5 segundos.</p><p class="meta"><b>Archivo principal:</b> <code>painel.html</code> · <b>Tiempo sugerido (sin IA):</b> 4 h</p></div></div><div class="dificil"><b>La parte difícil:</b> Los datos están sucios a propósito. Hay que limpiarlos, mostrar qué se corrigió y permitir hacer clic en una cifra para ver las filas que la componen.</div><div class="abas"><button class="aba on" data-alvo="p2-agente">Para agente con carpeta</button><button class="aba" data-alvo="p2-chat">Para ventana de chat</button><button class="aba" data-alvo="p2-pessoa">Sin IA: briefing para una persona o un equipo</button></div><div class="painel on" id="p2-agente"><p class="quem">Para agente con carpeta (Claude Code, Codex, Cursor, Antigravity, Gemini CLI, OpenCode)</p><button class="copiar" data-de="p2-agente-txt">Copiar</button><pre class="prompt" id="p2-agente-txt"># Prueba 2: Panel de ventas
+
+Crea un panel de ventas para la dueña de una pequeña cadena de 4 cafeterías.
+
+Los datos están en `vendas.csv`: los pedidos del período. El archivo está sucio a propósito. Primero límpialo y muestra qué corregiste (qué tipo de problema y cuántas filas de cada uno). Muestra la facturación total del período.
+
+La dueña tiene que ver lo que importa en 5 segundos y poder hacer clic en una cifra para ver las filas que la componen.
+
+Archivo principal: `painel.html`. Tiene que abrirse con dos clics, así que los datos limpios van dentro del propio HTML.
+
+## Esmero
+- Haz que se vea realmente bien: quien pase la vista tiene que detenerse y dejar de desplazarse.
+- Usa las herramientas y habilidades que tengas (diseño, animación, generador de imágenes). Tú eliges.
+
+## Imágenes y video (opcional)
+- Si tienes conectado un generador de imágenes o de video (por ejemplo: Higgsfield, Agnes, Codex, un modelo local), úsalo: como máximo 8 imágenes y 1 video corto, guardados como archivos en tu carpeta.
+- Si no tienes, dibuja todo con código (SVG, CSS, canvas). La prueba vale lo mismo.
+- Modo rayos X: la tecla X y un botón pequeño activan los contornos, con un color para cada imagen o video generado y otro para cada animación hecha con código, con una etiqueta pequeña en cada uno.
+
+## Reglas
+- Trabaja por tu cuenta. No hagas preguntas. Termina de una vez.
+- Trabaja solo dentro de tu carpeta.
+- Guarda todo como archivo en la carpeta. No uses archivos de Internet.
+- No publiques, no hagas deploy ni subas nada. Nunca reproduzcas sonido.
+- Al final, escribe ENTREGA.md en la carpeta: qué hiciste, cómo abrirlo y cada imagen o video generado (archivo, qué muestra, qué herramienta lo creó).
+</pre></div><div class="painel" id="p2-chat"><p class="quem">Para ventana de chat (Agnes, ChatGPT, Gemini, Claude.ai, DeepSeek, Grok, Copilot)</p><button class="copiar" data-de="p2-chat-txt">Copiar</button><pre class="prompt" id="p2-chat-txt"># Prueba 2: Panel de ventas
+
+Crea un panel de ventas para la dueña de una pequeña cadena de 4 cafeterías.
+
+Los datos están en `vendas-mini.csv`: los pedidos del período. El archivo está sucio a propósito. Primero límpialo y muestra qué corregiste (qué tipo de problema y cuántas filas de cada uno). Muestra la facturación total del período.
+
+La dueña tiene que ver lo que importa en 5 segundos y poder hacer clic en una cifra para ver las filas que la componen.
+
+Archivo principal: `painel.html`. Tiene que abrirse con dos clics, así que los datos limpios van dentro del propio HTML.
+
+## Esmero
+- Haz que se vea realmente bien: quien pase la vista tiene que detenerse y dejar de desplazarse.
+- Usa las herramientas y habilidades que tengas (diseño, animación, generador de imágenes). Tú eliges.
+
+## Imágenes (opcional)
+- Si esta interfaz genera imágenes, genera como máximo 4 e indica el nombre de archivo de cada una (img1.jpg, img2.jpg...), para que las guarde junto al HTML. En el HTML, usa &lt;img src=&quot;img1.jpg&quot;&gt; y muestra un dibujo en SVG o CSS en su lugar si el archivo no existe, para que la página nunca abra con una imagen rota.
+- Si no genera, dibuja todo en SVG o CSS dentro del HTML. La prueba vale lo mismo.
+- Modo rayos X: la tecla X y un botón pequeño activan los contornos, con un color para cada imagen y otro para cada animación hecha con código, con una etiqueta pequeña en cada uno.
+
+## Cómo entregar (estás en una ventana de chat, sin carpeta)
+- Responde con UN archivo HTML completo en un único bloque de código, desde &lt;!doctype html&gt; hasta &lt;/html&gt;, con el CSS y JavaScript dentro.
+- El archivo tiene que estar completo. Nada de &quot;el resto sigue igual&quot;.
+- No uses archivos de Internet. Nunca reproduzcas sonido.
+- No hagas preguntas. Termina de una vez.
+- Después del bloque, en hasta 5 líneas: qué hiciste y cómo abrirlo.
+
+Los datos están abajo, entre las líneas ===. Coloca los datos DENTRO del HTML.
+
+=== vendas-mini.csv ===
+pedido,data,loja,produto,qtd,preco,pagamento
+50053,2026-08-06,Beira-Rio,Gelado,4,13.50,cartao
+50082,2026-08-08,Centro,Café em grão 250g,1,39.90,pix
+50193,2026-08-15,Centro,Espresso,1,6.50,pix
+50042,2026-08-05,Rodoviária,Bolo de fubá,4,9.50,cartao
+50039,2026-08-05,Beira-Rio,Coado,2,8.00,pix
+50177,2026-08-14,Centro,Gelado,4,13.50,pix
+50130,2026-08-10,Alto da Serra,Gelado,4,13.50,dinheiro
+50070,2026-08-07,Beira-Rio,Café em grão 250g,4,39.90,pix
+50188,2026-08-14,Alto da Serra,Coado,1,8.00,pix
+50187,2026-08-14,Alto da Serra,Gelado,3,13.50,cartao
+50119,2026-08-10,Centro,Cappuccino,3,11.00,pix
+50020,2026-08-04,Beira-Rio,Latte,2,12.00,pix
+50207,2026-08-15,Alto da Serra,Latte,1,12.00,pix
+50114,2026-08-09,Alto da Serra,Gelado,4,13.50,dinheiro
+50146,2026-08-11,Alto da Serra,Pão de queijo,2,7.00,cartao
+50201,2026-08-15,Rodoviária,Cappuccino,3,11.00,pix
+50021,2026-08-04,Beira-Rio,Cappuccino,4,R$ 11.00,dinheiro
+50169,2026-08-13,Rodoviária,Cappuccino,2,11.00,cartao
+50026,2026-08-04,RODOVIÁRIA,Latte,3,12.00,cartao
+50091,2026-08-08,Rodoviária,Gelado,2,13.50,dinheiro
+50139,2026-08-11,Rodoviária,Café em grão 250g,1,39.90,cartao
+50058,2026-08-06,Rodoviária,Espresso,1,R$ 6.50,pix
+50190,2026-08-15,Centro,Café em grão 250g,2,39.90,dinheiro
+50135,2026-08-11,Centro,Pão de queijo,1,7.00,cartao
+50154,2026-08-12,Beira-Rio,Pão de queijo,1,7.00,dinheiro
+50079,2026-08-08,Centro,Espresso,3,6.50,cartao
+50045,2026-08-05,Alto da Serra,Bolo de fubá,2,9.50,dinheiro
+50129,10/08/2026,Alto da Serra,Bolo de fubá,2,9.50,cartao
+50024,2026-08-04,Rodoviária,Gelado,1,13.50,pix
+50141,2026-08-11,Rodoviária,Gelado,4,13.50,pix
+50003,2026-08-03,Centro,Latte,4,12.00,pix
+50199,2026-08-15,Beira-Rio,Pão de queijo,2,7.00,cartao
+50223,16/08/2026,Alto da Serra,Espresso,1,6.50,cartao
+50075,2026-08-07,Alto da Serra,Espresso,3,6.50,cartao
+50069,2026-08-07,Beira-Rio,Gelado,4,13.50,dinheiro
+50146,2026-08-11,Alto da Serra,Pão de queijo,2,7.00,cartao
+50106,2026-08-09,Rodoviária,Gelado,2,13.50,pix
+50208,2026-08-15,Alto da Serra,Coado,3,8.00,pix
+50049,2026-08-06,Centro,Cappuccino,3,11.00,cartao
+50209,2026-08-16,Centro,Coado,2,8.00,cartao
+50087,2026-08-08,Beira-Rio,Espresso,3,6.50,pix
+50124,2026-08-10,Rodoviária,Gelado,2,13.50,cartao
+50076,7 ago 2026,Alto da Serra,Latte,2,12.00,pix
+50040,2026-08-05,Beira-Rio,Café em grão 250g,3,39.90,cartao
+50145,2026-08-11,Alto da Serra,Café em grão 250g,3,39.90,pix
+50066,2026-08-07,Centro,Pão de queijo,2,7.00,cartao
+50183,14 ago 2026,Beira-Rio,Bolo de fubá,4,9.50,pix
+50152,2026-08-12,Beira-Rio,Coado,1,8.00,pix
+50035,2026-08-05,Centro,Bolo de fubá,3,9.50,dinheiro
+50222,2026-08-16,Alto da Serra,Gelado,1,13.50,cartao
+50140,2026-08-11,Rodoviária,Coado,3,8.00,pix
+50057,2026-08-06,Rodoviária,Latte,2,12.00,pix
+50068,2026-08-07,Beira-Rio,Latte,3,12.00,dinheiro
+50097,2026-08-09,Centro,Latte,1,12.00,pix
+50174,2026-08-13,Alto da Serra,Café em grão 250g,4,39.90,pix
+50088,08/08/2026,Beira-Rio,Coado,3,8.00,pix
+50202,2026-08-15,Rodoviária,Espresso,1,6.50,cartao
+50148,2026-08-12,Centro,Gelado,3,13.50,pix
+50110,2026-08-09,Rodoviária,Coado,1,8.00,pix
+50162,2026-08-13,Centro,Cappuccino,3,11.00,pix
+50134,2026-08-11,Centro,Pão de queijo,4,7.00,cartao
+50204,2026-08-15,Alto da Serra,Café em grão 250g,1,39.90,cartao
+50072,2026-08-07,Rodoviária,Latte,2,12.00,pix
+50167,13/08/2026,Beira-Rio,Café em grão 250g,1,39.90,pix
+50203,2026-08-15,Rodoviária,Latte,4,12.00,pix
+50016,2026-08-04,Centro,Bolo de fubá,3,9.50,pix
+50136,2026-08-11,Beira-Rio,Latte,2,12.00,pix
+50173,2026-08-13,Alto da Serra,Café em grão 250g,1,39.90,dinheiro
+50021,2026-08-04,Beira-Rio,Cappuccino,4,R$ 11.00,dinheiro
+50150,2026-08-12,Centro,Gelado,2,R$ 13.50,cartao
+50090,2026-08-08,Rodoviária,Pão de queijo,4,7.00,pix
+50116,2026-08-10,Centro,Espresso,1,6.50,cartao
+50120,2026-08-10,Beira-Rio,Pão de queijo,3,7.00,cartao
+50093,2026-08-08,Alto da Serra,Pão de queijo,4,7.00,pix
+50115,2026-08-10,Centro,Pão de queijo,3,7.00,pix
+50103,2026-08-09,Beira-Rio,Café em grão 250g,2,39.90,cartao
+50191,15 ago 2026,Centro,Bolo de fubá,4,9.50,cartao
+50099,2026-08-09,Centro,Latte,3,12.00,cartao
+50019,4 ago 2026,Centro,Gelado,2,13.50,pix
+50031,2026-08-05,Centro,Pão de queijo,3,7.00,pix
+50107,2026-08-09,Rodoviária,Coado,4,8.00,pix
+50059,2026-08-06,Rodoviária,Bolo de fubá,3,9.50,cartao
+50161,2026-08-13,Centro,Pão de queijo,4,7.00,pix
+50175,2026-08-13,Alto da Serra,Espresso,3,6.50,pix
+50019,4 ago 2026,Centro,Gelado,2,13.50,pix
+50164,13 ago 2026,Centro,Café em grão 250g,1,39.90,cartao
+50176,2026-08-14,Centro,Coado,4,8.00,pix
+50008,3 ago 2026,Beira-Rio,Bolo de fubá,1,9.50,cartao
+50221,16 ago 2026,Rodoviária,Latte,4,12.00,pix
+50143,2026-08-11,Rodoviária,Coado,4,8.00,pix
+50085,2026-08-08,Beira-Rio,Latte,1,12.00,cartao
+50030,2026-08-04,Alto da Serra,Gelado,2,R$ 13.50,pix
+50216,16/08/2026,Beira-Rio,Espresso,4,6.50,cartao
+50013,2026-08-03,Alto da Serra,Latte,1,12.00,pix
+50073,2026-08-07,Rodoviária,Café em grão 250g,4,39.90,cartao
+50038,2026-08-05,Beira-Rio,Cappuccino,4,11.00,pix
+50215,2026-08-16,Beira-Rio,Café em grão 250g,1,39.90,dinheiro
+50017,2026-08-04,Centro,Cappuccino,4,11.00,pix
+50163,2026-08-13,Centro,Espresso,3,6.50,cartao
+50056,2026-08-06,Beira-Rio,Latte,2,12.00,pix
+50184,14 ago 2026,Beira-Rio,Pão de queijo,4,7.00,pix
+50213,2026-08-16,Centro,Gelado,3,13.50,cartao
+50012,2026-08-03,Alto da Serra,Coado,1,8.00,pix
+50077,2026-08-07,Alto da Serra,Pão de queijo,1,7.00,cartao
+50158,2026-08-12,Alto da Serra,Latte,3,12.00,pix
+50065,2026-08-07,Centro,Espresso,3,6.50,cartao
+50100,09/08/2026,Centro,Café em grão 250g,4,39.90,pix
+50027,2026-08-04,Rodoviária,Cappuccino,1,11.00,cartao
+50205,15/08/2026,Alto da Serra,Pão de queijo,1,7.00,cartao
+50029,2026-08-04,Alto da Serra,Pão de queijo,4,7.00,pix
+50197,2026-08-15,beira-rio ,Café em grão 250g,1,39.90,pix
+50004,2026-08-03,Centro,Bolo de fubá,2,9.50,dinheiro
+50206,2026-08-15,ALTO DA SERRA,Café em grão 250g,2,39.90,pix
+50149,2026-08-12,Centro,Latte,4,12.00,pix
+50125,2026-08-10,Rodoviária,Latte,1,12.00,pix
+50032,2026-08-05,Centro,Bolo de fubá,4,9.50,pix
+50048,2026-08-05,Alto da Serra,Cappuccino,4,11.00,cartao
+50054,2026-08-06,Beira-Rio,Latte,3,12.00,cartao
+50217,2026-08-16,Beira-Rio,Gelado,4,13.50,pix
+50198,2026-08-15,Beira-Rio,Latte,3,12.00,pix
+50081,2026-08-08,Centro,Cappuccino,2,11.00,cartao
+50007,2026-08-03,Beira-Rio,Coado,3,&quot;8,00&quot;,cartao
+50179,2026-08-14,Centro,Gelado,1,13.50,cartao
+50144,2026-08-11,Alto da Serra,Espresso,4,6.50,cartao
+50015,2026-08-04,centro ,Pão de queijo,1,7.00,cartao
+50078,2026-08-08,Centro,Bolo de fubá,1,9.50,cartao
+50014,2026-08-03,Alto da Serra,Café em grão 250g,4,39.90,pix
+50156,2026-08-12,Rodoviária,Cappuccino,4,11.00,cartao
+50211,2026-08-16,Centro,Bolo de fubá,2,9.50,pix
+50155,2026-08-12,Rodoviária,Latte,2,12.00,dinheiro
+50055,2026-08-06,Beira-Rio,Cappuccino,1,11.00,cartao
+50101,2026-08-09,Centro,Latte,1,12.00,pix
+50127,2026-08-10,Rodoviária,Gelado,2,13.50,cartao
+50192,2026-08-15,Centro,Cappuccino,4,11.00,pix
+50047,2026-08-05,Alto da Serra,Bolo de fubá,1,9.50,cartao
+50165,2026-08-13,centro ,Latte,4,&quot;12,00&quot;,pix
+50123,2026-08-10,Beira-Rio,Coado,1,8.00,cartao
+50098,2026-08-09,Centro,Espresso,4,6.50,cartao
+50180,2026-08-14,Centro,Café em grão 250g,4,39.90,pix
+50157,2026-08-12,Alto da Serra,Cappuccino,2,11.00,cartao
+50166,13 ago 2026,Beira-Rio,Bolo de fubá,4,9.50,pix
+50122,2026-08-10,Beira-Rio,Café em grão 250g,1,39.90,pix
+50102,2026-08-09,Beira-Rio,Pão de queijo,1,7.00,cartao
+50214,2026-08-16,Centro,Espresso,1,6.50,pix
+50171,2026-08-13,Rodoviária,Coado,1,8.00,pix
+50151,2026-08-12,Centro,Cappuccino,3,11.00,cartao
+50117,2026-08-10,Centro,Gelado,2,13.50,pix
+50147,2026-08-12,Centro,Espresso,1,6.50,pix
+50109,2026-08-09,Rodoviária,Café em grão 250g,4,39.90,pix
+50050,2026-08-06,Centro,Cappuccino,2,11.00,pix
+50159,2026-08-12,Alto da Serra,Café em grão 250g,2,39.90,pix
+50025,2026-08-04,Rodoviária,Coado,1,8.00,pix
+50064,2026-08-07,Centro,Café em grão 250g,2,39.90,pix
+50033,05/08/2026,Centro,Café em grão 250g,1,39.90,cartao
+50006,03/08/2026,Beira-Rio,Espresso,4,6.50,pix
+50172,2026-08-13,Rodoviária,Coado,4,8.00,pix
+50060,2026-08-06,Rodoviária,Espresso,4,6.50,cartao
+50108,2026-08-09,Rodoviária,Coado,4,8.00,cartao
+50185,2026-08-14,Rodoviária,Espresso,4,6.50,cartao
+50212,2026-08-16,Centro,Latte,1,12.00,cartao
+50210,2026-08-16,Centro,Espresso,1,R$ 6.50,pix
+50132,2026-08-11,Centro,Café em grão 250g,3,39.90,dinheiro
+50126,2026-08-10,Rodoviária,Cappuccino,3,11.00,pix
+50061,2026-08-06,Alto da Serra,Latte,1,12.00,pix
+50133,2026-08-11,Centro,Espresso,1,6.50,dinheiro
+50044,2026-08-05,Rodoviária,Coado,2,8.00,cartao
+50080,2026-08-08,Centro,Café em grão 250g,4,39.90,dinheiro
+50112,2026-08-09,Alto da Serra,Pão de queijo,3,7.00,pix
+50018,2026-08-04,Centro,Pão de queijo,3,7.00,dinheiro
+50118,2026-08-10,Centro,Cappuccino,4,11.00,pix
+50002,2026-08-03,Centro,Cappuccino,3,11.00,pix
+50131,2026-08-11,Centro,Cappuccino,1,11.00,cartao
+50195,2026-08-15,Beira-Rio,Pão de queijo,3,7.00,cartao
+50052,2026-08-06,Centro,Gelado,1,13.50,cartao
+50168,2026-08-13,Beira-Rio,Coado,4,&quot;8,00&quot;,pix
+50096,2026-08-09,Centro,Cappuccino,1,11.00,cartao
+50063,2026-08-07,Centro,Latte,1,12.00,cartao
+50005,2026-08-03,Beira-Rio,Cappuccino,4,11.00,pix
+50092,2026-08-08,Rodoviária,Coado,2,8.00,cartao
+50051,2026-08-06,Centro,Bolo de fubá,4,9.50,pix
+50001,2026-08-03,Centro,Espresso,3,6.50,cartao
+50128,2026-08-10,Alto da Serra,Café em grão 250g,2,39.90,cartao
+50160,2026-08-12,Alto da Serra,Café em grão 250g,2,39.90,cartao
+50218,2026-08-16,Beira-Rio,Pão de queijo,2,7.00,pix
+50170,2026-08-13,Rodoviária,Cappuccino,2,11.00,pix
+50104,2026-08-09, Beira-Rio,Espresso,4,6.50,pix
+50037,2026-08-05,Beira-Rio,Bolo de fubá,1,9.50,pix
+50009,2026-08-03,Rodoviária,Gelado,1,13.50,cartao
+50062,2026-08-06,Alto da Serra,Bolo de fubá,3,9.50,dinheiro
+50224,16 ago 2026,Alto da Serra,Espresso,2,6.50,pix
+50022,2026-08-04,Beira-Rio,Cappuccino,3,11.00,pix
+50084,2026-08-08,Beira-Rio,Cappuccino,2,11.00,cartao
+50113,2026-08-09,Alto da Serra,Espresso,3,6.50,cartao
+50121,2026-08-10,Beira-Rio,Bolo de fubá,1,9.50,cartao
+50042,2026-08-05,Rodoviária,Bolo de fubá,4,9.50,cartao
+50036,2026-08-05,Beira-Rio,Café em grão 250g,2,39.90,pix
+50219,2026-08-16,Rodoviária,Latte,2,12.00,cartao
+50023,2026-08-04,Beira-Rio,Coado,1,8.00,pix
+50041,2026-08-05,Beira-Rio,Café em grão 250g,1,39.90,cartao
+50083,2026-08-08,Centro,Pão de queijo,1,7.00,cartao
+50095,2026-08-08,Alto da Serra,Gelado,2,13.50,pix
+50187,2026-08-14,Alto da Serra,Gelado,3,13.50,cartao
+50105,2026-08-09,Beira-Rio,Coado,4,8.00,cartao
+50220,2026-08-16,Rodoviária,Latte,3,12.00,cartao
+50153,2026-08-12,Beira-Rio,Bolo de fubá,2,9.50,cartao
+50142,2026-08-11,Rodoviária,Coado,3,8.00,cartao
+50194,2026-08-15,Centro,Cappuccino,2,11.00,cartao
+50034,2026-08-05,Centro,Pão de queijo,3,7.00,pix
+50067,2026-08-07,Beira-Rio,Coado,4,8.00,cartao
+50178,2026-08-14,Centro,Gelado,4,&quot;13,50&quot;,cartao
+50186,2026-08-14,Alto da Serra,Latte,4,12.00,cartao
+50189,2026-08-15,Centro,Café em grão 250g,4,39.90,pix
+50028,2026-08-04,Alto da Serra,Café em grão 250g,4,39.90,cartao
+50137,2026-08-11,Beira-Rio,Espresso,1,6.50,dinheiro
+50071,2026-08-07,beira-rio ,Espresso,4,6.50,cartao
+50138,2026-08-11,Beira-Rio,Cappuccino,2,11.00,dinheiro
+50181,14/08/2026, Beira-Rio,Coado,3,8.00,pix
+50043,2026-08-05,Rodoviária,Latte,4,12.00,cartao
+50182,2026-08-14,Beira-Rio,Espresso,1,6.50,dinheiro
+50196,2026-08-15,Beira-Rio,Espresso,4,6.50,pix
+50010,2026-08-03,Rodoviária,Café em grão 250g,1,39.90,pix
+50111,2026-08-09,Alto da Serra,Bolo de fubá,1,9.50,dinheiro
+50074,2026-08-07,Alto da Serra,Coado,4,8.00,dinheiro
+50086,2026-08-08,Beira-Rio,Cappuccino,2,11.00,pix
+50089,2026-08-08,Rodoviária,Coado,2,8.00,dinheiro
+50094,2026-08-08,Alto da Serra,Bolo de fubá,2,9.50,pix
+50046,2026-08-05,Alto da Serra,Latte,3,12.00,cartao
+50011,2026-08-03,Rodoviária,Bolo de fubá,1,9.50,cartao
+50200,2026-08-15,Rodoviária,Café em grão 250g,3,39.90,cartao
+90002,2026-08-06,Centro,TESTE - NAO CONTAR,99,1.00,pix
+90001,2026-10-26,Centro,TESTE - NAO CONTAR,99,1.00,pix
+=== fin ===
+</pre></div><div class="painel" id="p2-pessoa"><p class="quem">Sin IA: briefing para una persona o un equipo</p><button class="copiar" data-de="p2-pessoa-txt">Copiar</button><pre class="prompt" id="p2-pessoa-txt"># Prueba 2: Panel de ventas
+
+**Tiempo sugerido:** 4 h · **Perfil:** analista de datos con HTML, o front-end
+
+Crea un panel de ventas para la dueña de una pequeña cadena de 4 cafeterías.
+
+Los datos están en `vendas.csv`: los pedidos del período. El archivo está sucio a propósito. Primero límpialo y muestra qué corregiste (qué tipo de problema y cuántas filas de cada uno). Muestra la facturación total del período.
+
+La dueña tiene que ver lo que importa en 5 segundos y poder hacer clic en una cifra para ver las filas que la componen.
+
+Archivo principal: `painel.html`. Tiene que abrirse con dos clics, así que los datos limpios van dentro del propio HTML.
+
+## Esmero
+- Haz que se vea realmente bien: quien pase la vista tiene que detenerse y dejar de desplazarse.
+- Puedes usar lo que quieras: programa de diseño, código, banco de imágenes o ilustración propia.
+
+## Imágenes y video
+- Usa imágenes de donde quieras (tuyas, de un banco gratuito o generadas) y anota el origen de cada una en ENTREGA.md.
+- Modo rayos X (opcional para una persona, punto extra): la tecla X y un botón pequeño activan los contornos, con un color para cada imagen o video y otro para cada animación hecha con código, con una etiqueta pequeña en cada uno.
+
+## Cómo entregar
+- Puedes usar cualquier herramienta, incluso ninguna IA. Al final, indica cuáles usaste.
+- Entrega la carpeta con el archivo principal y un ENTREGA.md: qué hiciste, cómo abrirlo y de dónde salió cada imagen.
+- No publiques nada en Internet. Sin sonido.
+- Si surge una duda durante el trabajo: decide y anota la decisión en ENTREGA.md (la prueba también evalúa esto).
+- El archivo de datos mencionado arriba viene con este briefing, o está en la carpeta `dados/` del kit (botón &quot;Download ZIP&quot; en GitHub).
+
+## Cómo se evaluará
+Ficha de 10 puntos (avaliar/ficha.es.md): funciona, la parte difícil, esmero, honestidad y reglas.
+</pre></div></article>
+<article class="prova" id="prova-3"><div class="prova-top"><span class="num">3</span><div><h3>Presentación de ventas</h3><p>Una presentación que consigue el primer cliente de oficina, creada a partir de notas desordenadas.</p><p class="meta"><b>Archivo principal:</b> <code>apresentacao.html</code> · <b>Tiempo sugerido (sin IA):</b> 3 h</p></div></div><div class="dificil"><b>La parte difícil:</b> Las notas tienen trampas: un precio que cambió, una cuenta equivocada y una cifra que no se puede mencionar. Solo se pueden usar cifras que estén en las notas.</div><div class="abas"><button class="aba on" data-alvo="p3-agente">Para agente con carpeta</button><button class="aba" data-alvo="p3-chat">Para ventana de chat</button><button class="aba" data-alvo="p3-pessoa">Sin IA: briefing para una persona o un equipo</button></div><div class="painel on" id="p3-agente"><p class="quem">Para agente con carpeta (Claude Code, Codex, Cursor, Antigravity, Gemini CLI, OpenCode)</p><button class="copiar" data-de="p3-agente-txt">Copiar</button><pre class="prompt" id="p3-agente-txt"># Prueba 3: Presentación de ventas
+
+Haz una presentación que convenza a la primera oficina cliente para que se suscriba al café en grano.
+
+Las notas desordenadas de la reunión de ventas están en `notas.txt`. Usa solo cifras que estén en las notas y marca en pantalla cada cifra que hayas tenido que calcular. Sé breve: una gerente ocupada tiene que decir que sí.
+
+Archivo principal: `apresentacao.html`. Tiene que abrirse con dos clics. Las flechas del teclado permiten avanzar por las diapositivas.
+
+## Esmero
+- Haz que se vea realmente bien: quien pase la vista tiene que detenerse y dejar de desplazarse.
+- Usa las herramientas y habilidades que tengas (diseño, animación, generador de imágenes). Tú eliges.
+
+## Imágenes y video (opcional)
+- Si tienes conectado un generador de imágenes o de video (por ejemplo: Higgsfield, Agnes, Codex, un modelo local), úsalo: como máximo 8 imágenes y 1 video corto, guardados como archivos en tu carpeta.
+- Si no tienes, dibuja todo con código (SVG, CSS, canvas). La prueba vale lo mismo.
+- Modo rayos X: la tecla X y un botón pequeño activan los contornos, con un color para cada imagen o video generado y otro para cada animación hecha con código, con una etiqueta pequeña en cada uno.
+
+## Reglas
+- Trabaja por tu cuenta. No hagas preguntas. Termina de una vez.
+- Trabaja solo dentro de tu carpeta.
+- Guarda todo como archivo en la carpeta. No uses archivos de Internet.
+- No publiques, no hagas deploy ni subas nada. Nunca reproduzcas sonido.
+- Al final, escribe ENTREGA.md en la carpeta: qué hiciste, cómo abrirlo y cada imagen o video generado (archivo, qué muestra, qué herramienta lo creó).
+</pre></div><div class="painel" id="p3-chat"><p class="quem">Para ventana de chat (Agnes, ChatGPT, Gemini, Claude.ai, DeepSeek, Grok, Copilot)</p><button class="copiar" data-de="p3-chat-txt">Copiar</button><pre class="prompt" id="p3-chat-txt"># Prueba 3: Presentación de ventas
+
+Haz una presentación que convenza a la primera oficina cliente para que se suscriba al café en grano.
+
+Las notas desordenadas de la reunión de ventas están en `notas.txt`. Usa solo cifras que estén en las notas y marca en pantalla cada cifra que hayas tenido que calcular. Sé breve: una gerente ocupada tiene que decir que sí.
+
+Archivo principal: `apresentacao.html`. Tiene que abrirse con dos clics. Las flechas del teclado permiten avanzar por las diapositivas.
+
+## Esmero
+- Haz que se vea realmente bien: quien pase la vista tiene que detenerse y dejar de desplazarse.
+- Usa las herramientas y habilidades que tengas (diseño, animación, generador de imágenes). Tú eliges.
+
+## Imágenes (opcional)
+- Si esta interfaz genera imágenes, genera como máximo 4 e indica el nombre de archivo de cada una (img1.jpg, img2.jpg...), para que las guarde junto al HTML. En el HTML, usa &lt;img src=&quot;img1.jpg&quot;&gt; y muestra un dibujo en SVG o CSS en su lugar si el archivo no existe, para que la página nunca abra con una imagen rota.
+- Si no genera, dibuja todo en SVG o CSS dentro del HTML. La prueba vale lo mismo.
+- Modo rayos X: la tecla X y un botón pequeño activan los contornos, con un color para cada imagen y otro para cada animación hecha con código, con una etiqueta pequeña en cada uno.
+
+## Cómo entregar (estás en una ventana de chat, sin carpeta)
+- Responde con UN archivo HTML completo en un único bloque de código, desde &lt;!doctype html&gt; hasta &lt;/html&gt;, con el CSS y JavaScript dentro.
+- El archivo tiene que estar completo. Nada de &quot;el resto sigue igual&quot;.
+- No uses archivos de Internet. Nunca reproduzcas sonido.
+- No hagas preguntas. Termina de una vez.
+- Después del bloque, en hasta 5 líneas: qué hiciste y cómo abrirlo.
+
+Los datos están abajo, entre las líneas ===. Coloca los datos DENTRO del HTML.
+
+=== notas.txt ===
+notas - Grão do Morro - idea de suscripción p/ oficinas (tecleado durante la llamada, desordenado)
+
+quién: Marta (dueña), Kenji (operaciones). yo tomando notas.
+
+- quieren vender café en grano p/ OFICINAS, no solo en el mostrador. 1.º objetivo = Vieira &amp; Sato Advogados (2 pisos, cerca de la tienda Rodoviária)
+- la gerente de la oficina es Lúcia. ella dijo que la gente &quot;odia la máquina de cápsulas&quot;
+- Vieira &amp; Sato tiene 120 personas. Lúcia cree que el 60% toma café todos los días
+- precio que pensó Marta: R$ 95 el kg entregado...
+  &gt;&gt; ACTUALIZACIÓN después de la llamada: Marta mandó un mensaje, usar R$ 89 el kg y no 95. olvida el 95
+- entrega cada 2 semanas. molinillo prestado gratis si cierra 6 meses
+- quien toma café gasta unos 0,5 kg al mes (número de Kenji, de las tiendas)
+- Grão do Morro tuesta 2x por semana, así que el café llega con máx. 4 días desde el tueste
+- competidor: CREO que CaféJá cobra unos R$ 130 el kg?? no tengo ninguna certeza - NO citar eso
+- ya hay 3 oficinas en fila: Vieira &amp; Sato, un estudio de diseño (15 personas), una oficina de arquitectura (22 personas)
+- Marta: &quot;3 oficinas, unas 40 cada una, entonces 140 personas&quot; (cuenta de ella, verificar)
+- oferta de prueba: 2 primeras semanas gratis, cancela cuando quieras
+- lo que quiere Lúcia: sin suciedad, sin trampa de contrato, que al equipo le guste
+- próximo paso que quiere Marta: degustación de 20 min en Vieira &amp; Sato un jueves por la mañana
+- marca: acogedora, sencilla, un poco graciosa. colores: crema + verde oscuro + naranja quemado
+=== fin ===
+</pre></div><div class="painel" id="p3-pessoa"><p class="quem">Sin IA: briefing para una persona o un equipo</p><button class="copiar" data-de="p3-pessoa-txt">Copiar</button><pre class="prompt" id="p3-pessoa-txt"># Prueba 3: Presentación de ventas
+
+**Tiempo sugerido:** 3 h · **Perfil:** diseñador de presentaciones con HTML básico, o front-end
+
+Haz una presentación que convenza a la primera oficina cliente para que se suscriba al café en grano.
+
+Las notas desordenadas de la reunión de ventas están en `notas.txt`. Usa solo cifras que estén en las notas y marca en pantalla cada cifra que hayas tenido que calcular. Sé breve: una gerente ocupada tiene que decir que sí.
+
+Archivo principal: `apresentacao.html`. Tiene que abrirse con dos clics. Las flechas del teclado permiten avanzar por las diapositivas.
+
+## Esmero
+- Haz que se vea realmente bien: quien pase la vista tiene que detenerse y dejar de desplazarse.
+- Puedes usar lo que quieras: programa de diseño, código, banco de imágenes o ilustración propia.
+
+## Imágenes y video
+- Usa imágenes de donde quieras (tuyas, de un banco gratuito o generadas) y anota el origen de cada una en ENTREGA.md.
+- Modo rayos X (opcional para una persona, punto extra): la tecla X y un botón pequeño activan los contornos, con un color para cada imagen o video y otro para cada animación hecha con código, con una etiqueta pequeña en cada uno.
+
+## Cómo entregar
+- Puedes usar cualquier herramienta, incluso ninguna IA. Al final, indica cuáles usaste.
+- Entrega la carpeta con el archivo principal y un ENTREGA.md: qué hiciste, cómo abrirlo y de dónde salió cada imagen.
+- No publiques nada en Internet. Sin sonido.
+- Si surge una duda durante el trabajo: decide y anota la decisión en ENTREGA.md (la prueba también evalúa esto).
+- El archivo de datos mencionado arriba viene con este briefing, o está en la carpeta `dados/` del kit (botón &quot;Download ZIP&quot; en GitHub).
+
+## Cómo se evaluará
+Ficha de 10 puntos (avaliar/ficha.es.md): funciona, la parte difícil, esmero, honestidad y reglas.
+</pre></div></article>
+<article class="prova" id="prova-4"><div class="prova-top"><span class="num">4</span><div><h3>Video explicativo animado</h3><p>20 segundos para explicar cómo un agente de IA hace un trabajo. Para un niño de 10 años.</p><p class="meta"><b>Archivo principal:</b> <code>explicativo.html</code> · <b>Tiempo sugerido (sin IA):</b> 4 h</p></div></div><div class="dificil"><b>La parte difícil:</b> Sin voz. La historia tiene que tener sentido solo con imágenes, reproducirse sola en 1920 x 1080 y repetirse.</div><div class="abas"><button class="aba on" data-alvo="p4-agente">Para agente con carpeta</button><button class="aba" data-alvo="p4-chat">Para ventana de chat</button><button class="aba" data-alvo="p4-pessoa">Sin IA: briefing para una persona o un equipo</button></div><div class="painel on" id="p4-agente"><p class="quem">Para agente con carpeta (Claude Code, Codex, Cursor, Antigravity, Gemini CLI, OpenCode)</p><button class="copiar" data-de="p4-agente-txt">Copiar</button><pre class="prompt" id="p4-agente-txt"># Prueba 4: Video explicativo animado
+
+Haz un video explicativo animado de 20 segundos: &quot;Cómo un agente de IA hace un trabajo por ti&quot;.
+
+Quien lo ve tiene 10 años. Sin voz ni narración. Tú eliges el estilo y la historia.
+
+Archivo principal: `explicativo.html`. Tiene que abrirse con dos clics, reproducirse solo en 1920 x 1080 y repetirse sin parar.
+
+## Esmero
+- Haz que se vea realmente bien: quien pase la vista tiene que detenerse y dejar de desplazarse.
+- Usa las herramientas y habilidades que tengas (diseño, animación, generador de imágenes). Tú eliges.
+
+## Imágenes y video (opcional)
+- Si tienes conectado un generador de imágenes o de video (por ejemplo: Higgsfield, Agnes, Codex, un modelo local), úsalo: como máximo 8 imágenes y 1 video corto, guardados como archivos en tu carpeta.
+- Si no tienes, dibuja todo con código (SVG, CSS, canvas). La prueba vale lo mismo.
+- Modo rayos X: la tecla X y un botón pequeño activan los contornos, con un color para cada imagen o video generado y otro para cada animación hecha con código, con una etiqueta pequeña en cada uno.
+
+## Reglas
+- Trabaja por tu cuenta. No hagas preguntas. Termina de una vez.
+- Trabaja solo dentro de tu carpeta.
+- Guarda todo como archivo en la carpeta. No uses archivos de Internet.
+- No publiques, no hagas deploy ni subas nada. Nunca reproduzcas sonido.
+- Al final, escribe ENTREGA.md en la carpeta: qué hiciste, cómo abrirlo y cada imagen o video generado (archivo, qué muestra, qué herramienta lo creó).
+</pre></div><div class="painel" id="p4-chat"><p class="quem">Para ventana de chat (Agnes, ChatGPT, Gemini, Claude.ai, DeepSeek, Grok, Copilot)</p><button class="copiar" data-de="p4-chat-txt">Copiar</button><pre class="prompt" id="p4-chat-txt"># Prueba 4: Video explicativo animado
+
+Haz un video explicativo animado de 20 segundos: &quot;Cómo un agente de IA hace un trabajo por ti&quot;.
+
+Quien lo ve tiene 10 años. Sin voz ni narración. Tú eliges el estilo y la historia.
+
+Archivo principal: `explicativo.html`. Tiene que abrirse con dos clics, reproducirse solo en 1920 x 1080 y repetirse sin parar.
+
+## Esmero
+- Haz que se vea realmente bien: quien pase la vista tiene que detenerse y dejar de desplazarse.
+- Usa las herramientas y habilidades que tengas (diseño, animación, generador de imágenes). Tú eliges.
+
+## Imágenes (opcional)
+- Si esta interfaz genera imágenes, genera como máximo 4 e indica el nombre de archivo de cada una (img1.jpg, img2.jpg...), para que las guarde junto al HTML. En el HTML, usa &lt;img src=&quot;img1.jpg&quot;&gt; y muestra un dibujo en SVG o CSS en su lugar si el archivo no existe, para que la página nunca abra con una imagen rota.
+- Si no genera, dibuja todo en SVG o CSS dentro del HTML. La prueba vale lo mismo.
+- Modo rayos X: la tecla X y un botón pequeño activan los contornos, con un color para cada imagen y otro para cada animación hecha con código, con una etiqueta pequeña en cada uno.
+
+## Cómo entregar (estás en una ventana de chat, sin carpeta)
+- Responde con UN archivo HTML completo en un único bloque de código, desde &lt;!doctype html&gt; hasta &lt;/html&gt;, con el CSS y JavaScript dentro.
+- El archivo tiene que estar completo. Nada de &quot;el resto sigue igual&quot;.
+- No uses archivos de Internet. Nunca reproduzcas sonido.
+- No hagas preguntas. Termina de una vez.
+- Después del bloque, en hasta 5 líneas: qué hiciste y cómo abrirlo.
+</pre></div><div class="painel" id="p4-pessoa"><p class="quem">Sin IA: briefing para una persona o un equipo</p><button class="copiar" data-de="p4-pessoa-txt">Copiar</button><pre class="prompt" id="p4-pessoa-txt"># Prueba 4: Video explicativo animado
+
+**Tiempo sugerido:** 4 h · **Perfil:** motion designer o front-end (animación en HTML/CSS)
+
+Haz un video explicativo animado de 20 segundos: &quot;Cómo un agente de IA hace un trabajo por ti&quot;.
+
+Quien lo ve tiene 10 años. Sin voz ni narración. Tú eliges el estilo y la historia.
+
+Archivo principal: `explicativo.html`. Tiene que abrirse con dos clics, reproducirse solo en 1920 x 1080 y repetirse sin parar.
+
+## Esmero
+- Haz que se vea realmente bien: quien pase la vista tiene que detenerse y dejar de desplazarse.
+- Puedes usar lo que quieras: programa de diseño, código, banco de imágenes o ilustración propia.
+
+## Imágenes y video
+- Usa imágenes de donde quieras (tuyas, de un banco gratuito o generadas) y anota el origen de cada una en ENTREGA.md.
+- Modo rayos X (opcional para una persona, punto extra): la tecla X y un botón pequeño activan los contornos, con un color para cada imagen o video y otro para cada animación hecha con código, con una etiqueta pequeña en cada uno.
+
+## Cómo entregar
+- Puedes usar cualquier herramienta, incluso ninguna IA. Al final, indica cuáles usaste.
+- Entrega la carpeta con el archivo principal y un ENTREGA.md: qué hiciste, cómo abrirlo y de dónde salió cada imagen.
+- No publiques nada en Internet. Sin sonido.
+- Si surge una duda durante el trabajo: decide y anota la decisión en ENTREGA.md (la prueba también evalúa esto).
+
+## Cómo se evaluará
+Ficha de 10 puntos (avaliar/ficha.es.md): funciona, la parte difícil, esmero, honestidad y reglas.
+</pre></div></article>
+<article class="prova" id="prova-5"><div class="prova-top"><span class="num">5</span><div><h3>Editor de fotos</h3><p>Un editor de fotos en el navegador con aspecto de producto real.</p><p class="meta"><b>Archivo principal:</b> <code>editor.html</code> · <b>Tiempo sugerido (sin IA):</b> 6 h</p></div></div><div class="dificil"><b>La parte difícil:</b> Las ocho herramientas tienen que funcionar: abrir foto, capas, pincel, recorte, filtros, texto, deshacer y exportar PNG.</div><div class="abas"><button class="aba on" data-alvo="p5-agente">Para agente con carpeta</button><button class="aba" data-alvo="p5-chat">Para ventana de chat</button><button class="aba" data-alvo="p5-pessoa">Sin IA: briefing para una persona o un equipo</button></div><div class="painel on" id="p5-agente"><p class="quem">Para agente con carpeta (Claude Code, Codex, Cursor, Antigravity, Gemini CLI, OpenCode)</p><button class="copiar" data-de="p5-agente-txt">Copiar</button><pre class="prompt" id="p5-agente-txt"># Prueba 5: Editor de fotos
+
+Crea un editor de fotos que funcione en el navegador. Tiene que parecer un producto real.
+
+Debe incluir: abrir una foto, capas, pincel, recorte, filtros, texto, deshacer y exportar en PNG. El resto queda a tu criterio.
+
+Archivo principal: `editor.html`. Tiene que abrirse con dos clics.
+
+## Esmero
+- Haz que se vea realmente bien: quien pase la vista tiene que detenerse y dejar de desplazarse.
+- Usa las herramientas y habilidades que tengas (diseño, animación, generador de imágenes). Tú eliges.
+
+## Imágenes y video (opcional)
+- Si tienes conectado un generador de imágenes o de video (por ejemplo: Higgsfield, Agnes, Codex, un modelo local), úsalo: como máximo 8 imágenes y 1 video corto, guardados como archivos en tu carpeta.
+- Si no tienes, dibuja todo con código (SVG, CSS, canvas). La prueba vale lo mismo.
+- Modo rayos X: la tecla X y un botón pequeño activan los contornos, con un color para cada imagen o video generado y otro para cada animación hecha con código, con una etiqueta pequeña en cada uno.
+
+## Reglas
+- Trabaja por tu cuenta. No hagas preguntas. Termina de una vez.
+- Trabaja solo dentro de tu carpeta.
+- Guarda todo como archivo en la carpeta. No uses archivos de Internet.
+- No publiques, no hagas deploy ni subas nada. Nunca reproduzcas sonido.
+- Al final, escribe ENTREGA.md en la carpeta: qué hiciste, cómo abrirlo y cada imagen o video generado (archivo, qué muestra, qué herramienta lo creó).
+</pre></div><div class="painel" id="p5-chat"><p class="quem">Para ventana de chat (Agnes, ChatGPT, Gemini, Claude.ai, DeepSeek, Grok, Copilot)</p><button class="copiar" data-de="p5-chat-txt">Copiar</button><pre class="prompt" id="p5-chat-txt"># Prueba 5: Editor de fotos
+
+Crea un editor de fotos que funcione en el navegador. Tiene que parecer un producto real.
+
+Debe incluir: abrir una foto, capas, pincel, recorte, filtros, texto, deshacer y exportar en PNG. El resto queda a tu criterio.
+
+Archivo principal: `editor.html`. Tiene que abrirse con dos clics.
+
+## Esmero
+- Haz que se vea realmente bien: quien pase la vista tiene que detenerse y dejar de desplazarse.
+- Usa las herramientas y habilidades que tengas (diseño, animación, generador de imágenes). Tú eliges.
+
+## Imágenes (opcional)
+- Si esta interfaz genera imágenes, genera como máximo 4 e indica el nombre de archivo de cada una (img1.jpg, img2.jpg...), para que las guarde junto al HTML. En el HTML, usa &lt;img src=&quot;img1.jpg&quot;&gt; y muestra un dibujo en SVG o CSS en su lugar si el archivo no existe, para que la página nunca abra con una imagen rota.
+- Si no genera, dibuja todo en SVG o CSS dentro del HTML. La prueba vale lo mismo.
+- Modo rayos X: la tecla X y un botón pequeño activan los contornos, con un color para cada imagen y otro para cada animación hecha con código, con una etiqueta pequeña en cada uno.
+
+## Cómo entregar (estás en una ventana de chat, sin carpeta)
+- Responde con UN archivo HTML completo en un único bloque de código, desde &lt;!doctype html&gt; hasta &lt;/html&gt;, con el CSS y JavaScript dentro.
+- El archivo tiene que estar completo. Nada de &quot;el resto sigue igual&quot;.
+- No uses archivos de Internet. Nunca reproduzcas sonido.
+- No hagas preguntas. Termina de una vez.
+- Después del bloque, en hasta 5 líneas: qué hiciste y cómo abrirlo.
+</pre></div><div class="painel" id="p5-pessoa"><p class="quem">Sin IA: briefing para una persona o un equipo</p><button class="copiar" data-de="p5-pessoa-txt">Copiar</button><pre class="prompt" id="p5-pessoa-txt"># Prueba 5: Editor de fotos
+
+**Tiempo sugerido:** 6 h · **Perfil:** desarrollador front-end (JavaScript y canvas)
+
+Crea un editor de fotos que funcione en el navegador. Tiene que parecer un producto real.
+
+Debe incluir: abrir una foto, capas, pincel, recorte, filtros, texto, deshacer y exportar en PNG. El resto queda a tu criterio.
+
+Archivo principal: `editor.html`. Tiene que abrirse con dos clics.
+
+## Esmero
+- Haz que se vea realmente bien: quien pase la vista tiene que detenerse y dejar de desplazarse.
+- Puedes usar lo que quieras: programa de diseño, código, banco de imágenes o ilustración propia.
+
+## Imágenes y video
+- Usa imágenes de donde quieras (tuyas, de un banco gratuito o generadas) y anota el origen de cada una en ENTREGA.md.
+- Modo rayos X (opcional para una persona, punto extra): la tecla X y un botón pequeño activan los contornos, con un color para cada imagen o video y otro para cada animación hecha con código, con una etiqueta pequeña en cada uno.
+
+## Cómo entregar
+- Puedes usar cualquier herramienta, incluso ninguna IA. Al final, indica cuáles usaste.
+- Entrega la carpeta con el archivo principal y un ENTREGA.md: qué hiciste, cómo abrirlo y de dónde salió cada imagen.
+- No publiques nada en Internet. Sin sonido.
+- Si surge una duda durante el trabajo: decide y anota la decisión en ENTREGA.md (la prueba también evalúa esto).
+
+## Cómo se evaluará
+Ficha de 10 puntos (avaliar/ficha.es.md): funciona, la parte difícil, esmero, honestidad y reglas.
+</pre></div></article>
+<article class="prova" id="prova-6"><div class="prova-top"><span class="num">6</span><div><h3>Juego de conducción 3D</h3><p>Una ciudad pequeña, autos en las calles y una misión.</p><p class="meta"><b>Archivo principal:</b> <code>jogo.html</code> · <b>Tiempo sugerido (sin IA):</b> 6 h</p></div></div><div class="dificil"><b>La parte difícil:</b> Tiene que ser divertido durante los primeros 10 segundos, con pantalla de victoria y pantalla de derrota.</div><div class="abas"><button class="aba on" data-alvo="p6-agente">Para agente con carpeta</button><button class="aba" data-alvo="p6-chat">Para ventana de chat</button><button class="aba" data-alvo="p6-pessoa">Sin IA: briefing para una persona o un equipo</button></div><div class="painel on" id="p6-agente"><p class="quem">Para agente con carpeta (Claude Code, Codex, Cursor, Antigravity, Gemini CLI, OpenCode)</p><button class="copiar" data-de="p6-agente-txt">Copiar</button><pre class="prompt" id="p6-agente-txt"># Prueba 6: Juego de conducción 3D
+
+Crea un juego de conducción en 3D que funcione en el navegador.
+
+Una ciudad pequeña, otros autos en las calles y una misión con pantalla de victoria y pantalla de derrota. El resto queda a tu criterio. Tiene que ser divertido durante los primeros 10 segundos.
+
+Archivo principal: `jogo.html`. Tiene que abrirse con dos clics. Three.js por CDN está permitido.
+
+## Esmero
+- Haz que se vea realmente bien: quien pase la vista tiene que detenerse y dejar de desplazarse.
+- Usa las herramientas y habilidades que tengas (diseño, animación, generador de imágenes). Tú eliges.
+
+## Imágenes y video (opcional)
+- Si tienes conectado un generador de imágenes o de video (por ejemplo: Higgsfield, Agnes, Codex, un modelo local), úsalo: como máximo 8 imágenes y 1 video corto, guardados como archivos en tu carpeta.
+- Si no tienes, dibuja todo con código (SVG, CSS, canvas). La prueba vale lo mismo.
+- Modo rayos X: la tecla X y un botón pequeño activan los contornos, con un color para cada imagen o video generado y otro para cada animación hecha con código, con una etiqueta pequeña en cada uno.
+
+## Reglas
+- Trabaja por tu cuenta. No hagas preguntas. Termina de una vez.
+- Trabaja solo dentro de tu carpeta.
+- Guarda todo como archivo en la carpeta. No uses archivos de Internet (excepto Three.js por CDN, que está permitido).
+- No publiques, no hagas deploy ni subas nada. Nunca reproduzcas sonido.
+- Al final, escribe ENTREGA.md en la carpeta: qué hiciste, cómo abrirlo y cada imagen o video generado (archivo, qué muestra, qué herramienta lo creó).
+</pre></div><div class="painel" id="p6-chat"><p class="quem">Para ventana de chat (Agnes, ChatGPT, Gemini, Claude.ai, DeepSeek, Grok, Copilot)</p><button class="copiar" data-de="p6-chat-txt">Copiar</button><pre class="prompt" id="p6-chat-txt"># Prueba 6: Juego de conducción 3D
+
+Crea un juego de conducción en 3D que funcione en el navegador.
+
+Una ciudad pequeña, otros autos en las calles y una misión con pantalla de victoria y pantalla de derrota. El resto queda a tu criterio. Tiene que ser divertido durante los primeros 10 segundos.
+
+Archivo principal: `jogo.html`. Tiene que abrirse con dos clics. Three.js por CDN está permitido.
+
+## Esmero
+- Haz que se vea realmente bien: quien pase la vista tiene que detenerse y dejar de desplazarse.
+- Usa las herramientas y habilidades que tengas (diseño, animación, generador de imágenes). Tú eliges.
+
+## Imágenes (opcional)
+- Si esta interfaz genera imágenes, genera como máximo 4 e indica el nombre de archivo de cada una (img1.jpg, img2.jpg...), para que las guarde junto al HTML. En el HTML, usa &lt;img src=&quot;img1.jpg&quot;&gt; y muestra un dibujo en SVG o CSS en su lugar si el archivo no existe, para que la página nunca abra con una imagen rota.
+- Si no genera, dibuja todo en SVG o CSS dentro del HTML. La prueba vale lo mismo.
+- Modo rayos X: la tecla X y un botón pequeño activan los contornos, con un color para cada imagen y otro para cada animación hecha con código, con una etiqueta pequeña en cada uno.
+
+## Cómo entregar (estás en una ventana de chat, sin carpeta)
+- Responde con UN archivo HTML completo en un único bloque de código, desde &lt;!doctype html&gt; hasta &lt;/html&gt;, con el CSS y JavaScript dentro.
+- El archivo tiene que estar completo. Nada de &quot;el resto sigue igual&quot;.
+- No uses archivos de Internet (excepto Three.js por CDN, que está permitido). Nunca reproduzcas sonido.
+- No hagas preguntas. Termina de una vez.
+- Después del bloque, en hasta 5 líneas: qué hiciste y cómo abrirlo.
+</pre></div><div class="painel" id="p6-pessoa"><p class="quem">Sin IA: briefing para una persona o un equipo</p><button class="copiar" data-de="p6-pessoa-txt">Copiar</button><pre class="prompt" id="p6-pessoa-txt"># Prueba 6: Juego de conducción 3D
+
+**Tiempo sugerido:** 6 h · **Perfil:** desarrollador de juegos o front-end con 3D (Three.js)
+
+Crea un juego de conducción en 3D que funcione en el navegador.
+
+Una ciudad pequeña, otros autos en las calles y una misión con pantalla de victoria y pantalla de derrota. El resto queda a tu criterio. Tiene que ser divertido durante los primeros 10 segundos.
+
+Archivo principal: `jogo.html`. Tiene que abrirse con dos clics. Three.js por CDN está permitido.
+
+## Esmero
+- Haz que se vea realmente bien: quien pase la vista tiene que detenerse y dejar de desplazarse.
+- Puedes usar lo que quieras: programa de diseño, código, banco de imágenes o ilustración propia.
+
+## Imágenes y video
+- Usa imágenes de donde quieras (tuyas, de un banco gratuito o generadas) y anota el origen de cada una en ENTREGA.md.
+- Modo rayos X (opcional para una persona, punto extra): la tecla X y un botón pequeño activan los contornos, con un color para cada imagen o video y otro para cada animación hecha con código, con una etiqueta pequeña en cada uno.
+
+## Cómo entregar
+- Puedes usar cualquier herramienta, incluso ninguna IA. Al final, indica cuáles usaste.
+- Entrega la carpeta con el archivo principal y un ENTREGA.md: qué hiciste, cómo abrirlo y de dónde salió cada imagen.
+- No publiques nada en Internet. Sin sonido.
+- Si surge una duda durante el trabajo: decide y anota la decisión en ENTREGA.md (la prueba también evalúa esto).
+
+## Cómo se evaluará
+Ficha de 10 puntos (avaliar/ficha.es.md): funciona, la parte difícil, esmero, honestidad y reglas.
+</pre></div></article>
+<article class="prova" id="prova-7"><div class="prova-top"><span class="num">7</span><div><h3>Central de agentes</h3><p>Un equipo de 4 agentes (planificador, investigador, redactor y revisor) trabajando en vivo mientras lo observas.</p><p class="meta"><b>Archivo principal:</b> <code>central.html</code> · <b>Tiempo sugerido (sin IA):</b> 8 h</p></div></div><div class="dificil"><b>La parte difícil:</b> Pausar, detener, gestionar fallos y consultar ejecuciones anteriores: todo tiene que funcionar, y cada agente debe estar detrás de una única función que se pueda reemplazar.</div><div class="abas"><button class="aba on" data-alvo="p7-agente">Para agente con carpeta</button><button class="aba" data-alvo="p7-chat">Para ventana de chat</button><button class="aba" data-alvo="p7-pessoa">Sin IA: briefing para una persona o un equipo</button></div><div class="painel on" id="p7-agente"><p class="quem">Para agente con carpeta (Claude Code, Codex, Cursor, Antigravity, Gemini CLI, OpenCode)</p><button class="copiar" data-de="p7-agente-txt">Copiar</button><pre class="prompt" id="p7-agente-txt"># Prueba 7: Central de agentes
+
+Crea un centro de control para un pequeño equipo de agentes de IA: un planificador, un investigador, un redactor y un revisor.
+
+Escribo un objetivo y veo al equipo planificar, trabajar y revisar en vivo. Puedo pausar o detener una ejecución. Al final recibo un informe claro y puedo abrir ejecuciones anteriores. Si un agente falla, veo el motivo y la ejecución continúa.
+
+En esta versión, cada agente es un simulador: espera unos segundos y devuelve un texto de ejemplo. Coloca ese simulador detrás de una única función, para poder reemplazarlo por un modelo real más adelante. No uses una clave de API.
+
+Archivo principal: `central.html`, que se abre con dos clics. Si necesitas un servidor, debe iniciarse con un solo comando, escrito en ENTREGA.md. Pruébalo antes de decir que terminaste.
+
+## Esmero
+- Haz que se vea realmente bien: quien pase la vista tiene que detenerse y dejar de desplazarse.
+- Usa las herramientas y habilidades que tengas (diseño, animación, generador de imágenes). Tú eliges.
+
+## Imágenes y video (opcional)
+- Si tienes conectado un generador de imágenes o de video (por ejemplo: Higgsfield, Agnes, Codex, un modelo local), úsalo: como máximo 8 imágenes y 1 video corto, guardados como archivos en tu carpeta.
+- Si no tienes, dibuja todo con código (SVG, CSS, canvas). La prueba vale lo mismo.
+- Modo rayos X: la tecla X y un botón pequeño activan los contornos, con un color para cada imagen o video generado y otro para cada animación hecha con código, con una etiqueta pequeña en cada uno.
+
+## Reglas
+- Trabaja por tu cuenta. No hagas preguntas. Termina de una vez.
+- Trabaja solo dentro de tu carpeta.
+- Guarda todo como archivo en la carpeta. No uses archivos de Internet.
+- No publiques, no hagas deploy ni subas nada. Nunca reproduzcas sonido.
+- Al final, escribe ENTREGA.md en la carpeta: qué hiciste, cómo abrirlo y cada imagen o video generado (archivo, qué muestra, qué herramienta lo creó).
+</pre></div><div class="painel" id="p7-chat"><p class="quem">Para ventana de chat (Agnes, ChatGPT, Gemini, Claude.ai, DeepSeek, Grok, Copilot)</p><button class="copiar" data-de="p7-chat-txt">Copiar</button><pre class="prompt" id="p7-chat-txt"># Prueba 7: Central de agentes
+
+Crea un centro de control para un pequeño equipo de agentes de IA: un planificador, un investigador, un redactor y un revisor.
+
+Escribo un objetivo y veo al equipo planificar, trabajar y revisar en vivo. Puedo pausar o detener una ejecución. Al final recibo un informe claro y puedo abrir ejecuciones anteriores. Si un agente falla, veo el motivo y la ejecución continúa.
+
+En esta versión, cada agente es un simulador: espera unos segundos y devuelve un texto de ejemplo. Coloca ese simulador detrás de una única función, para poder reemplazarlo por un modelo real más adelante. No uses una clave de API.
+
+Archivo principal: `central.html`, que se abre con dos clics. Todo funciona en el navegador; las ejecuciones anteriores quedan guardadas en el propio navegador.
+
+## Esmero
+- Haz que se vea realmente bien: quien pase la vista tiene que detenerse y dejar de desplazarse.
+- Usa las herramientas y habilidades que tengas (diseño, animación, generador de imágenes). Tú eliges.
+
+## Imágenes (opcional)
+- Si esta interfaz genera imágenes, genera como máximo 4 e indica el nombre de archivo de cada una (img1.jpg, img2.jpg...), para que las guarde junto al HTML. En el HTML, usa &lt;img src=&quot;img1.jpg&quot;&gt; y muestra un dibujo en SVG o CSS en su lugar si el archivo no existe, para que la página nunca abra con una imagen rota.
+- Si no genera, dibuja todo en SVG o CSS dentro del HTML. La prueba vale lo mismo.
+- Modo rayos X: la tecla X y un botón pequeño activan los contornos, con un color para cada imagen y otro para cada animación hecha con código, con una etiqueta pequeña en cada uno.
+
+## Cómo entregar (estás en una ventana de chat, sin carpeta)
+- Responde con UN archivo HTML completo en un único bloque de código, desde &lt;!doctype html&gt; hasta &lt;/html&gt;, con el CSS y JavaScript dentro.
+- El archivo tiene que estar completo. Nada de &quot;el resto sigue igual&quot;.
+- No uses archivos de Internet. Nunca reproduzcas sonido.
+- No hagas preguntas. Termina de una vez.
+- Después del bloque, en hasta 5 líneas: qué hiciste y cómo abrirlo.
+</pre></div><div class="painel" id="p7-pessoa"><p class="quem">Sin IA: briefing para una persona o un equipo</p><button class="copiar" data-de="p7-pessoa-txt">Copiar</button><pre class="prompt" id="p7-pessoa-txt"># Prueba 7: Central de agentes
+
+**Tiempo sugerido:** 8 h · **Perfil:** desarrollador web (JavaScript); la parte de agentes es simulada, no hace falta saber IA
+
+Crea un centro de control para un pequeño equipo de agentes de IA: un planificador, un investigador, un redactor y un revisor.
+
+Escribo un objetivo y veo al equipo planificar, trabajar y revisar en vivo. Puedo pausar o detener una ejecución. Al final recibo un informe claro y puedo abrir ejecuciones anteriores. Si un agente falla, veo el motivo y la ejecución continúa.
+
+En esta versión, cada agente es un simulador: espera unos segundos y devuelve un texto de ejemplo. Coloca ese simulador detrás de una única función, para poder reemplazarlo por un modelo real más adelante. No uses una clave de API.
+
+Archivo principal: `central.html`, que se abre con dos clics. Si necesitas un servidor, debe iniciarse con un solo comando, escrito en ENTREGA.md. Pruébalo antes de decir que terminaste.
+
+## Esmero
+- Haz que se vea realmente bien: quien pase la vista tiene que detenerse y dejar de desplazarse.
+- Puedes usar lo que quieras: programa de diseño, código, banco de imágenes o ilustración propia.
+
+## Imágenes y video
+- Usa imágenes de donde quieras (tuyas, de un banco gratuito o generadas) y anota el origen de cada una en ENTREGA.md.
+- Modo rayos X (opcional para una persona, punto extra): la tecla X y un botón pequeño activan los contornos, con un color para cada imagen o video y otro para cada animación hecha con código, con una etiqueta pequeña en cada uno.
+
+## Cómo entregar
+- Puedes usar cualquier herramienta, incluso ninguna IA. Al final, indica cuáles usaste.
+- Entrega la carpeta con el archivo principal y un ENTREGA.md: qué hiciste, cómo abrirlo y de dónde salió cada imagen.
+- No publiques nada en Internet. Sin sonido.
+- Si surge una duda durante el trabajo: decide y anota la decisión en ENTREGA.md (la prueba también evalúa esto).
+
+## Cómo se evaluará
+Ficha de 10 puntos (avaliar/ficha.es.md): funciona, la parte difícil, esmero, honestidad y reglas.
+</pre></div></article>
+<!--/PROVAS-->
+</div></section>
+
+<section id="guia"><div class="wrap">
+  <span class="chip">Cómo usarlas · paso a paso</span>
+  <h2>Desde cero hasta la puntuación</h2>
+  <p class="sub">Elige el camino según tu herramienta. Los pasos 1 y 5 sirven para todos.</p>
+
+  <div class="step"><div class="b">1</div><div>
+    <h3>Descarga el kit</h3>
+    <p>Para copiar los prompts basta con esta página. Para preparar carpetas y evaluar: Python 3 y, de preferencia, Chrome o Chromium (el evaluador abre la página oculta para leer los números que calcula el JavaScript). ¿Sin git? Usa el botón "Code › Download ZIP" en GitHub y descomprímelo. Los nombres de archivo (<code>apresentacao.html</code>, <code>painel.html</code>) y las columnas del CSV quedan en portugués a propósito: el evaluador los busca.</p>
+<pre><span class="k">git clone</span> <span class="s">https://github.com/inematds/sete-provas-ia</span>
+<span class="k">cd</span> sete-provas-ia</pre>
+  </div></div>
+
+  <div class="step"><div class="b">2</div><div>
+    <h3>Agente con carpeta: prepara una carpeta por participante</h3>
+    <p>El script copia el prompt (PROMPT.md) y los datos que necesita la prueba. Formato: <code>preparar.py &lt;prueba&gt; &lt;carpeta&gt; [agente|pessoa] [pt|en|es]</code>; escribe las palabras <code>agente</code> y <code>pessoa</code> tal cual (están en portugués) y agrega <code>es</code> para recibir el prompt en español. En Windows, usa <code>py</code> en lugar de <code>python3</code>. Después, abre el agente dentro de la carpeta y pega el contenido de PROMPT.md.</p>
+<pre><span class="k">python3 kit/preparar.py</span> 2 corrida/claude/02 agente es    <span class="c"># prueba 2 para Claude Code</span>
+<span class="k">python3 kit/preparar.py</span> 2 corrida/codex/02 agente es     <span class="c"># la misma prueba para Codex</span>
+<span class="k">cd</span> corrida/claude/02 <span class="k">&amp;&amp; claude</span>              <span class="c"># pega el contenido de PROMPT.md; después vuelve con cd ../../..</span></pre>
+  </div></div>
+
+  <div class="step"><div class="b">3</div><div>
+    <h3>Ventana de chat (Agnes, ChatGPT, Gemini…)</h3>
+    <p>Copia la pestaña «Para ventana de chat» de la prueba y pégala en una conversación nueva. La respuesta será un HTML completo: copia el bloque en un archivo con el nombre indicado (por ejemplo, <code>apresentacao.html</code>) y ábrelo con dos clics.</p>
+    <p><b>Sin terminal (Windows o Mac):</b> abre el Bloc de notas (en Mac, TextEdit con "Formato › Convertir a texto sin formato"), pega el HTML, elige "Guardar como", selecciona "Todos los archivos", codificación UTF-8, y guárdalo como <code>apresentacao.html</code>. Haz doble clic en el archivo y se abre en el navegador.</p>
+<pre><span class="c"># con terminal (Linux/Mac), lo mismo en dos líneas:</span>
+<span class="k">mkdir -p</span> corrida/agnes/03 <span class="k">&amp;&amp; nano</span> corrida/agnes/03/apresentacao.html</pre>
+    <div class="nota"><b>En Agnes:</b> si pides imágenes durante la conversación, redacta el prompt de imagen en inglés y usa poco texto dentro de ella; los pedidos de imágenes en un idioma que no sea inglés suelen bloquearse por el filtro. Si la respuesta queda cortada, pide «continúa exactamente desde donde te quedaste» y une las partes antes de guardar. El formato chat se probó con Claude Sonnet; todavía no se ha evaluado en Agnes ni en los otros chats.</div>
+  </div></div>
+
+  <div class="step"><div class="b">4</div><div>
+    <h3>Sin IA: entrega el briefing</h3>
+    <p>Prepara la carpeta en formato «persona» y entrégasela a quien hará el trabajo. El briefing incluye el tiempo sugerido y explica cómo se evaluará.</p>
+<pre><span class="k">python3 kit/preparar.py</span> 3 corrida/maria/03 pessoa es   <span class="c"># PROMPT.md + notas.txt</span></pre>
+  </div></div>
+
+  <div class="step"><div class="b">5</div><div>
+    <h3>Revisa y asigna la puntuación</h3>
+    <p>El evaluador muestra OK, AVISO o FALHA (falla) en cada elemento medible; sus mensajes están en portugués. Sin Chrome o Chromium lee solo el código, y los números que la página calcula sola pasan a AVISO (revísalos en pantalla). Después, abre el archivo, úsalo durante 5 minutos y completa la ficha.</p>
+<pre><span class="k">python3 kit/avaliar.py</span> 2 corrida/claude/02            <span class="c"># entrega del agente</span>
+<span class="k">python3 kit/avaliar.py</span> 3 corrida/agnes/03 <span class="s">--chat</span>      <span class="c"># entrega del chat (sin ENTREGA.md)</span></pre>
+  </div></div>
+</div></section>
+
+<section id="avaliar"><div class="wrap">
+  <span class="chip">Evaluar sin IA</span>
+  <h2>Las respuestas correctas se pueden revisar a mano</h2>
+  <p class="sub">Los datos se generan con un script y una semilla fija, así que la respuesta correcta siempre es la misma. Puedes comprobarla con una calculadora.</p>
+  <div class="grid g2">
+    <div class="card"><h3>📊 Prueba 2: panel</h3><p>El <code>vendas.csv</code> tiene 1.470 filas con cinco problemas intencionales: nombre de tienda escrito de otra forma (69), precio con R$ o coma (82), fecha fuera del formato estándar (125), fila duplicada (34) y fila de prueba (6). Después de limpiar: 1.430 pedidos y R$ 50.162,10 en ventas. En la versión para chat (<code>vendas-mini.csv</code>, 14 días): 224 pedidos y R$ 7.831,00.</p>
+<pre><span class="k">python3 kit/limpar.py</span> dados/vendas.csv   <span class="c"># limpieza de referencia, sin IA</span></pre></div>
+    <div class="card"><h3>🧾 Prueba 3: presentación</h3><p>En las anotaciones, el precio correcto es R$ 89 por kg (se cambió el 95); el dato «3 oficinas, 140 personas» es incorrecto (120 + 15 + 22 = 157) y no se pueden incluir los R$ 130 de la competencia. Cifras válidas: 72 personas toman café, 36 kg al mes, R$ 3.204 al mes.</p>
+<pre><span class="k">cat</span> dados/gabarito.json            <span class="c"># todas las cifras correctas y las prohibidas</span></pre></div>
+  </div>
+  <div class="tabela" style="margin-top:22px">
+  <table class="t">
+    <tr><th>Criterio</th><th>0</th><th>1</th><th>2</th></tr>
+    <tr><td>Funciona</td><td>no abre o se abre con errores</td><td>falta parte de lo pedido</td><td>se abre con dos clics y funciona por completo</td></tr>
+    <tr><td>Parte difícil</td><td>la ignoró</td><td>lo intentó, pero se equivocó</td><td>lo resolvió</td></tr>
+    <tr><td>Acabado</td><td>parece un borrador</td><td>correcto, pero sin gracia</td><td>dan ganas de detenerse a mirarlo</td></tr>
+    <tr><td>Honestidad</td><td>inventó datos o lo que hizo</td><td>una pequeña exageración</td><td>el relato coincide con lo que existe (ENTREGA.md; en el chat, el resumen después del HTML)</td></tr>
+    <tr><td>Reglas</td><td>incumplió 2 o más</td><td>incumplió 1</td><td>cumplió todas</td></tr>
+  </table>
+  </div>
+  <p class="mut" style="margin-top:12px">Ficha completa, con la parte difícil de cada prueba: <a href="https://github.com/inematds/sete-provas-ia/blob/main/avaliar/ficha.es.md" target="_blank" rel="noopener">avaliar/ficha.es.md</a>.</p>
+</div></section>
+
+<section id="exemplos"><div class="wrap">
+  <span class="chip">Prueba real</span>
+  <h2>Resultados del modo chat</h2>
+  <p class="sub">Las pruebas 2 y 3 en formato «chat», realizadas con Claude Sonnet por suscripción, en una conversación sin herramientas y revisadas con el evaluador.</p>
+<!--EXEMPLOS-->
+  <div class="ex">
+    <figure><img src="../assets/ex-02.jpg" alt="painel.html" loading="lazy"><figcaption>Prueba 2 (panel), forma chat: total R$ 7.831,00 y 224 pedidos, iguales a las respuestas; muestra cuántas filas corrigió de cada tipo y abre las filas al hacer clic. Evaluador: 8/8. Defecto que la ficha detecta: las barras de los gráficos no se llenan.</figcaption></figure>
+    <figure><img src="../assets/ex-03.jpg" alt="apresentacao.html" loading="lazy"><figcaption>Prueba 3 (presentación), forma chat: usó R$ 89, evitó R$ 95, R$ 130 y 140, y marcó sus cálculos (72 personas, 36 kg, R$ 3.204). Evaluador: 8/9; el aviso es que la suma correcta (157) no aparece en pantalla: la trampa de la cuenta quedó resuelta a medias (1 de 2 en "La parte difícil" de la ficha).</figcaption></figure>
+  </div>
+  <p class="mut" style="margin-top:14px"><a href="https://github.com/inematds/sete-provas-ia/tree/main/exemplos/chat-sonnet" target="_blank" rel="noopener">Ver los archivos entregados →</a></p>
+</div></section>
+
+<footer>
+  <div class="wrap">
+    <div class="pill">7 pruebas</div><div class="pill">3 formatos</div><div class="pill">Python 3 + Chrome opcional</div>
+    <p style="margin-top:18px">sete-provas-ia · kit abierto y gratuito ·
+      <a href="https://github.com/inematds/sete-provas-ia">inematds/sete-provas-ia</a> ·
+      <a href="https://inema.club">INEMA.CLUB</a></p>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var KEY='sete-provas-ia-theme';
+    var b=document.body, t=document.getElementById('themeToggle');
+    try{ if(localStorage.getItem(KEY)==='light'){ b.classList.add('light'); t.textContent='☀️'; } }catch(e){}
+    t.addEventListener('click',function(){
+      var light=b.classList.toggle('light');
+      t.textContent=light?'☀️':'🌙';
+      try{ localStorage.setItem(KEY, light?'light':'dark'); }catch(e){}
+    });
+    document.querySelectorAll('.prova').forEach(function(card){
+      card.querySelectorAll('.aba').forEach(function(aba){
+        aba.addEventListener('click',function(){
+          card.querySelectorAll('.aba').forEach(function(a){a.classList.toggle('on',a===aba)});
+          card.querySelectorAll('.painel').forEach(function(p){p.classList.toggle('on',p.id===aba.dataset.alvo)});
+        });
+      });
+    });
+    document.querySelectorAll('.copiar').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        var txt=document.getElementById(btn.dataset.de).textContent, antes=btn.textContent;
+        var ok=function(){btn.textContent='✓';setTimeout(function(){btn.textContent=antes},1400)};
+        if(navigator.clipboard){navigator.clipboard.writeText(txt).then(ok)}
+        else{var a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();ok()}
+      });
+    });
+  })();
+</script>
+</body>
+</html>

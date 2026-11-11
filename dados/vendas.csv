@@ -1,0 +1,1471 @@
+pedido,data,loja,produto,qtd,preco,pagamento
+50053,2026-08-06,Beira-Rio,Gelado,4,13.50,cartao
+50877,2026-09-26,Rodoviária,Gelado,2,13.50,pix
+50619,2026-09-10,Beira-Rio,Bolo de fubá,3,9.50,cartao
+50443,2026-08-30,Beira-Rio,Cappuccino,2,11.00,cartao
+50786,2026-09-20,Beira-Rio,Latte,2,12.00,cartao
+51400,2026-10-29,Alto da Serra,Café em grão 250g,4,39.90,cartao
+50082,2026-08-08,Centro,Café em grão 250g,1,39.90,pix
+50762,2026-09-19,Centro,Gelado,4,13.50,cartao
+50371,2026-08-26,Centro,Pão de queijo,4,7.00,cartao
+50225,2026-08-17,Centro,Cappuccino,2,11.00,pix
+50193,2026-08-15,Centro,Espresso,1,6.50,pix
+50042,2026-08-05,Rodoviária,Bolo de fubá,4,9.50,cartao
+51077,2026-10-09,Beira-Rio,Coado,2,8.00,pix
+51010,2026-10-04,alto da serra ,Cappuccino,3,11.00,cartao
+50286,2026-08-21,Centro,Bolo de fubá,4,9.50,cartao
+50494,2026-09-02,Rodoviária,Latte,3,12.00,pix
+50478,2026-09-01,Alto da Serra,Coado,3,8.00,pix
+50948,2026-10-01,Centro,Espresso,1,6.50,pix
+51131,12 out 2026,CENTRO,Bolo de fubá,4,9.50,dinheiro
+51064,2026-10-08,Beira-Rio,Coado,3,8.00,pix
+51168,2026-10-14,Alto da Serra,Gelado,4,13.50,pix
+51309,2026-10-24,Centro,Bolo de fubá,4,R$ 9.50,pix
+50540,2026-09-05,Rodoviária,Café em grão 250g,1,39.90,cartao
+50039,2026-08-05,Beira-Rio,Coado,2,8.00,pix
+50548,2026-09-06,Centro,Coado,2,8.00,pix
+50537,2026-09-05,Rodoviária,Espresso,1,6.50,cartao
+50416,29/08/2026,Centro,Gelado,4,13.50,pix
+50899,2026-09-27,Rodoviária,Espresso,3,6.50,pix
+51306,2026-10-24,Centro,Bolo de fubá,4,9.50,pix
+50479,2026-09-01,Alto da Serra,Latte,1,12.00,pix
+51370,2026-10-27,Rodoviária,Coado,1,8.00,cartao
+50772,19/09/2026,Rodoviária,Gelado,4,13.50,pix
+51041,2026-10-06,Alto da Serra,Bolo de fubá,1,9.50,pix
+50177,2026-08-14,Centro,Gelado,4,13.50,pix
+50130,2026-08-10,Alto da Serra,Gelado,4,13.50,dinheiro
+50070,2026-08-07,Beira-Rio,Café em grão 250g,4,39.90,pix
+51244,19/10/2026,Rodoviária,Latte,1,12.00,cartao
+50558,06/09/2026,Beira-Rio,Café em grão 250g,3,39.90,pix
+51273,2026-10-21,Alto da Serra,Cappuccino,3,11.00,pix
+50381,2026-08-26,Rodoviária,Bolo de fubá,3,9.50,pix
+50779,2026-09-20,Centro,Bolo de fubá,3,9.50,pix
+51169,2026-10-14,Alto da Serra,Latte,3,12.00,cartao
+50188,2026-08-14,Alto da Serra,Coado,1,8.00,pix
+50390,2026-08-27,Beira-Rio,Bolo de fubá,1,R$ 9.50,pix
+50649,2026-09-12, Beira-Rio,Latte,4,12.00,cartao
+51357,2026-10-26,Rodoviária,Coado,4,8.00,cartao
+50980,2026-10-03,Beira-Rio,Pão de queijo,4,7.00,dinheiro
+51353,2026-10-26,Beira-Rio,Cappuccino,2,11.00,pix
+51268,21/10/2026,Beira-Rio,Gelado,1,R$ 13.50,pix
+50187,2026-08-14,Alto da Serra,Gelado,3,13.50,cartao
+50751,2026-09-18,Rodoviária,Coado,1,8.00,dinheiro
+51251,2026-10-20,Centro,Coado,3,8.00,pix
+50700,2026-09-15,Centro,Cappuccino,4,11.00,pix
+51200,2026-10-17,Centro,Cappuccino,1,11.00,pix
+50119,2026-08-10,Centro,Cappuccino,3,11.00,pix
+51205,2026-10-17,Beira-Rio,Latte,3,12.00,pix
+50974,2026-10-03,Centro,Gelado,1,13.50,pix
+50311,2026-08-22,Beira-Rio,Café em grão 250g,2,39.90,cartao
+50751,2026-09-18,Rodoviária,Coado,1,8.00,dinheiro
+50599,2026-09-08,Alto da Serra,Café em grão 250g,1,39.90,cartao
+50531,2026-09-05,Beira-Rio,Pão de queijo,3,R$ 7.00,pix
+50640,2026-09-12,Centro,Espresso,4,6.50,pix
+50774,2026-09-19,Rodoviária,Pão de queijo,2,7.00,cartao
+50020,2026-08-04,Beira-Rio,Latte,2,12.00,pix
+50592,2026-09-08,Rodoviária,Cappuccino,1,11.00,cartao
+51389,2026-10-29,Centro,Gelado,2,13.50,dinheiro
+50277,2026-08-20,Alto da Serra,Café em grão 250g,1,39.90,pix
+51006,2026-10-04, Alto da Serra,Latte,1,12.00,pix
+51410,2026-10-30,Alto da Serra,Bolo de fubá,1,9.50,pix
+50321,2026-08-22,Alto da Serra,Cappuccino,1,11.00,cartao
+50970,2026-10-02,Alto da Serra,Cappuccino,1,11.00,cartao
+51053,2026-10-07,Rodoviária,Cappuccino,1,11.00,cartao
+51312,2026-10-24,Beira-Rio,Coado,1,8.00,pix
+50753,2026-09-18, Rodoviária,Gelado,1,13.50,cartao
+50447,2026-08-30,Rodoviária,Cappuccino,4,11.00,pix
+50235,2026-08-17,Rodoviária,Latte,3,12.00,pix
+51177,2026-10-15,Rodoviária,Latte,1,12.00,cartao
+51231,2026-10-18,Alto da Serra,Gelado,3,13.50,cartao
+50952,2026-10-01,Beira-Rio,Gelado,2,13.50,cartao
+50636,2026-09-11,Rodoviária,Pão de queijo,4,7.00,pix
+51120,2026-10-11,Rodoviária,Espresso,1,6.50,pix
+50618,2026-09-10,Beira-Rio,Café em grão 250g,1,39.90,pix
+50207,2026-08-15,Alto da Serra,Latte,1,12.00,pix
+50114,2026-08-09,Alto da Serra,Gelado,4,13.50,dinheiro
+50837,2026-09-24,Centro,Café em grão 250g,4,"39,90",cartao
+51416,2026-10-31,Centro,Bolo de fubá,3,9.50,pix
+50146,2026-08-11,Alto da Serra,Pão de queijo,2,7.00,cartao
+50280,2026-08-21,Centro,Espresso,3,R$ 6.50,pix
+51081,2026-10-09,Rodoviária,Gelado,3,13.50,pix
+50201,2026-08-15,Rodoviária,Cappuccino,3,11.00,pix
+50500,2026-09-03,Centro,Cappuccino,1,"11,00",dinheiro
+50986,2026-10-03,Rodoviária,Latte,3,12.00,cartao
+51061,2026-10-08,Centro,Café em grão 250g,3,39.90,pix
+50525,2026-09-05,Centro,Coado,1,8.00,pix
+50927,2026-09-29,Alto da Serra,Espresso,1,6.50,cartao
+50021,2026-08-04,Beira-Rio,Cappuccino,4,R$ 11.00,dinheiro
+50169,2026-08-13,Rodoviária,Cappuccino,2,11.00,cartao
+51227,2026-10-18,Rodoviária,Latte,3,12.00,cartao
+50543,2026-09-05,ALTO DA SERRA,Bolo de fubá,3,9.50,cartao
+50464,2026-08-31,Rodoviária,Cappuccino,3,11.00,cartao
+50572,2026-09-07,Centro,Cappuccino,4,11.00,cartao
+50026,2026-08-04,RODOVIÁRIA,Latte,3,12.00,cartao
+50242,2026-08-18,Centro,Bolo de fubá,1,9.50,pix
+50698,2026-09-14,Alto da Serra,Gelado,3,13.50,cartao
+50646,2026-09-12,Beira-Rio,Latte,3,"12,00",pix
+50091,2026-08-08,Rodoviária,Gelado,2,13.50,dinheiro
+50139,2026-08-11,Rodoviária,Café em grão 250g,1,39.90,cartao
+51250,2026-10-20,Centro,Cappuccino,3,11.00,cartao
+51109,2026-10-11,Centro,Pão de queijo,1,7.00,pix
+51148,2026-10-13,Beira-Rio,Café em grão 250g,2,R$ 39.90,pix
+51313,2026-10-24,Beira-Rio,Café em grão 250g,1,39.90,dinheiro
+50943,2026-09-30,Alto da Serra,Coado,3,8.00,cartao
+51004,2026-10-04,Rodoviária,Coado,1,R$ 8.00,dinheiro
+51082,9 out 2026,Rodoviária,Coado,3,8.00,pix
+50305,22 ago 2026,Centro,Café em grão 250g,4,39.90,pix
+50304,2026-08-22,Centro,Coado,4,8.00,pix
+50058,2026-08-06,Rodoviária,Espresso,1,R$ 6.50,pix
+50428,2026-08-29,Rodoviária,Bolo de fubá,1,9.50,dinheiro
+50190,2026-08-15,Centro,Café em grão 250g,2,39.90,dinheiro
+50951,2026-10-01,Beira-Rio,Latte,2,12.00,pix
+50135,2026-08-11,Centro,Pão de queijo,1,7.00,cartao
+50773,2026-09-19,Rodoviária,Bolo de fubá,1,9.50,pix
+50323,2026-08-23,Centro,Bolo de fubá,3,R$ 9.50,pix
+51135,2026-10-12,Beira-Rio,Coado,2,8.00,pix
+50342,2026-08-24,Centro,Pão de queijo,3,7.00,pix
+51179,2026-10-15,Alto da Serra,Pão de queijo,3,7.00,cartao
+51228,2026-10-18,Rodoviária,Café em grão 250g,2,39.90,dinheiro
+51359,2026-10-26,Alto da Serra,Coado,3,8.00,pix
+51297,2026-10-23,Beira-Rio,Espresso,4,6.50,pix
+51072,2026-10-09,Centro,Café em grão 250g,2,39.90,dinheiro
+50350,2026-08-24,Rodoviária,Cappuccino,3,11.00,pix
+50154,2026-08-12,Beira-Rio,Pão de queijo,1,7.00,dinheiro
+50079,2026-08-08,Centro,Espresso,3,6.50,cartao
+50730,2026-09-17,Centro,Café em grão 250g,3,39.90,pix
+50383,2026-08-26,Alto da Serra,Gelado,4,13.50,cartao
+51310,2026-10-24,Centro,Pão de queijo,3,7.00,pix
+51336,2026-10-25,Beira-Rio,Pão de queijo,4,7.00,cartao
+50625,2026-09-10,Alto da Serra,Bolo de fubá,2,9.50,cartao
+50971,2026-10-02,Alto da Serra,Pão de queijo,2,7.00,pix
+50045,2026-08-05,Alto da Serra,Bolo de fubá,2,9.50,dinheiro
+50637,2026-09-11,alto da serra ,Latte,2,12.00,pix
+50668,2026-09-13,Beira-Rio,Bolo de fubá,3,9.50,dinheiro
+50975,2026-10-03,Centro,Coado,4,8.00,pix
+51311,2026-10-24,Centro,Espresso,4,6.50,pix
+50129,10/08/2026,Alto da Serra,Bolo de fubá,2,9.50,cartao
+50024,2026-08-04,Rodoviária,Gelado,1,13.50,pix
+50962,2026-10-02,Centro,Gelado,3,13.50,dinheiro
+50681,2026-09-13,Alto da Serra,Café em grão 250g,3,39.90,pix
+50141,2026-08-11,Rodoviária,Gelado,4,13.50,pix
+51049,2026-10-07,Beira-Rio,Pão de queijo,2,7.00,pix
+50237,2026-08-17,Alto da Serra,Pão de queijo,1,7.00,pix
+51402,2026-10-30,Centro,Cappuccino,2,11.00,pix
+51197,2026-10-17,Centro,Latte,2,12.00,pix
+50228,2026-08-17,Centro,Coado,1,8.00,cartao
+50359,2026-08-25,Centro,Pão de queijo,1,7.00,cartao
+50229,2026-08-17,Beira-Rio,Café em grão 250g,3,39.90,dinheiro
+51147,2026-10-13,Beira-Rio,Espresso,4,6.50,pix
+50913,28/09/2026,Rodoviária,Café em grão 250g,1,39.90,pix
+50475,2026-09-01,Beira-Rio,Latte,1,12.00,dinheiro
+50709,2026-09-15,Rodoviária,Cappuccino,3,11.00,pix
+51299,2026-10-23,Beira-Rio,Cappuccino,1,11.00,cartao
+51025,2026-10-05,Alto da Serra,Café em grão 250g,2,39.90,pix
+51387,2026-10-28,Alto da Serra,Cappuccino,4,11.00,cartao
+50003,2026-08-03,Centro,Latte,4,12.00,pix
+50854,2026-09-25,Centro,Espresso,3,6.50,dinheiro
+50357,2026-08-25,Centro,Cappuccino,2,11.00,pix
+50199,2026-08-15,Beira-Rio,Pão de queijo,2,7.00,cartao
+51201,17/10/2026,Centro,Bolo de fubá,4,9.50,cartao
+50223,16/08/2026,Alto da Serra,Espresso,1,6.50,cartao
+50792,2026-09-20,Rodoviária,Latte,2,12.00,cartao
+51375,2026-10-27,Alto da Serra,Coado,1,"8,00",cartao
+50434,2026-08-30,Centro,Latte,1,12.00,cartao
+50432,2026-08-29,Alto da Serra,Bolo de fubá,3,9.50,pix
+50958,2026-10-01,Alto da Serra,Gelado,1,13.50,cartao
+50075,2026-08-07,Alto da Serra,Espresso,3,6.50,cartao
+50442,2026-08-30,Beira Rio,Gelado,2,13.50,dinheiro
+51011,2026-10-05,Centro,Gelado,3,13.50,pix
+51094,2026-10-10,Centro,Café em grão 250g,3,39.90,pix
+51124,11 out 2026,Alto da Serra,Pão de queijo,4,7.00,cartao
+50713,2026-09-16,Centro,Pão de queijo,3,"7,00",cartao
+50995,2026-10-04,Centro,Bolo de fubá,4,9.50,pix
+50617,10/09/2026,Centro,Espresso,2,6.50,pix
+50429,2026-08-29,Rodoviária,Bolo de fubá,2,9.50,cartao
+50704,2026-09-15,Centro,Bolo de fubá,2,9.50,dinheiro
+50320,22 ago 2026,Alto da Serra,Gelado,2,13.50,pix
+90002,2026-08-06,Centro,TESTE - NAO CONTAR,99,1.00,pix
+50532,2026-09-05, Beira-Rio,Gelado,3,13.50,pix
+50649,2026-09-12, Beira-Rio,Latte,4,12.00,cartao
+50069,2026-08-07,Beira-Rio,Gelado,4,13.50,dinheiro
+50476,2026-09-01,Rodoviária,Espresso,2,6.50,pix
+50642,2026-09-12,Centro,Cappuccino,4,11.00,pix
+50146,2026-08-11,Alto da Serra,Pão de queijo,2,7.00,cartao
+50529,2026-09-05,Centro,Espresso,2,6.50,cartao
+50565,2026-09-06,Alto da Serra,Bolo de fubá,2,9.50,pix
+50977,2026-10-03,Centro,Espresso,2,6.50,pix
+51055,2026-10-07,Alto da Serra,Cappuccino,1,11.00,pix
+50501,2026-09-03,Beira-Rio,Pão de queijo,3,7.00,pix
+51302,2026-10-23,Rodoviária,Gelado,1,13.50,pix
+51037,2026-10-06,Rodoviária,Cappuccino,2,11.00,dinheiro
+50683,2026-09-13,Alto da Serra,Coado,4,8.00,cartao
+50366,2026-08-25,Rodoviária,Coado,3,8.00,cartao
+50588,2026-09-08,Beira-Rio,Espresso,3,6.50,cartao
+50658,12/09/2026,Alto da Serra,Gelado,4,13.50,pix
+51430,2026-10-31,Alto da Serra,Gelado,3,13.50,cartao
+50993,2026-10-04,Centro,Espresso,3,R$ 6.50,cartao
+50106,2026-08-09,Rodoviária,Gelado,2,13.50,pix
+51180,2026-10-16,Centro,Pão de queijo,3,7.00,pix
+50251,2026-08-18,Rodoviária,Cappuccino,1,11.00,pix
+51133,2026-10-12,Beira-Rio,Espresso,1,6.50,pix
+51112,2026-10-11,Centro,Latte,4,12.00,pix
+50735,2026-09-17,Beira-Rio,Bolo de fubá,3,9.50,dinheiro
+50868,2026-09-26,Centro,Pão de queijo,3,7.00,pix
+50968,2026-10-02,Rodoviária,Cappuccino,3,11.00,pix
+50504,2026-09-03,Beira-Rio,Gelado,2,13.50,pix
+50208,2026-08-15,Alto da Serra,Coado,3,8.00,pix
+50689,2026-09-14,Centro,Cappuccino,3,11.00,pix
+50778,2026-09-19,Alto da Serra,Bolo de fubá,4,9.50,cartao
+50889,2026-09-27,Centro,Espresso,2,6.50,pix
+51119,2026-10-11,Rodoviária,Cappuccino,4,11.00,cartao
+50670,2026-09-13,Beira-Rio,Café em grão 250g,3,39.90,dinheiro
+51417,2026-10-31,Centro,Gelado,2,13.50,cartao
+50285,21 ago 2026,Centro,Gelado,4,13.50,pix
+50864,26/09/2026,Centro,Pão de queijo,2,7.00,cartao
+50871,2026-09-26,Beira-Rio,Espresso,3,6.50,pix
+51406,30 out 2026,Beira-Rio,Espresso,4,6.50,pix
+50687,2026-09-14,Centro,Bolo de fubá,4,9.50,pix
+90001,2026-10-26,Centro,TESTE - NAO CONTAR,99,1.00,pix
+50049,2026-08-06,Centro,Cappuccino,3,11.00,cartao
+50209,2026-08-16,Centro,Coado,2,8.00,cartao
+50898,2026-09-27,Rodoviária,Cappuccino,3,11.00,pix
+50435,2026-08-30,Centro,Latte,4,12.00,pix
+50087,2026-08-08,Beira-Rio,Espresso,3,6.50,pix
+50782,2026-09-20,Centro,Bolo de fubá,2,9.50,pix
+50546,06/09/2026,Centro,Bolo de fubá,2,9.50,cartao
+51308,2026-10-24,Centro,Pão de queijo,2,7.00,pix
+50982,2026-10-03,Rodoviária,Gelado,3,13.50,pix
+50823,2026-09-23,Centro,Cappuccino,3,11.00,cartao
+51207,2026-10-17,Rodoviária,Pão de queijo,2,7.00,pix
+50124,2026-08-10,Rodoviária,Gelado,2,13.50,cartao
+90004,2026-10-23,Centro,TESTE - NAO CONTAR,99,1.00,pix
+50825,2026-09-23,Centro,Pão de queijo,2,7.00,pix
+50879,2026-09-26,Rodoviária,Pão de queijo,2,7.00,pix
+51351,2026-10-26,Centro,Bolo de fubá,1,9.50,cartao
+50445,2026-08-30,Beira-Rio,Espresso,4,6.50,cartao
+50076,7 ago 2026,Alto da Serra,Latte,2,12.00,pix
+51143,2026-10-13,Centro,Coado,4,8.00,pix
+50465,2026-08-31,Alto da Serra,Café em grão 250g,2,39.90,pix
+50254,2026-08-19,Centro,Café em grão 250g,3,39.90,pix
+50379,2026-08-26,Beira-Rio,Latte,1,12.00,pix
+50492,2026-09-02,Rodoviária,Café em grão 250g,2,39.90,pix
+50421,2026-08-29,Centro,Latte,1,12.00,cartao
+50553,2026-09-06,Beira-Rio,Coado,4,R$ 8.00,pix
+51075,09/10/2026,Centro,Pão de queijo,3,7.00,pix
+50998,2026-10-04,Beira-Rio,Café em grão 250g,2,39.90,pix
+51323,2026-10-24,Alto da Serra,Café em grão 250g,4,39.90,pix
+50040,2026-08-05,Beira-Rio,Café em grão 250g,3,39.90,cartao
+50891,2026-09-27,Centro,Bolo de fubá,1,9.50,cartao
+50545,2026-09-06,Centro,Bolo de fubá,4,9.50,cartao
+51014,2026-10-05,Centro,Latte,1,12.00,cartao
+50228,2026-08-17,Centro,Coado,1,8.00,cartao
+51152,13/10/2026, Rodoviária,Cappuccino,1,11.00,dinheiro
+50710,2026-09-15,Rodoviária,Cappuccino,4,11.00,cartao
+50497,2026-09-03,Centro,Café em grão 250g,2,39.90,cartao
+50815,2026-09-22,Beira-Rio,Espresso,1,6.50,pix
+50473,2026-09-01,Centro,Latte,1,12.00,cartao
+50695,2026-09-14,Rodoviária,Coado,1,8.00,cartao
+50857,2026-09-25,Beira-Rio,Café em grão 250g,1,39.90,cartao
+50603,2026-09-09,Beira-Rio,Pão de queijo,2,7.00,cartao
+50145,2026-08-11,Alto da Serra,Café em grão 250g,3,39.90,pix
+50969,2026-10-02,Alto da Serra,Espresso,2,6.50,dinheiro
+50066,2026-08-07,Centro,Pão de queijo,2,7.00,cartao
+51239,2026-10-19,Beira-Rio,Coado,2,8.00,dinheiro
+50430,2026-08-29,Alto da Serra,Café em grão 250g,4,39.90,cartao
+51028,2026-10-06,Centro,Latte,3,12.00,pix
+50338,2026-08-23,Alto da Serra,Café em grão 250g,1,39.90,cartao
+50569,2026-09-06,Alto da Serra,Pão de queijo,1,7.00,cartao
+50408,2026-08-28,Beira-Rio,Cappuccino,4,11.00,pix
+50728,16/09/2026,Alto da Serra,Bolo de fubá,2,9.50,pix
+50419,2026-08-29,Centro,Cappuccino,3,11.00,cartao
+50384,2026-08-26,Alto da Serra,Gelado,3,R$ 13.50,dinheiro
+50945,2026-10-01,Centro,Bolo de fubá,3,9.50,cartao
+50183,14 ago 2026,Beira-Rio,Bolo de fubá,4,9.50,pix
+51427,2026-10-31,Alto da Serra,Gelado,2,13.50,cartao
+51173,2026-10-15,Centro,Cappuccino,4,11.00,pix
+51182,16 out 2026,Centro,Espresso,3,6.50,cartao
+50912,2026-09-28,Beira-Rio,Coado,2,8.00,cartao
+50470,2026-09-01,Centro,Café em grão 250g,1,39.90,pix
+50291,21/08/2026,Beira-Rio,Coado,4,8.00,dinheiro
+51329,2026-10-25,Centro,Coado,1,8.00,pix
+50604,2026-09-09,Beira-Rio,Cappuccino,4,11.00,pix
+51364,2026-10-27,Centro,Espresso,2,6.50,cartao
+51327,2026-10-25,Centro,Café em grão 250g,4,39.90,pix
+50905,2026-09-28,Centro,Espresso,3,6.50,pix
+51320,2026-10-24,Rodoviária,Pão de queijo,2,7.00,dinheiro
+51315,2026-10-24,Beira-Rio,Latte,3,12.00,dinheiro
+50816,2026-09-22,Beira-Rio,Pão de queijo,2,7.00,dinheiro
+50457,2026-08-31,Centro,Coado,3,8.00,pix
+50818,2026-09-22,Rodoviária,Pão de queijo,4,7.00,cartao
+50327,2026-08-23,Beira-Rio,Pão de queijo,3,7.00,pix
+51158,2026-10-14,Centro,Latte,2,12.00,dinheiro
+50152,2026-08-12,Beira-Rio,Coado,1,8.00,pix
+50610,2026-09-09,Rodoviária,Café em grão 250g,2,39.90,cartao
+50440,2026-08-30,Beira-Rio,Gelado,1,13.50,cartao
+50881,26 set 2026,Rodoviária,Gelado,1,13.50,pix
+50261,2026-08-19,Rodoviária,Pão de queijo,2,7.00,cartao
+50937,2026-09-30,Beira-Rio,Latte,3,12.00,cartao
+50380,2026-08-26,Rodoviária,Bolo de fubá,4,9.50,pix
+50561,2026-09-06,Rodoviária,Latte,3,"12,00",cartao
+50996,2026-10-04,Beira-Rio,Latte,3,12.00,pix
+50035,2026-08-05,Centro,Bolo de fubá,3,9.50,dinheiro
+50760,19/09/2026,Centro,Gelado,4,13.50,cartao
+51085,2026-10-09,Alto da Serra,Pão de queijo,4,R$ 7.00,cartao
+51332,2026-10-25,Beira-Rio,Pão de queijo,3,7.00,cartao
+51176,2026-10-15,Rodoviária,Cappuccino,4,11.00,pix
+50583,2026-09-08,Centro,Gelado,3,13.50,pix
+50455,2026-08-31,Centro,Coado,2,8.00,pix
+50222,2026-08-16,Alto da Serra,Gelado,1,13.50,cartao
+51209,2026-10-17,Rodoviária,Espresso,3,6.50,cartao
+50438,2026-08-30,Centro,Pão de queijo,2,7.00,pix
+51188,2026-10-16,Beira-Rio,Latte,4,R$ 12.00,pix
+50643,2026-09-12,Centro,Gelado,3,13.50,pix
+50919,2026-09-29,Beira-Rio,Cappuccino,4,11.00,dinheiro
+50140,2026-08-11,Rodoviária,Coado,3,8.00,pix
+50057,2026-08-06,Rodoviária,Latte,2,12.00,pix
+50233,2026-08-17,Rodoviária,Pão de queijo,1,7.00,cartao
+50800,2026-09-21,Centro,Bolo de fubá,3,9.50,pix
+50836,2026-09-24,Centro,Gelado,3,13.50,cartao
+50068,2026-08-07,Beira-Rio,Latte,3,12.00,dinheiro
+51039,2026-10-06,Alto da Serra,Café em grão 250g,1,39.90,dinheiro
+50097,2026-08-09,Centro,Latte,1,12.00,pix
+50555,2026-09-06,Beira-Rio,Pão de queijo,4,7.00,pix
+50396,2026-08-27,Rodoviária,Latte,4,12.00,cartao
+50314,2026-08-22,Rodoviária,Café em grão 250g,2,39.90,cartao
+50659,2026-09-12,Alto da Serra,Pão de queijo,3,7.00,pix
+51115,2026-10-11,Beira-Rio,Café em grão 250g,1,39.90,cartao
+50860,25/09/2026,Rodoviária,Espresso,3,6.50,pix
+50174,2026-08-13,Alto da Serra,Café em grão 250g,4,39.90,pix
+50963,02/10/2026,Centro,Cappuccino,2,11.00,pix
+51065,2026-10-08, Rodoviária,Gelado,2,13.50,cartao
+50340,2026-08-24,Centro,Cappuccino,4,11.00,cartao
+50420,2026-08-29,Centro,Bolo de fubá,2,"9,50",pix
+50417,29 ago 2026,Centro,Cappuccino,4,11.00,dinheiro
+51409,2026-10-30,Rodoviária,Cappuccino,3,11.00,cartao
+50238,2026-08-17,Alto da Serra,Gelado,2,13.50,cartao
+51276,2026-10-22,Centro,Latte,2,12.00,cartao
+50718,2026-09-16,Centro,Pão de queijo,4,7.00,dinheiro
+51407,2026-10-30,Rodoviária,Latte,4,12.00,pix
+50361,2026-08-25,Beira-Rio,Bolo de fubá,1,9.50,cartao
+50556,2026-09-06,Beira-Rio,Latte,1,12.00,cartao
+50859,2026-09-25,Rodoviária,Coado,1,8.00,pix
+50612,2026-09-09,Alto da Serra,Pão de queijo,3,R$ 7.00,pix
+50530,2026-09-05,Centro,Latte,2,12.00,cartao
+50761,2026-09-19,Centro,Latte,3,12.00,dinheiro
+50088,08/08/2026,Beira-Rio,Coado,3,8.00,pix
+51117,2026-10-11,Beira-Rio,Cappuccino,3,11.00,pix
+50547,2026-09-06,Centro,Pão de queijo,1,7.00,pix
+50608,2026-09-09,Rodoviária,Pão de queijo,3,7.00,pix
+50202,2026-08-15,Rodoviária,Espresso,1,6.50,cartao
+51401,2026-10-30,Centro,Cappuccino,1,11.00,dinheiro
+51138,2026-10-12,Rodoviária,Latte,3,12.00,pix
+50148,2026-08-12,Centro,Gelado,3,13.50,pix
+50110,2026-08-09,Rodoviária,Coado,1,8.00,pix
+50960,2026-10-02,Centro,Pão de queijo,4,7.00,pix
+51203,2026-10-17,Beira-Rio,Bolo de fubá,1,9.50,pix
+50162,2026-08-13,Centro,Cappuccino,3,11.00,pix
+50317,2026-08-22,Alto da Serra,Coado,3,8.00,cartao
+50950,2026-10-01,Beira-Rio,Cappuccino,2,11.00,pix
+50944,2026-09-30,Alto da Serra,Coado,1,8.00,cartao
+50855,2026-09-25,Centro,Café em grão 250g,2,39.90,cartao
+51337,2026-10-25,Beira-Rio,Cappuccino,2,11.00,dinheiro
+50253,2026-08-18,Alto da Serra,Latte,3,12.00,dinheiro
+50964,2026-10-02,Beira-Rio,Pão de queijo,3,7.00,cartao
+50284,2026-08-21,Centro,Cappuccino,1,11.00,pix
+50134,2026-08-11,Centro,Pão de queijo,4,7.00,cartao
+51151,13/10/2026,rodoviária ,Café em grão 250g,2,39.90,pix
+50663,2026-09-13,Centro,Cappuccino,2,11.00,cartao
+51391,2026-10-29,Centro,Latte,3,12.00,cartao
+50462,31 ago 2026,Rodoviária,Coado,3,8.00,cartao
+51395,2026-10-29,Rodoviária,Bolo de fubá,4,9.50,cartao
+51100,2026-10-10,Rodoviária,Cappuccino,3,11.00,cartao
+50354,2026-08-24,Alto da Serra,Espresso,1,6.50,pix
+50204,2026-08-15,Alto da Serra,Café em grão 250g,1,39.90,cartao
+51150,2026-10-13,Rodoviária,Gelado,1,13.50,pix
+50072,2026-08-07,Rodoviária,Latte,2,12.00,pix
+50741,2026-09-18,Centro,Espresso,3,6.50,pix
+51280,22/10/2026,Beira-Rio,Café em grão 250g,1,39.90,dinheiro
+50754,2026-09-18,Rodoviária,Latte,3,12.00,pix
+50783,2026-09-20,Centro,Coado,1,8.00,cartao
+51257,2026-10-20,Rodoviária,Latte,1,12.00,cartao
+50717,2026-09-16,Centro,Coado,2,8.00,pix
+50167,13/08/2026,Beira-Rio,Café em grão 250g,1,39.90,pix
+50743,2026-09-18,Centro,Bolo de fubá,3,9.50,cartao
+50394,2026-08-27,Rodoviária,Café em grão 250g,3,39.90,cartao
+50345,24/08/2026,Beira-Rio,Pão de queijo,4,7.00,pix
+51170,2026-10-15,Centro,Gelado,4,13.50,pix
+50461,2026-08-31,Beira-Rio,Pão de queijo,2,7.00,pix
+50363,25 ago 2026,Beira-Rio,Espresso,3,6.50,pix
+51230,2026-10-18,Alto da Serra,Coado,3,8.00,cartao
+50537,2026-09-05,Rodoviária,Espresso,1,6.50,cartao
+50809,2026-09-21,Alto da Serra,Cappuccino,4,11.00,dinheiro
+50873,2026-09-26,Beira Rio,Bolo de fubá,2,9.50,cartao
+50807,2026-09-21,Alto da Serra,Pão de queijo,4,7.00,pix
+50335,2026-08-23,Rodoviária,Espresso,2,6.50,pix
+50203,2026-08-15,Rodoviária,Latte,4,12.00,pix
+50714,2026-09-16,Centro,Gelado,4,13.50,pix
+51106,2026-10-10,Alto da Serra,Bolo de fubá,2,"9,50",cartao
+50665,2026-09-13,Centro,Bolo de fubá,1,9.50,pix
+50775,2026-09-19,Rodoviária,Espresso,2,6.50,cartao
+50798,2026-09-21,Centro,Café em grão 250g,4,R$ 39.90,dinheiro
+51255,2026-10-20,Rodoviária,Gelado,2,13.50,pix
+51325,2026-10-24,Alto da Serra,Espresso,3,6.50,pix
+50734,2026-09-17,Beira-Rio,Latte,1,12.00,pix
+50874,2026-09-26,Beira-Rio,Espresso,3,6.50,cartao
+50708,2026-09-15,Beira-Rio,Café em grão 250g,1,39.90,cartao
+50902,2026-09-27,Alto da Serra,Cappuccino,3,11.00,cartao
+50843,2026-09-24,Beira-Rio,Espresso,4,6.50,pix
+51260,2026-10-20,Alto da Serra,Pão de queijo,2,7.00,pix
+50590,2026-09-08,beira-rio ,Café em grão 250g,4,39.90,dinheiro
+50528,2026-09-05,Centro,Bolo de fubá,4,9.50,pix
+51051,2026-10-07,Rodoviária,Coado,2,8.00,cartao
+51129,2026-10-12,Centro,Coado,1,8.00,pix
+51076,2026-10-09,Beira-Rio,Espresso,3,6.50,cartao
+51016,2026-10-05,Centro,Latte,1,12.00,cartao
+51381,28 out 2026,Beira-Rio,Cappuccino,2,11.00,dinheiro
+51167,2026-10-14,Alto da Serra,Espresso,4,6.50,cartao
+50415,2026-08-29,Centro,Cappuccino,1,11.00,pix
+51264,2026-10-21,Centro,Espresso,1,6.50,pix
+50347,2026-08-24,Beira-Rio,Café em grão 250g,4,39.90,pix
+50456,2026-08-31,Centro,Bolo de fubá,4,9.50,dinheiro
+50262,2026-08-19,Rodoviária,Bolo de fubá,2,9.50,cartao
+50801,2026-09-21,Beira-Rio,Coado,1,8.00,cartao
+50399,2026-08-27,Alto da Serra,Bolo de fubá,3,9.50,dinheiro
+50632,2026-09-11,Beira-Rio,Gelado,3,13.50,pix
+50288,2026-08-21,Beira-Rio,Cappuccino,3,11.00,pix
+50437,2026-08-30,Centro,Coado,4,8.00,cartao
+50707,2026-09-15,BEIRA-RIO,Café em grão 250g,2,39.90,dinheiro
+50516,2026-09-04,Beira-Rio,Espresso,4,6.50,dinheiro
+50016,2026-08-04,Centro,Bolo de fubá,3,9.50,pix
+50715,2026-09-16,Centro,Espresso,1,6.50,pix
+51422,2026-10-31,Beira-Rio,Café em grão 250g,3,39.90,pix
+50549,2026-09-06,Centro,Café em grão 250g,3,39.90,pix
+51099,2026-10-10,Rodoviária,Coado,3,R$ 8.00,pix
+50355,2026-08-24,alto da serra ,Latte,1,12.00,cartao
+51155,2026-10-13,Alto da Serra,Pão de queijo,3,7.00,cartao
+51279,2026-10-22,Centro,Bolo de fubá,1,9.50,pix
+50602,2026-09-09,Centro,Gelado,1,13.50,pix
+50491,2026-09-02,Rodoviária,Coado,2,8.00,pix
+50949,1 out 2026,centro ,Espresso,1,6.50,cartao
+51355,2026-10-26,Beira-Rio,Café em grão 250g,3,39.90,pix
+51044,2026-10-07,Centro,Pão de queijo,3,7.00,pix
+51078,2026-10-09,Beira-Rio,Latte,1,12.00,pix
+50650,2026-09-12,Beira-Rio,Bolo de fubá,3,9.50,dinheiro
+50645,2026-09-12,Centro,Café em grão 250g,2,39.90,pix
+51111,2026-10-11,Centro,Bolo de fubá,4,9.50,pix
+51105,2026-10-10,Alto da Serra,Espresso,3,6.50,cartao
+50136,2026-08-11,Beira-Rio,Latte,2,12.00,pix
+50994,2026-10-04,Centro,Bolo de fubá,4,9.50,cartao
+50289,2026-08-21,Beira-Rio,Espresso,2,6.50,pix
+50244,2026-08-18,Centro,Espresso,2,6.50,pix
+50241,2026-08-18,Centro,Café em grão 250g,4,39.90,pix
+51335,2026-10-25,Beira-Rio,Café em grão 250g,3,39.90,cartao
+50957,2026-10-01, Alto da Serra,Coado,3,8.00,cartao
+50422,2026-08-29,Beira-Rio,Café em grão 250g,3,39.90,cartao
+50780,2026-09-20,Centro,Café em grão 250g,1,39.90,cartao
+51194,2026-10-16,Alto da Serra,Pão de queijo,4,7.00,cartao
+50936,2026-09-30,Beira-Rio,Coado,3,8.00,cartao
+51040,2026-10-06,Alto da Serra,Bolo de fubá,2,9.50,cartao
+50173,2026-08-13,Alto da Serra,Café em grão 250g,1,39.90,dinheiro
+50231,2026-08-17,Beira-Rio,Espresso,2,6.50,cartao
+50252,2026-08-18,Alto da Serra,Latte,3,12.00,dinheiro
+50409,2026-08-28,Rodoviária,Pão de queijo,4,7.00,cartao
+50505,2026-09-03,Rodoviária,Pão de queijo,4,"7,00",cartao
+51380,2026-10-28,Beira-Rio,Gelado,1,13.50,pix
+51366,2026-10-27,Centro,Espresso,2,6.50,pix
+50978,2026-10-03,Beira-Rio,Coado,2,8.00,cartao
+50711,2026-09-15,Alto da Serra,Pão de queijo,3,7.00,dinheiro
+50848,2026-09-24,Alto da Serra,Café em grão 250g,1,39.90,pix
+50622,2026-09-10,Rodoviária,Espresso,3,6.50,cartao
+50257,2026-08-19,centro ,Bolo de fubá,2,9.50,cartao
+51413,2026-10-31,Centro,Cappuccino,2,11.00,dinheiro
+50266,2026-08-20,Centro,Coado,3,8.00,pix
+51083,2026-10-09,Alto da Serra,Cappuccino,3,11.00,dinheiro
+50582,2026-09-07,Alto da Serra,Cappuccino,3,11.00,pix
+51390,2026-10-29,Centro,Gelado,2,13.50,pix
+50822,2026-09-22,Alto da Serra,Latte,3,12.00,cartao
+50638,2026-09-12,Centro,Pão de queijo,4,"7,00",dinheiro
+50343,2026-08-24,Centro,Bolo de fubá,3,9.50,dinheiro
+50933,2026-09-30,Centro,Pão de queijo,3,7.00,cartao
+50021,2026-08-04,Beira-Rio,Cappuccino,4,R$ 11.00,dinheiro
+50875,26 set 2026,Beira-Rio,Gelado,4,13.50,cartao
+50946,2026-10-01,Centro,Latte,1,12.00,pix
+50150,2026-08-12,Centro,Gelado,2,R$ 13.50,cartao
+51012,2026-10-05,Centro,Latte,4,12.00,pix
+50090,2026-08-08,Rodoviária,Pão de queijo,4,7.00,pix
+51394,2026-10-29,Beira-Rio,Espresso,1,6.50,pix
+50469,2026-09-01,Centro,Espresso,2,6.50,cartao
+51290,2026-10-22,Alto da Serra,Bolo de fubá,2,9.50,cartao
+51033,6 out 2026,Beira-Rio,Café em grão 250g,4,39.90,cartao
+50892,2026-09-27,Centro,Bolo de fubá,3,9.50,pix
+51226,2026-10-18,Rodoviária,Latte,4,12.00,cartao
+50116,2026-08-10,Centro,Espresso,1,6.50,cartao
+50120,2026-08-10,Beira-Rio,Pão de queijo,3,7.00,cartao
+50093,2026-08-08,Alto da Serra,Pão de queijo,4,7.00,pix
+50115,2026-08-10,Centro,Pão de queijo,3,7.00,pix
+50276,2026-08-20,Alto da Serra,Pão de queijo,2,7.00,pix
+50103,2026-08-09,Beira-Rio,Café em grão 250g,2,39.90,cartao
+51384,28 out 2026,Rodoviária,Café em grão 250g,2,39.90,pix
+50574,07/09/2026,Centro,Gelado,3,R$ 13.50,pix
+51278,2026-10-22,Centro,Bolo de fubá,1,9.50,dinheiro
+50372,2026-08-26,Centro,Café em grão 250g,2,39.90,cartao
+50191,15 ago 2026,Centro,Bolo de fubá,4,9.50,cartao
+51000,4 out 2026,Beira-Rio,Pão de queijo,3,7.00,cartao
+51023,2026-10-05,Rodoviária,Espresso,3,6.50,pix
+50757,2026-09-18,Alto da Serra,Gelado,1,13.50,pix
+50255,2026-08-19,Centro,Gelado,1,13.50,cartao
+50099,2026-08-09,Centro,Latte,3,12.00,cartao
+51270,2026-10-21,Rodoviária,Café em grão 250g,1,39.90,pix
+50878,2026-09-26,Rodoviária,Coado,4,8.00,pix
+51424,2026-10-31,Rodoviária,Pão de queijo,4,R$ 7.00,pix
+50614,2026-09-10,Centro,Café em grão 250g,2,39.90,dinheiro
+50577,2026-09-07,Beira-Rio,Latte,2,12.00,cartao
+50019,4 ago 2026,Centro,Gelado,2,13.50,pix
+50298,2026-08-21,Alto da Serra,Espresso,4,6.50,pix
+50847,2026-09-24,Alto da Serra,Café em grão 250g,1,39.90,pix
+50031,2026-08-05,Centro,Pão de queijo,3,7.00,pix
+50502,2026-09-03,Beira-Rio,Latte,3,12.00,cartao
+50925,2026-09-29,Rodoviária,Latte,3,12.00,pix
+51134,2026-10-12,Beira-Rio,Coado,2,8.00,pix
+50236,2026-08-17,Alto da Serra,Pão de queijo,2,7.00,pix
+50107,2026-08-09,Rodoviária,Coado,4,8.00,pix
+50511,2026-09-04,Centro,Gelado,3,13.50,pix
+50758,2026-09-18,Alto da Serra,Gelado,1,13.50,cartao
+50059,2026-08-06,Rodoviária,Bolo de fubá,3,9.50,cartao
+51266,2026-10-21,Centro,Gelado,4,13.50,cartao
+51193,2026-10-16,Rodoviária,Cappuccino,2,11.00,pix
+50373,2026-08-26,Centro,Café em grão 250g,1,R$ 39.90,pix
+51067,2026-10-08,Rodoviária,Bolo de fubá,4,"9,50",cartao
+51086,09/10/2026,Alto da Serra,Cappuccino,4,11.00,pix
+50398,2026-08-27,Alto da Serra,Gelado,2,13.50,dinheiro
+51338,2026-10-25,Beira-Rio,Bolo de fubá,3,9.50,dinheiro
+50226,2026-08-17,Centro,Cappuccino,1,11.00,pix
+50595,2026-09-08,Rodoviária,Cappuccino,1,11.00,cartao
+50281,2026-08-21,Centro,Coado,3,8.00,pix
+50161,2026-08-13,Centro,Pão de queijo,4,7.00,pix
+51283,2026-10-22,Rodoviária,Pão de queijo,3,7.00,pix
+50292,21 ago 2026,Rodoviária,Bolo de fubá,4,9.50,cartao
+51360,2026-10-26,Alto da Serra,Cappuccino,2,11.00,cartao
+50756,2026-09-18,Alto da Serra,Bolo de fubá,4,9.50,pix
+51288,2026-10-22,Alto da Serra,Coado,1,8.00,pix
+50348,2026-08-24,Beira-Rio,Bolo de fubá,2,9.50,cartao
+50400,2026-08-27,Alto da Serra,Pão de queijo,4,7.00,pix
+50795,2026-09-20,Alto da Serra,Espresso,3,6.50,pix
+51296,2026-10-23,Beira-Rio,Coado,3,8.00,cartao
+51345,2026-10-25,Alto da Serra,Pão de queijo,4,7.00,cartao
+51333,2026-10-25,Beira-Rio,Bolo de fubá,3,9.50,pix
+51301,2026-10-23,Rodoviária,Pão de queijo,4,7.00,cartao
+50175,2026-08-13,Alto da Serra,Espresso,3,6.50,pix
+51208,17/10/2026,Rodoviária,Pão de queijo,4,7.00,pix
+51066,2026-10-08,Rodoviária,Café em grão 250g,4,39.90,cartao
+50696,2026-09-14,Alto da Serra,Espresso,3,6.50,cartao
+51362,2026-10-27,Centro,Espresso,4,6.50,cartao
+90005,2026-08-10,Centro,TESTE - NAO CONTAR,99,1.00,pix
+50616,2026-09-10,Centro,Cappuccino,4,11.00,dinheiro
+50694,2026-09-14,Rodoviária,Bolo de fubá,2,9.50,pix
+51042,2026-10-07,Centro,Pão de queijo,1,7.00,cartao
+50246,2026-08-18,Beira-Rio,Latte,3,12.00,pix
+51252,2026-10-20,Centro,Espresso,1,6.50,cartao
+50019,4 ago 2026,Centro,Gelado,2,13.50,pix
+51220,2026-10-18,Centro,Latte,3,12.00,dinheiro
+51248,2026-10-19,ALTO DA SERRA,Café em grão 250g,3,39.90,cartao
+50895,2026-09-27,Beira-Rio,Espresso,4,6.50,pix
+50985,2026-10-03,Rodoviária,Pão de queijo,2,7.00,pix
+51298,2026-10-23,Beira-Rio,Pão de queijo,3,7.00,pix
+51161,2026-10-14,Beira-Rio,Coado,1,8.00,pix
+90000,2026-09-06,Centro,TESTE - NAO CONTAR,99,1.00,pix
+50935,30/09/2026,Beira-Rio,Pão de queijo,4,7.00,cartao
+50412,2026-08-28,Rodoviária,Bolo de fubá,2,9.50,pix
+51091,2026-10-10,centro ,Latte,1,12.00,cartao
+50552,2026-09-06,Centro,Cappuccino,1,11.00,cartao
+51219,2026-10-18,Centro,Gelado,2,13.50,pix
+50450,2026-08-30,Rodoviária,Pão de queijo,2,7.00,pix
+50814,2026-09-22,Centro,Cappuccino,1,11.00,cartao
+50812,2026-09-22,Centro,Bolo de fubá,3,9.50,cartao
+50934,2026-09-30,Beira-Rio,Pão de queijo,3,7.00,pix
+50752,2026-09-18,Rodoviária,Pão de queijo,1,7.00,dinheiro
+51113,2026-10-11,Centro,Coado,3,8.00,cartao
+51244,19/10/2026,Rodoviária,Latte,1,12.00,cartao
+51125,2026-10-11,Alto da Serra,Latte,1,12.00,cartao
+50164,13 ago 2026,Centro,Café em grão 250g,1,39.90,cartao
+50598,2026-09-08,Alto da Serra,Pão de queijo,4,7.00,cartao
+50489,2026-09-02,Rodoviária,Bolo de fubá,2,9.50,pix
+50176,2026-08-14,Centro,Coado,4,8.00,pix
+50232,2026-08-17,Beira-Rio,Latte,1,12.00,dinheiro
+50008,3 ago 2026,Beira-Rio,Bolo de fubá,1,9.50,cartao
+50307,2026-08-22,Beira-Rio,Pão de queijo,2,7.00,pix
+50534,2026-09-05,Beira-Rio,Coado,3,8.00,cartao
+50221,16 ago 2026,Rodoviária,Latte,4,12.00,pix
+50842,2026-09-24,Beira-Rio,Coado,1,8.00,pix
+51104,2026-10-10,Alto da Serra,Café em grão 250g,4,39.90,pix
+50820,2026-09-22,Alto da Serra,Coado,2,8.00,pix
+50797,2026-09-21,Centro,Café em grão 250g,2,39.90,cartao
+50916,2026-09-29,Centro,Café em grão 250g,3,39.90,cartao
+50623,2026-09-10,Rodoviária,Bolo de fubá,2,R$ 9.50,pix
+50287,2026-08-21,Beira-Rio,Espresso,4,6.50,pix
+50290,2026-08-21,Beira-Rio,Gelado,2,13.50,pix
+50481,2 set 2026,Centro,Gelado,1,13.50,cartao
+50826,2026-09-23,Beira-Rio,Espresso,4,6.50,cartao
+51340,2026-10-25,Rodoviária,Pão de queijo,3,7.00,pix
+50580,2026-09-07,Rodoviária,Pão de queijo,3,7.00,cartao
+51195,2026-10-16,Alto da Serra,Espresso,2,6.50,dinheiro
+51371,2026-10-27,Rodoviária,Café em grão 250g,2,39.90,cartao
+51001,2026-10-04,Rodoviária,Gelado,3,13.50,pix
+50471,2026-09-01,Centro,Cappuccino,3,11.00,cartao
+51223,2026-10-18,Beira-Rio,Gelado,2,13.50,pix
+50921,2026-09-29,Beira-Rio,Café em grão 250g,4,39.90,cartao
+50693,2026-09-14,Beira-Rio,Pão de queijo,4,7.00,cartao
+51235,2026-10-19,Centro,Espresso,4,6.50,cartao
+50143,2026-08-11,Rodoviária,Coado,4,8.00,pix
+50605,2026-09-09,Beira-Rio,Coado,3,8.00,cartao
+50085,2026-08-08,Beira-Rio,Latte,1,12.00,cartao
+51411,2026-10-30,Alto da Serra,Latte,4,12.00,pix
+50563,2026-09-06,Rodoviária,Pão de queijo,1,7.00,pix
+50652,2026-09-12,Beira-Rio,Cappuccino,1,11.00,pix
+50425,2026-08-29,Beira-Rio,Café em grão 250g,1,39.90,pix
+50030,2026-08-04,Alto da Serra,Gelado,2,R$ 13.50,pix
+50888,2026-09-27,Centro,Café em grão 250g,3,39.90,pix
+50216,16/08/2026,Beira-Rio,Espresso,4,6.50,cartao
+50340,2026-08-24,Centro,Cappuccino,4,11.00,cartao
+50267,2026-08-20,Centro,Gelado,1,13.50,pix
+50013,2026-08-03,Alto da Serra,Latte,1,12.00,pix
+50557,2026-09-06,Beira-Rio,Coado,3,8.00,pix
+51382,2026-10-28,Rodoviária,Bolo de fubá,4,9.50,pix
+51183,2026-10-16,Centro,Gelado,1,13.50,cartao
+51162,2026-10-14,Beira-Rio,Espresso,3,6.50,pix
+50688,2026-09-14,Centro,Bolo de fubá,1,9.50,pix
+51262,2026-10-21,Centro,Café em grão 250g,1,39.90,cartao
+50073,2026-08-07,Rodoviária,Café em grão 250g,4,39.90,cartao
+50407,2026-08-28,Beira-Rio,Pão de queijo,3,7.00,dinheiro
+51391,2026-10-29,Centro,Latte,3,12.00,cartao
+50739,17/09/2026,Alto da Serra,Gelado,1,13.50,cartao
+50676,2026-09-13,Rodoviária,Espresso,2,6.50,pix
+50799,2026-09-21,Centro,Latte,1,12.00,cartao
+51234,2026-10-19,Centro,Café em grão 250g,3,39.90,dinheiro
+50458,2026-08-31,Beira-Rio,Coado,3,8.00,dinheiro
+51300,23 out 2026,Rodoviária,Espresso,3,6.50,cartao
+50660,2026-09-12,Alto da Serra,Cappuccino,4,11.00,cartao
+51388,2026-10-29,Centro,Gelado,3,13.50,cartao
+50459,2026-08-31,Beira-Rio,Bolo de fubá,1,9.50,pix
+50682,2026-09-13,Alto da Serra,Pão de queijo,4,7.00,pix
+50626,2026-09-10,Alto da Serra,Coado,2,8.00,pix
+50853,2026-09-25,Centro,Bolo de fubá,1,R$ 9.50,pix
+51030,2026-10-06,Centro,Coado,1,8.00,cartao
+50559,2026-09-06,RODOVIÁRIA,Gelado,3,13.50,cartao
+50767,2026-09-19,Beira-Rio,Cappuccino,3,11.00,pix
+50667,13/09/2026,Centro,Latte,4,12.00,pix
+50749,2026-09-18,Beira-Rio,Café em grão 250g,4,39.90,cartao
+50318,2026-08-22,Alto da Serra,Coado,3,8.00,pix
+51252,2026-10-20,Centro,Espresso,1,6.50,cartao
+50301,2026-08-22,Centro,Pão de queijo,4,7.00,pix
+51269,2026-10-21,Beira-Rio,Cappuccino,2,11.00,cartao
+51110,2026-10-11,Centro,Bolo de fubá,1,9.50,cartao
+51217,2026-10-18,Centro,Espresso,1,6.50,pix
+50979,2026-10-03,Beira-Rio,Bolo de fubá,4,9.50,pix
+51305,2026-10-23,Alto da Serra,Pão de queijo,2,7.00,pix
+50911,2026-09-28,Beira-Rio,Latte,3,12.00,pix
+50662,2026-09-13,Centro,Latte,3,12.00,cartao
+50661,2026-09-13,Centro,Pão de queijo,3,7.00,cartao
+50038,2026-08-05,Beira-Rio,Cappuccino,4,11.00,pix
+50627,2026-09-11,Centro,Café em grão 250g,4,39.90,pix
+51043,2026-10-07,Centro,Latte,4,12.00,cartao
+50990,2026-10-03,Alto da Serra,Coado,4,8.00,dinheiro
+50776,19/09/2026,Alto da Serra,Coado,1,8.00,cartao
+51045,2026-10-07,Centro,Bolo de fubá,2,9.50,cartao
+50215,2026-08-16,Beira-Rio,Café em grão 250g,1,39.90,dinheiro
+50624,2026-09-10,Rodoviária,Bolo de fubá,4,9.50,cartao
+50017,2026-08-04,Centro,Cappuccino,4,11.00,pix
+50585,2026-09-08,Centro,Cappuccino,2,11.00,pix
+50452,2026-08-30,Alto da Serra,Bolo de fubá,3,9.50,cartao
+50882,2026-09-26,Rodoviária,Espresso,4,6.50,cartao
+50672,13 set 2026,Beira-Rio,Cappuccino,4,11.00,dinheiro
+51242,2026-10-19,Beira-Rio,Bolo de fubá,4,9.50,cartao
+50918,2026-09-29,Centro,Coado,4,8.00,cartao
+50939,2026-09-30,Rodoviária,Café em grão 250g,1,39.90,pix
+51164,2026-10-14,Rodoviária,Coado,3,8.00,dinheiro
+50248,2026-08-18,Rodoviária,Latte,1,12.00,cartao
+51123,2026-10-11,Rodoviária,Café em grão 250g,4,39.90,cartao
+50671,2026-09-13,Beira-Rio,Latte,3,12.00,pix
+51421,2026-10-31,Beira-Rio,Espresso,2,6.50,cartao
+50666,2026-09-13,Centro,Coado,1,8.00,pix
+50163,2026-08-13,Centro,Espresso,3,6.50,cartao
+50056,2026-08-06,Beira-Rio,Latte,2,12.00,pix
+51116,2026-10-11,Beira-Rio,Latte,2,R$ 12.00,dinheiro
+50184,14 ago 2026,Beira-Rio,Pão de queijo,4,7.00,pix
+51079,2026-10-09,Rodoviária,Espresso,1,6.50,pix
+51204,2026-10-17,Beira-Rio,Coado,3,8.00,pix
+51163,2026-10-14,Beira-Rio,Gelado,4,13.50,pix
+50566,6 set 2026,Alto da Serra,Bolo de fubá,3,9.50,pix
+50213,2026-08-16,Centro,Gelado,3,13.50,cartao
+50586,2026-09-08,Centro,Cappuccino,4,11.00,cartao
+50806,2026-09-21,Alto da Serra,Coado,3,8.00,cartao
+50785,20 set 2026,Centro,Gelado,3,13.50,cartao
+50742,2026-09-18,Centro,Espresso,3,6.50,pix
+51013,2026-10-05,Centro,Pão de queijo,1,7.00,pix
+51036,2026-10-06, Rodoviária,Bolo de fubá,1,9.50,cartao
+50324,2026-08-23,Centro,Espresso,4,6.50,cartao
+51157,2026-10-14,Centro,Café em grão 250g,3,39.90,pix
+50392,2026-08-27,Rodoviária,Gelado,3,13.50,pix
+50362,2026-08-25,Beira-Rio,Café em grão 250g,4,39.90,cartao
+50601,2026-09-09,Centro,Bolo de fubá,4,9.50,pix
+50012,2026-08-03,Alto da Serra,Coado,1,8.00,pix
+50824,2026-09-23,Centro,Latte,4,12.00,cartao
+50077,2026-08-07,Alto da Serra,Pão de queijo,1,7.00,cartao
+50920,2026-09-29,BEIRA-RIO,Café em grão 250g,1,39.90,cartao
+50310,2026-08-22,Beira-Rio,Latte,1,12.00,pix
+50508,2026-09-03,Rodoviária,Latte,4,12.00,pix
+50973,2026-10-03,Centro,Café em grão 250g,1,39.90,cartao
+50738,2026-09-17,Rodoviária,Pão de queijo,1,7.00,cartao
+50313,2026-08-22,Rodoviária,Latte,2,12.00,pix
+50158,2026-08-12,Alto da Serra,Latte,3,12.00,pix
+50065,2026-08-07,Centro,Espresso,3,6.50,cartao
+51178,2026-10-15,Alto da Serra,Cappuccino,4,11.00,pix
+50375,2026-08-26,Centro,Gelado,1,13.50,pix
+51331,2026-10-25,Centro,Gelado,4,13.50,dinheiro
+50685,2026-09-14,Centro,Café em grão 250g,4,39.90,cartao
+51024,2026-10-05,Alto da Serra,Gelado,1,13.50,pix
+51139,2026-10-12,Alto da Serra,Gelado,3,13.50,pix
+50670,2026-09-13,Beira-Rio,Café em grão 250g,3,39.90,dinheiro
+51149,2026-10-13,Beira-Rio,Bolo de fubá,2,9.50,pix
+51247,2026-10-19,Alto da Serra,Coado,2,8.00,pix
+50827,2026-09-23,Beira-Rio,Pão de queijo,2,7.00,pix
+50830,2026-09-23,Rodoviária,Espresso,4,6.50,dinheiro
+50100,09/08/2026,Centro,Café em grão 250g,4,39.90,pix
+50027,2026-08-04,Rodoviária,Cappuccino,1,11.00,cartao
+50506,2026-09-03,Rodoviária,Cappuccino,3,11.00,pix
+50205,15/08/2026,Alto da Serra,Pão de queijo,1,7.00,cartao
+50914,2026-09-28,Rodoviária,Pão de queijo,4,"7,00",cartao
+50319,2026-08-22,Alto da Serra,Café em grão 250g,4,39.90,pix
+50606,2026-09-09,Beira-Rio,Pão de queijo,1,7.00,pix
+50477,2026-09-01,Rodoviária,Espresso,2,6.50,cartao
+50368,2026-08-25,Rodoviária,Café em grão 250g,1,39.90,cartao
+50029,2026-08-04,Alto da Serra,Pão de queijo,4,7.00,pix
+50731,2026-09-17,Centro,Espresso,4,R$ 6.50,cartao
+50987,2026-10-03,Alto da Serra,Bolo de fubá,3,9.50,cartao
+51102,2026-10-10,rodoviária ,Pão de queijo,3,7.00,pix
+50197,2026-08-15,beira-rio ,Café em grão 250g,1,39.90,pix
+50004,2026-08-03,Centro,Bolo de fubá,2,9.50,dinheiro
+50389,2026-08-27,Beira-Rio,Bolo de fubá,2,9.50,cartao
+50656,2026-09-12,Rodoviária,Pão de queijo,1,7.00,cartao
+50941,2026-09-30,Rodoviária,Latte,3,12.00,cartao
+51080,2026-10-09,Rodoviária,Café em grão 250g,3,39.90,dinheiro
+50234,2026-08-17,Rodoviária,Espresso,3,6.50,cartao
+51212,2026-10-17,Rodoviária,Coado,2,8.00,cartao
+50206,2026-08-15,ALTO DA SERRA,Café em grão 250g,2,39.90,pix
+50296,21 ago 2026,Rodoviária,Coado,1,8.00,dinheiro
+51047,2026-10-07,Centro,Espresso,2,6.50,pix
+50367,2026-08-25,Rodoviária,Bolo de fubá,3,9.50,pix
+50149,2026-08-12,Centro,Latte,4,12.00,pix
+51238,2026-10-19,Centro,Bolo de fubá,2,9.50,dinheiro
+51418,2026-10-31,Beira-Rio,Coado,2,8.00,cartao
+50444,2026-08-30,Beira-Rio,Espresso,1,6.50,cartao
+50125,2026-08-10,Rodoviária,Latte,1,12.00,pix
+50446,2026-08-30,Rodoviária,Gelado,3,13.50,dinheiro
+50991,2026-10-04,Centro,Pão de queijo,1,7.00,dinheiro
+51073,2026-10-09,Centro,Cappuccino,2,11.00,pix
+51038,2026-10-06,Rodoviária,Espresso,3,6.50,cartao
+50032,2026-08-05,Centro,Bolo de fubá,4,9.50,pix
+50312,2026-08-22,Beira-Rio,Gelado,1,13.50,pix
+50736,2026-09-17,Beira-Rio,Espresso,3,6.50,cartao
+51062,2026-10-08,Beira-Rio,Pão de queijo,1,7.00,pix
+50356,2026-08-25,Centro,Café em grão 250g,3,"39,90",pix
+50048,2026-08-05,Alto da Serra,Cappuccino,4,11.00,cartao
+51142,2026-10-13,Centro,Cappuccino,4,11.00,pix
+50439,2026-08-30,Centro,Gelado,3,13.50,pix
+50746,2026-09-18,Beira-Rio,Pão de queijo,1,7.00,cartao
+50908,2026-09-28,Beira-Rio,Espresso,4,6.50,pix
+51225,18 out 2026,Rodoviária,Cappuccino,2,11.00,cartao
+51035,2026-10-06,Beira-Rio,Latte,1,12.00,pix
+50926,2026-09-29,Alto da Serra,Cappuccino,4,11.00,cartao
+50784,2026-09-20,Centro,Gelado,2,13.50,pix
+50571,2026-09-07,Centro,Pão de queijo,1,7.00,pix
+51373,2026-10-27,Rodoviária,Coado,3,8.00,cartao
+51070,2026-10-08,Alto da Serra,Café em grão 250g,1,39.90,pix
+50393,2026-08-27,Rodoviária,Cappuccino,2,11.00,dinheiro
+51292,2026-10-23,Centro,Espresso,3,6.50,pix
+51306,2026-10-24,Centro,Bolo de fubá,4,9.50,pix
+51068,2026-10-08,Rodoviária,Bolo de fubá,1,"9,50",pix
+50535,05/09/2026,Beira-Rio,Café em grão 250g,1,39.90,dinheiro
+50054,2026-08-06,Beira-Rio,Latte,3,12.00,cartao
+50493,2 set 2026,Rodoviária,Latte,4,12.00,pix
+50852,25 set 2026,Centro,Latte,3,12.00,pix
+50722,2026-09-16,Rodoviária,Gelado,4,13.50,cartao
+50923,2026-09-29,Rodoviária,Gelado,1,13.50,pix
+50480,2026-09-02,Centro,Bolo de fubá,2,9.50,pix
+50488,2026-09-02,Beira-Rio,Espresso,2,6.50,cartao
+50586,2026-09-08,Centro,Cappuccino,4,11.00,cartao
+50947,2026-10-01,Centro,Café em grão 250g,1,39.90,cartao
+50564,2026-09-06,rodoviária ,Bolo de fubá,4,9.50,cartao
+50217,2026-08-16,Beira-Rio,Gelado,4,13.50,pix
+50788,2026-09-20,Beira-Rio,Bolo de fubá,4,9.50,pix
+50841,2026-09-24,Beira-Rio,Espresso,4,6.50,pix
+50915,2026-09-28,Alto da Serra,Gelado,2,13.50,pix
+50370,2026-08-25,Alto da Serra,Latte,4,12.00,cartao
+51058,08/10/2026,Centro,Gelado,1,13.50,cartao
+50460,2026-08-31,Beira-Rio,Bolo de fubá,2,9.50,cartao
+51198,2026-10-17,Centro,Latte,4,12.00,cartao
+51282,2026-10-22,Beira-Rio,Pão de queijo,3,7.00,cartao
+50712,2026-09-15,Alto da Serra,Coado,4,8.00,cartao
+50966,2026-10-02,Rodoviária,Espresso,1,6.50,dinheiro
+51057,2026-10-08,Centro,Cappuccino,3,11.00,pix
+50293,2026-08-21,Rodoviária,Cappuccino,2,11.00,pix
+51361,2026-10-27,CENTRO,Latte,4,12.00,cartao
+50737,17 set 2026,Rodoviária,Gelado,3,13.50,pix
+50198,2026-08-15,Beira-Rio,Latte,3,12.00,pix
+51352,2026-10-26,Centro,Café em grão 250g,4,39.90,cartao
+50791,2026-09-20,Rodoviária,Café em grão 250g,4,39.90,pix
+51367,2026-10-27,Beira-Rio,Café em grão 250g,2,"39,90",pix
+51095,2026-10-10,Beira-Rio,Gelado,3,13.50,dinheiro
+51107,10/10/2026,Alto da Serra,Café em grão 250g,1,39.90,cartao
+50740,2026-09-17,Alto da Serra,Pão de queijo,4,7.00,cartao
+50230,2026-08-17, Beira-Rio,Gelado,4,13.50,pix
+50391,2026-08-27,Beira-Rio,Espresso,4,6.50,dinheiro
+50081,2026-08-08,Centro,Cappuccino,2,11.00,cartao
+50334,23/08/2026,Rodoviária,Coado,2,8.00,pix
+50669,2026-09-13,Beira-Rio,Gelado,2,13.50,pix
+50411,2026-08-28,Rodoviária,Pão de queijo,3,7.00,cartao
+50227,2026-08-17,CENTRO,Café em grão 250g,3,39.90,cartao
+50507,2026-09-03,rodoviária ,Espresso,2,6.50,cartao
+50747,2026-09-18,Beira-Rio,Café em grão 250g,3,39.90,pix
+50802,2026-09-21,BEIRA-RIO,Cappuccino,1,11.00,dinheiro
+50007,2026-08-03,Beira-Rio,Coado,3,"8,00",cartao
+51060,2026-10-08,Centro,Cappuccino,4,11.00,cartao
+51348,2026-10-26,centro ,Gelado,2,13.50,pix
+51378,28/10/2026,Centro,Café em grão 250g,4,39.90,pix
+50179,2026-08-14,Centro,Gelado,1,13.50,cartao
+50144,2026-08-11,Alto da Serra,Espresso,4,6.50,cartao
+50769,2026-09-19,Beira-Rio,Cappuccino,4,R$ 11.00,cartao
+50386,2026-08-27,Centro,Bolo de fubá,1,9.50,cartao
+50983,2026-10-03,Rodoviária,Coado,2,8.00,dinheiro
+51096,2026-10-10,Beira-Rio,Cappuccino,2,11.00,cartao
+50015,2026-08-04,centro ,Pão de queijo,1,7.00,cartao
+51063,2026-10-08,Beira-Rio,Bolo de fubá,2,9.50,pix
+51304,2026-10-23,ALTO DA SERRA,Pão de queijo,3,7.00,cartao
+51059,2026-10-08,Centro,Gelado,1,13.50,pix
+50078,2026-08-08,Centro,Bolo de fubá,1,9.50,cartao
+50675,2026-09-13,Rodoviária,Coado,3,8.00,pix
+50861,2026-09-25,Rodoviária,Gelado,2,13.50,cartao
+50014,2026-08-03,Alto da Serra,Café em grão 250g,4,39.90,pix
+50156,2026-08-12,Rodoviária,Cappuccino,4,11.00,cartao
+50770,2026-09-19,Beira-Rio,Bolo de fubá,3,9.50,dinheiro
+50211,2026-08-16,Centro,Bolo de fubá,2,9.50,pix
+50360,25/08/2026,Centro,Cappuccino,3,11.00,pix
+50292,21 ago 2026,Rodoviária,Bolo de fubá,4,9.50,cartao
+50697,2026-09-14,Alto da Serra,Café em grão 250g,3,39.90,pix
+50155,2026-08-12,Rodoviária,Latte,2,12.00,dinheiro
+50256,2026-08-19,Centro,Pão de queijo,4,7.00,pix
+50055,2026-08-06,Beira-Rio,Cappuccino,1,11.00,cartao
+50967,2026-10-02,Rodoviária,Cappuccino,2,11.00,cartao
+51314,2026-10-24,Beira-Rio,Bolo de fubá,4,9.50,pix
+50674,2026-09-13,Beira-Rio,Gelado,2,13.50,cartao
+50495,2026-09-02,Alto da Serra,Coado,3,"8,00",pix
+51018,2026-10-05,Beira-Rio,Pão de queijo,4,7.00,cartao
+50831,2026-09-23,Alto da Serra,Cappuccino,4,11.00,pix
+51342,2026-10-25,Rodoviária,Coado,3,8.00,cartao
+50917,2026-09-29,Centro,Pão de queijo,3,7.00,cartao
+50101,2026-08-09,Centro,Latte,1,12.00,pix
+50332,23/08/2026,Rodoviária,Cappuccino,4,11.00,pix
+51326,2026-10-24,Alto da Serra,Bolo de fubá,4,9.50,dinheiro
+50725,2026-09-16,Rodoviária,Bolo de fubá,3,"9,50",dinheiro
+51285,22 out 2026,Rodoviária,Gelado,1,13.50,pix
+50835,2026-09-24,Centro,Café em grão 250g,3,39.90,pix
+50127,2026-08-10,Rodoviária,Gelado,2,13.50,cartao
+50839,2026-09-24,Centro,Coado,1,8.00,dinheiro
+50387,2026-08-27,Centro,Coado,2,8.00,pix
+50341,2026-08-24,Centro,Pão de queijo,2,7.00,dinheiro
+51118,2026-10-11,Beira-Rio,Espresso,1,6.50,pix
+50721,2026-09-16,Beira-Rio,Cappuccino,1,11.00,pix
+51286,2026-10-22,Alto da Serra,Coado,4,8.00,dinheiro
+50956,2026-10-01,Rodoviária,Coado,1,8.00,cartao
+50449,30/08/2026,Rodoviária,Coado,3,8.00,pix
+51256,2026-10-20,Rodoviária,Latte,1,12.00,pix
+50498,2026-09-03, Centro,Latte,1,12.00,pix
+50349,2026-08-24,Beira-Rio,Pão de queijo,2,7.00,cartao
+51412,30 out 2026,Alto da Serra,Pão de queijo,1,7.00,dinheiro
+50192,2026-08-15,Centro,Cappuccino,4,11.00,pix
+50653,2026-09-12,Rodoviária,Gelado,1,13.50,cartao
+50633,2026-09-11,Beira-Rio,Gelado,1,13.50,dinheiro
+50755,2026-09-18,Rodoviária,Coado,3,8.00,pix
+50047,2026-08-05,Alto da Serra,Bolo de fubá,1,9.50,cartao
+50679,2026-09-13,Rodoviária,Coado,1,8.00,cartao
+50931,2026-09-30,Centro,Café em grão 250g,1,39.90,pix
+50515,2026-09-04,Centro,Gelado,4,13.50,cartao
+50344,2026-08-24,Centro,Latte,3,12.00,cartao
+51303,2026-10-23,Rodoviária,Pão de queijo,4,7.00,pix
+51287,2026-10-22,Alto da Serra,Café em grão 250g,3,39.90,cartao
+50720,2026-09-16,Beira-Rio,Café em grão 250g,1,39.90,pix
+50903,2026-09-27,Alto da Serra,Latte,1,12.00,pix
+50828,2026-09-23,Beira-Rio,Espresso,2,6.50,pix
+50858,2026-09-25,Rodoviária,Latte,3,12.00,dinheiro
+50265,2026-08-20,Centro,Café em grão 250g,3,39.90,pix
+51192,2026-10-16,Rodoviária,Café em grão 250g,1,39.90,pix
+50647,2026-09-12,Beira-Rio,Café em grão 250g,1,39.90,pix
+50581,2026-09-07,Alto da Serra,Bolo de fubá,4,9.50,pix
+50550,2026-09-06,Centro,Coado,3,8.00,pix
+50165,2026-08-13,centro ,Latte,4,"12,00",pix
+51425,2026-10-31,Rodoviária,Latte,2,12.00,cartao
+50876,2026-09-26,Beira-Rio,Gelado,2,13.50,cartao
+50418,2026-08-29,Centro,Café em grão 250g,3,39.90,pix
+50484,2026-09-02,Centro,Café em grão 250g,2,39.90,pix
+51254,2026-10-20,Beira-Rio,Espresso,2,6.50,pix
+50123,2026-08-10,Beira-Rio,Coado,1,8.00,cartao
+50955,2026-10-01,Rodoviária,Cappuccino,2,11.00,cartao
+50940,2026-09-30,Rodoviária,Latte,4,12.00,cartao
+50988,2026-10-03,Alto da Serra,Gelado,4,13.50,cartao
+50780,2026-09-20,Centro,Café em grão 250g,1,39.90,cartao
+50856,2026-09-25,Beira-Rio,Bolo de fubá,3,9.50,cartao
+51293,2026-10-23,Centro,Pão de queijo,3,7.00,cartao
+50268,2026-08-20,Centro,Cappuccino,3,11.00,pix
+50503,2026-09-03,Beira-Rio,Pão de queijo,4,7.00,pix
+50259,2026-08-19,Beira-Rio,Latte,4,12.00,cartao
+50098,2026-08-09,Centro,Espresso,4,6.50,cartao
+51101,2026-10-10,rodoviária ,Cappuccino,3,11.00,pix
+50691,2026-09-14,Beira-Rio,Cappuccino,3,11.00,pix
+51128,2026-10-11,Alto da Serra,Pão de queijo,1,7.00,pix
+50275,2026-08-20,Rodoviária,Pão de queijo,3,7.00,dinheiro
+50413,2026-08-28,Rodoviária,Cappuccino,4,11.00,dinheiro
+51145,2026-10-13,Centro,Gelado,1,13.50,pix
+50976,2026-10-03,Centro,Bolo de fubá,2,9.50,pix
+50932,2026-09-30,Centro,Gelado,1,13.50,pix
+50517,2026-09-04,Beira-Rio,Bolo de fubá,3,9.50,pix
+51392,2026-10-29,Beira-Rio,Cappuccino,4,11.00,pix
+50180,2026-08-14,Centro,Café em grão 250g,4,39.90,pix
+51385,2026-10-28,Alto da Serra,Pão de queijo,1,7.00,dinheiro
+50295,2026-08-21,RODOVIÁRIA,Coado,1,8.00,pix
+50863,2026-09-25,Alto da Serra,Espresso,2,6.50,pix
+51181,2026-10-16,Centro,Latte,4,12.00,pix
+51274,21/10/2026,Alto da Serra,Café em grão 250g,3,39.90,pix
+50157,2026-08-12,Alto da Serra,Cappuccino,2,11.00,cartao
+50544,2026-09-05,Alto da Serra,Cappuccino,4,11.00,pix
+50639,2026-09-12,Centro,Latte,3,12.00,pix
+51354,2026-10-26,Beira-Rio,Latte,3,R$ 12.00,pix
+50622,2026-09-10,Rodoviária,Espresso,3,6.50,cartao
+50385,2026-08-27,Centro,Bolo de fubá,3,9.50,pix
+50166,13 ago 2026,Beira-Rio,Bolo de fubá,4,9.50,pix
+50723,16 set 2026,Rodoviária,Coado,4,"8,00",pix
+50122,2026-08-10,Beira-Rio,Café em grão 250g,1,39.90,pix
+50849,2026-09-24,Alto da Serra,Gelado,3,13.50,cartao
+50898,2026-09-27,Rodoviária,Cappuccino,3,11.00,pix
+50965,2026-10-02,Beira-Rio,Gelado,3,13.50,cartao
+50463,2026-08-31,Rodoviária,Coado,1,8.00,pix
+50102,2026-08-09,Beira-Rio,Pão de queijo,1,7.00,cartao
+50684,2026-09-14,Centro,Latte,3,12.00,cartao
+51136,2026-10-12,Rodoviária,Gelado,3,13.50,pix
+50466,2026-08-31,Alto da Serra,Coado,2,8.00,pix
+50992,2026-10-04,Centro,Coado,2,8.00,pix
+50748,2026-09-18,Beira-Rio,Espresso,4,"6,50",pix
+51241,2026-10-19,Beira-Rio,Latte,3,R$ 12.00,cartao
+50397,2026-08-27,Alto da Serra,Bolo de fubá,2,9.50,pix
+50759,2026-09-19,Centro,Cappuccino,4,11.00,pix
+50641,2026-09-12,Centro,Espresso,1,6.50,pix
+50240,2026-08-18,Centro,Latte,2,12.00,pix
+51369,2026-10-27,Beira-Rio,Bolo de fubá,2,9.50,pix
+51056,2026-10-07,Alto da Serra,Cappuccino,4,11.00,cartao
+50596,2026-09-08,Alto da Serra,Coado,2,8.00,cartao
+51087,2026-10-09,Alto da Serra,Café em grão 250g,1,39.90,cartao
+51185,16/10/2026,Centro,Café em grão 250g,3,39.90,pix
+51414,2026-10-31,Centro,Pão de queijo,1,7.00,pix
+50521,2026-09-04,Rodoviária,Bolo de fubá,3,9.50,pix
+50214,2026-08-16,Centro,Espresso,1,6.50,pix
+50171,2026-08-13,Rodoviária,Coado,1,8.00,pix
+51097,2026-10-10,Beira-Rio,Bolo de fubá,1,9.50,pix
+51174,2026-10-15,Beira Rio,Cappuccino,4,11.00,pix
+51383,2026-10-28,Rodoviária,Café em grão 250g,1,39.90,pix
+50621,2026-09-10,Beira-Rio,Gelado,1,13.50,pix
+51020,2026-10-05,Rodoviária,Bolo de fubá,2,9.50,cartao
+50374,2026-08-26,Centro,Gelado,1,13.50,dinheiro
+51399,2026-10-29,Alto da Serra,Café em grão 250g,3,39.90,cartao
+51140,2026-10-12,Alto da Serra,Cappuccino,3,11.00,cartao
+51186,2026-10-16,beira-rio ,Pão de queijo,4,7.00,pix
+51069,2026-10-08,Alto da Serra,Coado,1,8.00,pix
+50270,2026-08-20,Beira-Rio,Pão de queijo,1,7.00,pix
+50351,2026-08-24,Rodoviária,Gelado,3,13.50,dinheiro
+50339,2026-08-23,Alto da Serra,Latte,2,12.00,cartao
+50745,2026-09-18,Centro,Latte,1,12.00,cartao
+50664,2026-09-13,Centro,Coado,2,8.00,pix
+50151,2026-08-12,Centro,Cappuccino,3,11.00,cartao
+50942,2026-09-30,Alto da Serra,Bolo de fubá,1,9.50,dinheiro
+50117,2026-08-10,Centro,Gelado,2,13.50,pix
+51210,2026-10-17,Rodoviária,Gelado,3,13.50,dinheiro
+50821,22/09/2026,Alto da Serra,Latte,1,12.00,pix
+50526,5 set 2026,Centro,Café em grão 250g,2,39.90,pix
+51423,2026-10-31,Rodoviária,Bolo de fubá,4,9.50,cartao
+50883,2026-09-26,Alto da Serra,Espresso,2,6.50,pix
+51202,2026-10-17,Beira-Rio,Gelado,2,13.50,cartao
+50147,2026-08-12,Centro,Espresso,1,6.50,pix
+50961,2026-10-02,Centro,Coado,1,8.00,pix
+50587,2026-09-08,Beira-Rio,Café em grão 250g,4,39.90,pix
+51103,2026-10-10,Alto da Serra,Gelado,2,R$ 13.50,pix
+51330,2026-10-25,Centro,Pão de queijo,4,7.00,pix
+50567,2026-09-06,Alto da Serra,Café em grão 250g,3,39.90,cartao
+50817,2026-09-22, Beira-Rio,Café em grão 250g,3,"39,90",pix
+50487,2026-09-02,Beira-Rio,Latte,4,12.00,dinheiro
+50634,2026-09-11,Beira-Rio,Coado,2,8.00,pix
+50336,2026-08-23,Rodoviária,Latte,4,12.00,cartao
+51350,26 out 2026,Centro,Latte,1,12.00,pix
+50846,2026-09-24,Rodoviária,Coado,2,8.00,cartao
+50539,2026-09-05,Rodoviária,Cappuccino,3,11.00,pix
+50629,11/09/2026,Centro,Latte,2,12.00,cartao
+50109,2026-08-09,Rodoviária,Café em grão 250g,4,39.90,pix
+50522,2026-09-04,Rodoviária,Coado,1,8.00,pix
+50573,2026-09-07,Centro,Gelado,4,13.50,cartao
+50050,2026-08-06,Centro,Cappuccino,2,11.00,pix
+50699,2026-09-15,Centro,Coado,2,8.00,cartao
+51114,2026-10-11,Beira-Rio,Espresso,3,6.50,pix
+50159,2026-08-12,Alto da Serra,Café em grão 250g,2,39.90,pix
+51403,2026-10-30,Centro,Cappuccino,2,11.00,cartao
+51291,2026-10-23,Centro,Café em grão 250g,2,39.90,pix
+51218,2026-10-18,Centro,Café em grão 250g,4,39.90,pix
+51048,2026-10-07,Beira-Rio,Coado,3,8.00,pix
+50025,2026-08-04,Rodoviária,Coado,1,8.00,pix
+50869,2026-09-26,Centro,Coado,1,8.00,cartao
+50600,09/09/2026,Centro,Latte,2,12.00,cartao
+50064,2026-08-07,Centro,Café em grão 250g,2,39.90,pix
+50615,2026-09-10,Centro,Bolo de fubá,4,9.50,cartao
+51184,2026-10-16,Centro,Café em grão 250g,1,39.90,cartao
+50896,2026-09-27,Beira-Rio,Latte,3,12.00,cartao
+51026,2026-10-06,Centro,Gelado,1,13.50,pix
+50033,05/08/2026,Centro,Café em grão 250g,1,39.90,cartao
+51319,2026-10-24,Rodoviária,Latte,3,12.00,cartao
+50692,2026-09-14,Beira-Rio,Espresso,1,6.50,pix
+50813,2026-09-22,Centro,Café em grão 250g,3,39.90,pix
+50765,2026-09-19,Centro,Café em grão 250g,2,39.90,pix
+50766,2026-09-19,Centro,Espresso,1,6.50,cartao
+50496,2026-09-03,Centro,Pão de queijo,4,7.00,pix
+50648,2026-09-12,Beira-Rio,Coado,1,8.00,pix
+51358,2026-10-26,Alto da Serra,Latte,1,12.00,pix
+51272,2026-10-21,Alto da Serra,Espresso,2,6.50,pix
+51108,2026-10-11,Centro,Café em grão 250g,4,39.90,pix
+50724,2026-09-16,Rodoviária,Gelado,1,13.50,pix
+51154,2026-10-13,Rodoviária,Café em grão 250g,2,39.90,cartao
+51356,2026-10-26,Rodoviária,Coado,3,8.00,cartao
+50997,2026-10-04,Beira-Rio,Coado,2,8.00,cartao
+50959,2026-10-02,Centro,Coado,1,8.00,pix
+51240,19 out 2026,Beira-Rio,Espresso,1,6.50,pix
+51038,2026-10-06,Rodoviária,Espresso,3,6.50,cartao
+50866,2026-09-26,CENTRO,Gelado,2,13.50,pix
+51317,2026-10-24,Beira-Rio,Latte,3,12.00,dinheiro
+50833,2026-09-23,Alto da Serra,Gelado,4,13.50,cartao
+51031,06/10/2026,Beira-Rio,Café em grão 250g,1,39.90,cartao
+50006,03/08/2026,Beira-Rio,Espresso,4,6.50,pix
+50884,2026-09-26,Alto da Serra,Café em grão 250g,1,39.90,pix
+50436,2026-08-30,Centro,Cappuccino,3,11.00,pix
+50690,2026-09-14,Beira-Rio,Latte,3,12.00,cartao
+50245,2026-08-18,Beira-Rio,Cappuccino,2,11.00,cartao
+50844,24 set 2026,Rodoviária,Café em grão 250g,2,39.90,cartao
+51316,2026-10-24,Beira-Rio,Latte,2,12.00,dinheiro
+51243,2026-10-19,Rodoviária,Pão de queijo,3,7.00,pix
+50584,2026-09-08,Centro,Pão de queijo,1,7.00,pix
+50172,2026-08-13,Rodoviária,Coado,4,8.00,pix
+50060,2026-08-06,Rodoviária,Espresso,4,6.50,cartao
+50575,2026-09-07,Beira-Rio,Cappuccino,3,11.00,cartao
+50781,2026-09-20,Centro,Bolo de fubá,3,9.50,pix
+51232,2026-10-19,Centro,Gelado,4,13.50,pix
+51318,2026-10-24,Rodoviária,Pão de queijo,3,7.00,pix
+50886,2026-09-26,Alto da Serra,Espresso,4,6.50,pix
+51089,10/10/2026,Centro,Cappuccino,3,11.00,pix
+50929,2026-09-30,Centro,Bolo de fubá,4,9.50,cartao
+50108,2026-08-09,Rodoviária,Coado,4,8.00,cartao
+50716,2026-09-16,Centro,Café em grão 250g,4,39.90,cartao
+50578,2026-09-07,Rodoviária,Latte,3,12.00,cartao
+51379,2026-10-28,Beira-Rio,Gelado,2,13.50,pix
+50260,2026-08-19,Rodoviária,Cappuccino,3,11.00,cartao
+51289,2026-10-22,Alto da Serra,Latte,2,12.00,pix
+51386,2026-10-28,Alto da Serra,Café em grão 250g,4,39.90,pix
+50576,2026-09-07,Beira-Rio,Espresso,3,6.50,cartao
+51051,2026-10-07,Rodoviária,Coado,2,8.00,cartao
+51050,2026-10-07,Beira-Rio,Café em grão 250g,2,39.90,pix
+51126,2026-10-11,Alto da Serra,Gelado,2,13.50,pix
+51344,2026-10-25,Alto da Serra,Latte,1,12.00,cartao
+50701,2026-09-15,Centro,Café em grão 250g,2,39.90,pix
+50337,2026-08-23,Alto da Serra,Cappuccino,1,11.00,pix
+51275,2026-10-22,Centro,Gelado,3,13.50,cartao
+51130,2026-10-12,Centro,Café em grão 250g,1,39.90,cartao
+50541,2026-09-05,Rodoviária,Café em grão 250g,2,39.90,cartao
+50185,2026-08-14,Rodoviária,Espresso,4,6.50,cartao
+51159,2026-10-14,Centro,Café em grão 250g,4,39.90,pix
+51339,2026-10-25,Rodoviária,Café em grão 250g,4,39.90,cartao
+50891,2026-09-27,Centro,Bolo de fubá,1,9.50,cartao
+51408,30 out 2026,Rodoviária,Bolo de fubá,3,9.50,cartao
+50523,2026-09-04,Alto da Serra,Coado,1,8.00,pix
+50212,2026-08-16,Centro,Latte,1,12.00,cartao
+50609,2026-09-09,Rodoviária,Latte,3,12.00,cartao
+50404,2026-08-28,Centro,Bolo de fubá,2,9.50,cartao
+50316,2026-08-22,Alto da Serra,Latte,1,12.00,cartao
+51144,2026-10-13,Centro,Gelado,4,13.50,pix
+50482,2026-09-02,Centro,Cappuccino,1,11.00,pix
+50210,2026-08-16,Centro,Espresso,1,R$ 6.50,pix
+50811,2026-09-22,Centro,Gelado,4,13.50,pix
+50510,03/09/2026,Alto da Serra,Espresso,2,6.50,cartao
+51222,2026-10-18,Beira-Rio,Latte,2,12.00,cartao
+50132,2026-08-11,Centro,Café em grão 250g,3,39.90,dinheiro
+50126,2026-08-10,Rodoviária,Cappuccino,3,11.00,pix
+50061,2026-08-06,Alto da Serra,Latte,1,12.00,pix
+50369,25 ago 2026,Alto da Serra,Latte,2,12.00,pix
+51368,2026-10-27,Beira-Rio,Gelado,2,13.50,cartao
+50358,2026-08-25,Centro,Bolo de fubá,2,R$ 9.50,pix
+50133,2026-08-11,Centro,Espresso,1,6.50,dinheiro
+50885,2026-09-26,Alto da Serra,Bolo de fubá,4,9.50,pix
+51046,2026-10-07,centro ,Café em grão 250g,1,39.90,cartao
+51189,2026-10-16,BEIRA-RIO,Latte,1,12.00,cartao
+50901,2026-09-27,Rodoviária,Cappuccino,1,11.00,cartao
+51259,20 out 2026,Alto da Serra,Pão de queijo,3,7.00,pix
+50431,2026-08-29,Alto da Serra,Bolo de fubá,1,9.50,cartao
+51191,2026-10-16, Rodoviária,Coado,2,8.00,cartao
+51206,2026-10-17,Beira-Rio,Cappuccino,1,11.00,cartao
+50524,2026-09-04,Alto da Serra,Café em grão 250g,4,39.90,pix
+50044,2026-08-05,Rodoviária,Coado,2,8.00,cartao
+50840,2026-09-24,Beira-Rio,Coado,2,8.00,cartao
+51246,2026-10-19,Alto da Serra,Pão de queijo,4,7.00,pix
+50909,2026-09-28,Beira-Rio,Bolo de fubá,1,9.50,pix
+50080,2026-08-08,Centro,Café em grão 250g,4,39.90,dinheiro
+50654,2026-09-12,Rodoviária,Cappuccino,1,11.00,pix
+50673,2026-09-13,Beira-Rio,Café em grão 250g,1,39.90,cartao
+50424,2026-08-29,Beira-Rio,Bolo de fubá,1,9.50,cartao
+50382,2026-08-26, Alto da Serra,Latte,4,12.00,cartao
+50249,2026-08-18,Rodoviária,Gelado,1,13.50,pix
+50297,2026-08-21,Alto da Serra,Coado,3,8.00,dinheiro
+50819,2026-09-22,Alto da Serra,Bolo de fubá,3,9.50,cartao
+50451,2026-08-30,Alto da Serra,Bolo de fubá,2,9.50,cartao
+50953,2026-10-01,Beira-Rio,Cappuccino,2,11.00,dinheiro
+50729,2026-09-16,Alto da Serra,Gelado,2,13.50,pix
+50243,2026-08-18,Centro,Cappuccino,4,R$ 11.00,pix
+51080,2026-10-09,Rodoviária,Café em grão 250g,3,39.90,dinheiro
+50519,2026-09-04,Rodoviária,Gelado,2,13.50,pix
+50112,2026-08-09,Alto da Serra,Pão de queijo,3,7.00,pix
+51294,23/10/2026,Centro,Coado,3,8.00,pix
+50018,2026-08-04,Centro,Pão de queijo,3,7.00,dinheiro
+50630,2026-09-11,Centro,Coado,3,"8,00",cartao
+51265,21 out 2026,Centro,Bolo de fubá,1,9.50,cartao
+50777,2026-09-19,Alto da Serra,Gelado,1,13.50,pix
+51156,2026-10-14,CENTRO,Cappuccino,2,R$ 11.00,cartao
+50118,2026-08-10,Centro,Cappuccino,4,11.00,pix
+50897,2026-09-27,Beira-Rio,Café em grão 250g,3,39.90,cartao
+50527,2026-09-05,Centro,Bolo de fubá,4,9.50,pix
+50002,2026-08-03,Centro,Cappuccino,3,11.00,pix
+51172,15/10/2026,Centro,Bolo de fubá,1,9.50,cartao
+50131,2026-08-11,Centro,Cappuccino,1,11.00,cartao
+50706,2026-09-15,Beira-Rio,Coado,1,8.00,cartao
+51153,2026-10-13,Rodoviária,Gelado,3,13.50,cartao
+50195,2026-08-15,Beira-Rio,Pão de queijo,3,7.00,cartao
+50771,2026-09-19,Beira-Rio,Bolo de fubá,1,9.50,cartao
+50052,2026-08-06,Centro,Gelado,1,13.50,cartao
+50845,2026-09-24,Rodoviária,Pão de queijo,2,7.00,pix
+50168,2026-08-13,Beira-Rio,Coado,4,"8,00",pix
+50474,2026-09-01,Beira-Rio,Espresso,4,6.50,dinheiro
+50870,2026-09-26,Centro,Café em grão 250g,3,39.90,pix
+50096,2026-08-09,Centro,Cappuccino,1,11.00,cartao
+51090,2026-10-10,Centro,Gelado,2,13.50,pix
+50325,2026-08-23,Centro,Bolo de fubá,3,9.50,pix
+50514,2026-09-04,Centro,Latte,3,12.00,cartao
+51321,2026-10-24,Rodoviária,Cappuccino,3,11.00,dinheiro
+50922,2026-09-29,Rodoviária,Cappuccino,1,11.00,pix
+51253,2026-10-20,Beira-Rio,Latte,4,"12,00",cartao
+51122,2026-10-11,Rodoviária,Bolo de fubá,1,9.50,pix
+50063,2026-08-07,Centro,Latte,1,12.00,cartao
+50793,2026-09-20,Rodoviária,Espresso,3,6.50,pix
+50679,2026-09-13,Rodoviária,Coado,1,8.00,cartao
+51377,28 out 2026,Centro,Latte,3,12.00,pix
+50705,2026-09-15,Centro,Coado,3,8.00,cartao
+51322,2026-10-24,Rodoviária,Cappuccino,1,R$ 11.00,pix
+50915,2026-09-28,Alto da Serra,Gelado,2,13.50,pix
+50005,2026-08-03,Beira-Rio,Cappuccino,4,11.00,pix
+50512,2026-09-04,CENTRO,Coado,2,8.00,pix
+50533,2026-09-05,Beira-Rio,Café em grão 250g,4,39.90,cartao
+50092,2026-08-08,Rodoviária,Coado,2,8.00,cartao
+50773,2026-09-19,Rodoviária,Bolo de fubá,1,9.50,pix
+50239,2026-08-17,Alto da Serra,Gelado,4,13.50,dinheiro
+50910,2026-09-28,Beira-Rio,Café em grão 250g,1,39.90,dinheiro
+51008,2026-10-04,Alto da Serra,Latte,4,12.00,cartao
+50433,2026-08-30,Centro,Café em grão 250g,3,R$ 39.90,pix
+50051,2026-08-06,Centro,Bolo de fubá,4,9.50,pix
+50423,2026-08-29,Beira-Rio,Cappuccino,4,11.00,pix
+50300,22/08/2026,Centro,Coado,2,8.00,pix
+51190,2026-10-16,Beira-Rio,Coado,4,8.00,cartao
+50789,2026-09-20,Beira-Rio,Gelado,3,13.50,pix
+50294,21/08/2026,Rodoviária,Latte,3,12.00,dinheiro
+50426,2026-08-29,Rodoviária,Coado,3,8.00,dinheiro
+51397,2026-10-29,Rodoviária,Gelado,2,"13,50",cartao
+50401,2026-08-28,Centro,Bolo de fubá,4,9.50,cartao
+50613,2026-09-10,Centro,Latte,3,12.00,cartao
+50001,2026-08-03,Centro,Espresso,3,6.50,cartao
+51419,2026-10-31,Beira-Rio,Bolo de fubá,3,9.50,pix
+50128,2026-08-10,Alto da Serra,Café em grão 250g,2,39.90,cartao
+50454,2026-08-31,Centro,Gelado,2,13.50,cartao
+51017,5 out 2026,Beira-Rio,Latte,4,12.00,cartao
+50160,2026-08-12,Alto da Serra,Café em grão 250g,2,39.90,cartao
+51341,2026-10-25,Rodoviária,Gelado,2,13.50,pix
+50283,2026-08-21,Centro,Espresso,2,6.50,cartao
+51237,2026-10-19,Centro,Latte,3,12.00,cartao
+50218,2026-08-16,Beira-Rio,Pão de queijo,2,7.00,pix
+50170,2026-08-13,Rodoviária,Cappuccino,2,11.00,pix
+50832,2026-09-23,Alto da Serra,Gelado,2,13.50,cartao
+50104,2026-08-09, Beira-Rio,Espresso,4,6.50,pix
+50607,2026-09-09,Rodoviária,Bolo de fubá,4,9.50,pix
+50483,2026-09-02,Centro,Bolo de fubá,1,9.50,dinheiro
+50593,2026-09-08,Rodoviária,Coado,2,8.00,pix
+51146,2026-10-13,Beira-Rio,Pão de queijo,1,"7,00",cartao
+50037,2026-08-05,Beira-Rio,Bolo de fubá,1,9.50,pix
+51420,2026-10-31,Beira-Rio,Café em grão 250g,2,39.90,pix
+51137,2026-10-12,Rodoviária,Gelado,4,13.50,pix
+51127,2026-10-11,Alto da Serra,Latte,2,"12,00",pix
+51084,2026-10-09,Alto da Serra,Gelado,1,13.50,pix
+50278,2026-08-20,Alto da Serra,Café em grão 250g,2,39.90,cartao
+50322,2026-08-23,Centro,Coado,4,8.00,pix
+50009,2026-08-03,Rodoviária,Gelado,1,13.50,cartao
+50862,2026-09-25,Alto da Serra,Coado,3,8.00,dinheiro
+50900,27/09/2026,Rodoviária,Espresso,1,6.50,pix
+50872,2026-09-26,Beira-Rio,Coado,1,8.00,dinheiro
+51258,2026-10-20,Rodoviária,Coado,1,8.00,pix
+51088,2026-10-10,Centro,Espresso,3,6.50,pix
+50810,2026-09-22,Centro,Gelado,4,13.50,pix
+50804,2026-09-21,rodoviária ,Cappuccino,3,11.00,cartao
+50062,2026-08-06,Alto da Serra,Bolo de fubá,3,9.50,dinheiro
+50224,16 ago 2026,Alto da Serra,Espresso,2,6.50,pix
+50794,2026-09-20,Alto da Serra,Gelado,2,13.50,cartao
+50468,2026-09-01,Centro,Espresso,3,6.50,pix
+50726,2026-09-16,Rodoviária,Cappuccino,3,11.00,dinheiro
+50247,2026-08-18,Beira-Rio,Cappuccino,4,11.00,dinheiro
+50568,2026-09-06, Alto da Serra,Pão de queijo,2,7.00,cartao
+50805,2026-09-21,Rodoviária,Café em grão 250g,4,39.90,cartao
+50022,2026-08-04,Beira-Rio,Cappuccino,3,11.00,pix
+50084,2026-08-08,Beira-Rio,Cappuccino,2,11.00,cartao
+50113,2026-08-09,Alto da Serra,Espresso,3,6.50,cartao
+50989,2026-10-03,Alto da Serra,Gelado,3,13.50,cartao
+50678,2026-09-13,Rodoviária,Pão de queijo,3,7.00,pix
+50282,21 ago 2026,Centro,Gelado,4,13.50,cartao
+50655,2026-09-12,Rodoviária,Cappuccino,2,11.00,pix
+50365,2026-08-25,Beira-Rio,Bolo de fubá,2,9.50,pix
+51005,2026-10-04,Rodoviária,Pão de queijo,1,7.00,pix
+51199,2026-10-17,Centro,Bolo de fubá,2,9.50,pix
+50271,20/08/2026,Beira-Rio,Gelado,4,13.50,pix
+50808,2026-09-21,Alto da Serra,Pão de queijo,2,7.00,dinheiro
+50850,2026-09-25,Centro,Gelado,2,"13,50",cartao
+50513,2026-09-04,Centro,Café em grão 250g,1,39.90,pix
+50378,2026-08-26,Beira-Rio,Gelado,2,13.50,cartao
+51349,2026-10-26,Centro,Coado,3,8.00,cartao
+50121,2026-08-10,Beira-Rio,Bolo de fubá,1,9.50,cartao
+50042,2026-08-05,Rodoviária,Bolo de fubá,4,9.50,cartao
+50560,2026-09-06,Rodoviária,Coado,4,8.00,pix
+51263,2026-10-21,Centro,Latte,1,12.00,cartao
+50331,2026-08-23,Beira-Rio,Gelado,2,13.50,cartao
+50904,2026-09-28,Centro,Pão de queijo,3,7.00,pix
+51003,2026-10-04,Rodoviária,Café em grão 250g,2,39.90,pix
+50036,2026-08-05,Beira-Rio,Café em grão 250g,2,39.90,pix
+50405,2026-08-28,Centro,Latte,1,12.00,pix
+50635,11 set 2026,Rodoviária,Pão de queijo,1,7.00,cartao
+51211,2026-10-17,Rodoviária,Bolo de fubá,2,9.50,cartao
+50981,2026-10-03,Beira-Rio,Café em grão 250g,4,39.90,pix
+51334,2026-10-25,beira-rio ,Cappuccino,3,11.00,pix
+50768,2026-09-19,Beira-Rio,Latte,1,12.00,pix
+90003,2026-09-21,Centro,TESTE - NAO CONTAR,99,1.00,pix
+50328,2026-08-23,Beira-Rio,Bolo de fubá,2,9.50,cartao
+50346,2026-08-24,Beira-Rio,Gelado,2,"13,50",dinheiro
+51284,2026-10-22,Rodoviária,Espresso,3,6.50,pix
+50402,2026-08-28,Centro,Pão de queijo,1,7.00,cartao
+50219,2026-08-16,Rodoviária,Latte,2,12.00,cartao
+50518,2026-09-04, Rodoviária,Bolo de fubá,1,9.50,dinheiro
+50364,2026-08-25,Beira-Rio,Latte,4,12.00,cartao
+51398,2026-10-29,Alto da Serra,Café em grão 250g,3,39.90,pix
+50591,2026-09-08,Beira-Rio,Gelado,1,13.50,cartao
+51363,2026-10-27,Centro,Cappuccino,3,11.00,pix
+50023,2026-08-04,Beira-Rio,Coado,1,8.00,pix
+51365,2026-10-27,Centro,Bolo de fubá,2,9.50,cartao
+50790,2026-09-20,Rodoviária,Espresso,2,6.50,cartao
+50041,2026-08-05,Beira-Rio,Café em grão 250g,1,39.90,cartao
+51009,2026-10-04,Alto da Serra,Pão de queijo,4,"7,00",cartao
+50938,2026-09-30,Beira-Rio,Gelado,3,13.50,pix
+51071,09/10/2026,CENTRO,Cappuccino,1,11.00,cartao
+51029,2026-10-06, Centro,Café em grão 250g,4,39.90,pix
+51271,2026-10-21,Rodoviária,Coado,4,8.00,pix
+51121,2026-10-11,Rodoviária,Cappuccino,2,11.00,cartao
+50827,2026-09-23,Beira-Rio,Pão de queijo,2,7.00,pix
+50326,2026-08-23,Centro,Latte,4,12.00,cartao
+50486,2026-09-02,Beira-Rio,Latte,2,12.00,cartao
+50796,2026-09-21,Centro,Pão de queijo,2,7.00,pix
+51196,17 out 2026,Centro,Espresso,4,6.50,pix
+50377,2026-08-26,Beira-Rio,Bolo de fubá,3,9.50,pix
+50764,2026-09-19,Centro,Bolo de fubá,2,R$ 9.50,pix
+51426,2026-10-31,Rodoviária,Café em grão 250g,3,39.90,pix
+50453,2026-08-30,Alto da Serra,Café em grão 250g,3,"39,90",pix
+50744,2026-09-18,Centro,Gelado,3,13.50,pix
+50485,2026-09-02,Beira-Rio,Gelado,1,13.50,dinheiro
+50702,2026-09-15,Centro,Cappuccino,3,11.00,pix
+51281,2026-10-22,Beira-Rio,Cappuccino,2,11.00,cartao
+50083,2026-08-08,Centro,Pão de queijo,1,7.00,cartao
+50719,2026-09-16,Beira-Rio,Espresso,3,6.50,cartao
+51393,2026-10-29,Beira-Rio,Pão de queijo,1,7.00,pix
+50095,2026-08-08,Alto da Serra,Gelado,2,13.50,pix
+51233,2026-10-19,Centro,Gelado,4,13.50,pix
+50272,2026-08-20,Beira-Rio,Cappuccino,3,11.00,pix
+50513,2026-09-04,Centro,Café em grão 250g,1,39.90,pix
+51092,2026-10-10,Centro,Bolo de fubá,3,9.50,cartao
+50333,2026-08-23,Rodoviária,Pão de queijo,4,7.00,pix
+50329,2026-08-23,Beira-Rio,Espresso,3,6.50,pix
+50984,2026-10-03,Rodoviária,Café em grão 250g,1,39.90,pix
+50611,9 set 2026,Alto da Serra,Cappuccino,4,R$ 11.00,pix
+50403,2026-08-28,Centro,Latte,2,12.00,cartao
+50750,2026-09-18,Beira-Rio,Coado,1,8.00,pix
+50803,2026-09-21,Rodoviária,Espresso,2,6.50,pix
+50628,2026-09-11,Centro,Coado,4,8.00,cartao
+50701,2026-09-15,Centro,Café em grão 250g,2,39.90,pix
+50187,2026-08-14,Alto da Serra,Gelado,3,13.50,cartao
+50838,2026-09-24,Centro,Cappuccino,1,R$ 11.00,cartao
+50657,2026-09-12,Rodoviária,Café em grão 250g,2,39.90,dinheiro
+50880,2026-09-26,Rodoviária,Coado,1,8.00,pix
+50273,20/08/2026,rodoviária ,Bolo de fubá,3,9.50,pix
+50376,2026-08-26,Beira-Rio,Bolo de fubá,4,9.50,pix
+51160,2026-10-14,Centro,Pão de queijo,1,7.00,cartao
+50303,2026-08-22,Centro,Latte,4,12.00,pix
+51374,2026-10-27,Alto da Serra,Café em grão 250g,4,39.90,pix
+50105,2026-08-09,Beira-Rio,Coado,4,8.00,cartao
+50787,2026-09-20,Beira-Rio,Pão de queijo,3,7.00,cartao
+50490,2026-09-02,Rodoviária,Bolo de fubá,4,9.50,dinheiro
+50427,2026-08-29,Rodoviária,Coado,3,8.00,pix
+51215,2026-10-17,Alto da Serra,Bolo de fubá,4,9.50,cartao
+50220,2026-08-16,Rodoviária,Latte,3,12.00,cartao
+50153,2026-08-12,Beira-Rio,Bolo de fubá,2,9.50,cartao
+51224,18/10/2026,beira-rio ,Espresso,4,6.50,pix
+50597,2026-09-08,Alto da Serra,Latte,1,12.00,pix
+51027,2026-10-06,Centro,Café em grão 250g,4,39.90,dinheiro
+50680,2026-09-13,Alto da Serra,Café em grão 250g,4,39.90,cartao
+50142,2026-08-11,Rodoviária,Coado,3,8.00,cartao
+50906,2026-09-28,Centro,Gelado,1,13.50,cartao
+50763,2026-09-19,Centro,Espresso,2,6.50,pix
+50194,2026-08-15,Centro,Cappuccino,2,11.00,cartao
+50972,2026-10-03,Centro,Espresso,2,6.50,pix
+50034,2026-08-05,Centro,Pão de queijo,3,7.00,pix
+50538,2026-09-05,Rodoviária,Café em grão 250g,4,39.90,cartao
+50865,2026-09-26,Centro,Latte,2,12.00,pix
+51032,2026-10-06,Beira-Rio,Pão de queijo,2,"7,00",pix
+50930,2026-09-30,Centro,Espresso,2,6.50,pix
+50067,2026-08-07,Beira-Rio,Coado,4,8.00,cartao
+50499,2026-09-03,Centro,Bolo de fubá,3,9.50,cartao
+51324,2026-10-24,Alto da Serra,Cappuccino,2,11.00,cartao
+50448,2026-08-30,Rodoviária,Coado,3,8.00,pix
+51132,2026-10-12,Centro,Bolo de fubá,3,9.50,cartao
+50554,2026-09-06,Beira-Rio,Coado,2,8.00,cartao
+50928,2026-09-29,Alto da Serra,Latte,3,12.00,cartao
+50954,2026-10-01,Rodoviária,Espresso,2,R$ 6.50,cartao
+50269,2026-08-20, Centro,Gelado,4,"13,50",pix
+50631,2026-09-11,Centro,Cappuccino,1,11.00,pix
+50467,2026-09-01,Centro,Cappuccino,2,11.00,pix
+51261,2026-10-20,Alto da Serra,Cappuccino,1,11.00,pix
+51221,2026-10-18,Beira-Rio,Coado,1,8.00,cartao
+50419,2026-08-29,Centro,Cappuccino,3,11.00,cartao
+50829,2026-09-23,Rodoviária,Cappuccino,4,11.00,pix
+50834,2026-09-23,Alto da Serra,Coado,4,8.00,pix
+50274,2026-08-20,Rodoviária,Coado,4,8.00,dinheiro
+51347,25 out 2026,Alto da Serra,Bolo de fubá,2,9.50,pix
+50395,2026-08-27,Rodoviária,Coado,1,8.00,pix
+50851,2026-09-25,Centro,Coado,3,8.00,pix
+50887,2026-09-26, Alto da Serra,Café em grão 250g,2,39.90,pix
+51404,2026-10-30,Beira-Rio,Bolo de fubá,4,9.50,cartao
+50651,2026-09-12,Beira-Rio,Latte,4,12.00,cartao
+51249,2026-10-20,Centro,Pão de queijo,3,7.00,dinheiro
+50178,2026-08-14,Centro,Gelado,4,"13,50",cartao
+50999,4 out 2026,Beira-Rio,Bolo de fubá,3,9.50,cartao
+50186,2026-08-14,Alto da Serra,Latte,4,12.00,cartao
+50594,2026-09-08,Rodoviária,Gelado,3,13.50,cartao
+50189,2026-08-15,Centro,Café em grão 250g,4,39.90,pix
+50616,2026-09-10,Centro,Cappuccino,4,11.00,dinheiro
+51376,2026-10-27,Alto da Serra,Coado,3,8.00,cartao
+50028,2026-08-04,Alto da Serra,Café em grão 250g,4,39.90,cartao
+50137,2026-08-11,Beira-Rio,Espresso,1,6.50,dinheiro
+50353,2026-08-24,Alto da Serra,Pão de queijo,4,7.00,cartao
+50071,2026-08-07,beira-rio ,Espresso,4,6.50,cartao
+51213,2026-10-17,Alto da Serra,Espresso,3,6.50,pix
+50890,2026-09-27,Centro,Cappuccino,2,11.00,pix
+50589,8 set 2026,Beira-Rio,Gelado,4,13.50,dinheiro
+51245,19 out 2026,Rodoviária,Pão de queijo,1,7.00,dinheiro
+50867,2026-09-26,Centro,Latte,3,12.00,cartao
+51171,2026-10-15,Centro,Gelado,3,13.50,pix
+51074,2026-10-09,Centro,Café em grão 250g,3,39.90,cartao
+50441,2026-08-30,Beira-Rio,Coado,4,8.00,pix
+50551,2026-09-06,Centro,Gelado,1,13.50,cartao
+50138,2026-08-11,Beira-Rio,Cappuccino,2,11.00,dinheiro
+50181,14/08/2026, Beira-Rio,Coado,3,8.00,pix
+51165,2026-10-14,Rodoviária,Cappuccino,4,11.00,pix
+50644,2026-09-12,Centro,Coado,2,8.00,pix
+50392,2026-08-27,Rodoviária,Gelado,3,13.50,pix
+50043,2026-08-05,Rodoviária,Latte,4,12.00,cartao
+50306,2026-08-22,Beira-Rio,Cappuccino,1,11.00,cartao
+50182,2026-08-14,Beira-Rio,Espresso,1,6.50,dinheiro
+51343,2026-10-25,Rodoviária,Pão de queijo,3,7.00,pix
+51021,2026-10-05,Rodoviária,Gelado,1,13.50,pix
+50352,2026-08-24,Rodoviária,Bolo de fubá,3,9.50,dinheiro
+50472,2026-09-01,Centro,Coado,1,8.00,pix
+51098,2026-10-10,RODOVIÁRIA,Cappuccino,1,11.00,pix
+50509,2026-09-03,Alto da Serra,Coado,2,8.00,pix
+51307,2026-10-24,Centro,Coado,2,8.00,pix
+50302,2026-08-22,Centro,Cappuccino,1,11.00,cartao
+51175,2026-10-15,Beira-Rio,Coado,2,"8,00",cartao
+50196,2026-08-15,Beira-Rio,Espresso,4,6.50,pix
+50010,2026-08-03,Rodoviária,Café em grão 250g,1,39.90,pix
+51093,2026-10-10,Centro,Latte,2,12.00,dinheiro
+50727,2026-09-16,Alto da Serra,Espresso,1,6.50,cartao
+50258,2026-08-19,BEIRA-RIO,Bolo de fubá,1,9.50,cartao
+51277,2026-10-22,Centro,Cappuccino,1,11.00,cartao
+50263,2026-08-19,Alto da Serra,Café em grão 250g,1,39.90,pix
+51428,2026-10-31,Alto da Serra,Café em grão 250g,3,39.90,cartao
+51002,2026-10-04,Rodoviária,Latte,1,12.00,cartao
+50406,28 ago 2026,Beira-Rio,Bolo de fubá,4,9.50,cartao
+50924,2026-09-29,Rodoviária,Coado,4,8.00,cartao
+50410,2026-08-28,Rodoviária,Gelado,3,13.50,cartao
+51019,2026-10-05,Rodoviária,Café em grão 250g,2,39.90,pix
+51007,2026-10-04,alto da serra ,Café em grão 250g,3,39.90,cartao
+51015,2026-10-05,Centro,Coado,3,8.00,cartao
+51372,2026-10-27,Rodoviária,Cappuccino,3,11.00,pix
+51396,2026-10-29,Rodoviária,Cappuccino,2,11.00,cartao
+51216,2026-10-17,Alto da Serra,Gelado,3,13.50,pix
+50111,2026-08-09,Alto da Serra,Bolo de fubá,1,9.50,dinheiro
+50299,21/08/2026,Alto da Serra,Café em grão 250g,2,39.90,cartao
+50536,2026-09-05,Beira-Rio,Pão de queijo,1,7.00,cartao
+50703,2026-09-15,CENTRO,Gelado,2,13.50,pix
+51166,2026-10-14,Rodoviária,Café em grão 250g,4,39.90,pix
+51267,2026-10-21,beira-rio ,Coado,4,8.00,pix
+50074,2026-08-07,Alto da Serra,Coado,4,8.00,dinheiro
+50620,2026-09-10,Beira-Rio,Gelado,4,13.50,pix
+50086,2026-08-08,Beira-Rio,Cappuccino,2,11.00,pix
+51214,2026-10-17,Alto da Serra,Bolo de fubá,2,9.50,cartao
+50732,2026-09-17,Centro,Gelado,4,R$ 13.50,cartao
+50308,2026-08-22,Beira-Rio,Café em grão 250g,1,39.90,cartao
+51054,2026-10-07,Alto da Serra,Coado,4,8.00,pix
+50733,2026-09-17,Centro,Espresso,3,"6,50",pix
+50279,2026-08-20,Alto da Serra,Gelado,2,13.50,dinheiro
+51034,2026-10-06,Beira-Rio,Espresso,4,R$ 6.50,cartao
+50414,2026-08-28,Alto da Serra,Café em grão 250g,4,39.90,dinheiro
+50089,2026-08-08,Rodoviária,Coado,2,8.00,dinheiro
+50557,2026-09-06,Beira-Rio,Coado,3,8.00,pix
+51187,2026-10-16,Beira-Rio,Pão de queijo,2,7.00,pix
+50388,2026-08-27,Centro,Cappuccino,1,11.00,cartao
+51229,2026-10-18,Alto da Serra,Gelado,2,13.50,cartao
+50309,2026-08-22,Beira-Rio,Pão de queijo,4,7.00,cartao
+50094,2026-08-08,Alto da Serra,Bolo de fubá,2,9.50,pix
+51415,2026-10-31,Centro,Café em grão 250g,4,39.90,pix
+50677,2026-09-13,Rodoviária,Pão de queijo,1,7.00,cartao
+51405,2026-10-30,Beira-Rio,Bolo de fubá,3,9.50,cartao
+51328,2026-10-25,Centro,Coado,1,8.00,pix
+50046,2026-08-05,Alto da Serra,Latte,3,12.00,cartao
+50579,2026-09-07,Rodoviária,Espresso,1,6.50,cartao
+50542,2026-09-05,Alto da Serra,Latte,2,12.00,pix
+51236,2026-10-19,Centro,Café em grão 250g,3,39.90,pix
+50250,2026-08-18,Rodoviária,Café em grão 250g,2,39.90,dinheiro
+50907,2026-09-28,Centro,Espresso,3,6.50,pix
+50011,2026-08-03,Rodoviária,Bolo de fubá,1,9.50,cartao
+50562,2026-09-06,Rodoviária,Bolo de fubá,4,9.50,pix
+51141,2026-10-12,Alto da Serra,Gelado,1,13.50,cartao
+50686,2026-09-14,Centro,Bolo de fubá,2,9.50,pix
+50200,2026-08-15,Rodoviária,Café em grão 250g,3,39.90,cartao
+50894,2026-09-27,Beira-Rio,Café em grão 250g,4,39.90,cartao
+50264,2026-08-20,Centro,Cappuccino,4,11.00,cartao
+50330,2026-08-23,Beira-Rio,Espresso,1,6.50,cartao
+51022,2026-10-05,Rodoviária,Coado,1,R$ 8.00,pix
+51346,2026-10-25,Alto da Serra,Latte,1,12.00,pix
+50520,2026-09-04,Rodoviária,Café em grão 250g,4,39.90,cartao
+50893,2026-09-27,Beira-Rio,Cappuccino,1,11.00,cartao
+51295,2026-10-23,Centro,Bolo de fubá,2,9.50,pix
+51052,2026-10-07,Rodoviária,Cappuccino,2,11.00,dinheiro
+50315,2026-08-22,Rodoviária,Coado,4,8.00,dinheiro
+51429,2026-10-31,Alto da Serra,Bolo de fubá,4,9.50,pix
+50570,2026-09-07,Centro,Latte,4,"12,00",dinheiro

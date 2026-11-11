@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7 Tests for Any AI — the same request for an agent, in chat, or for a person</title>
+<meta name="description" content="Seven ready-to-use test prompts (sales page, dashboard, presentation, animated explainer, photo editor, 3D game, and agent hub) in three formats: an agent with a folder, a chat window like Agnes or ChatGPT, and a brief for a person without AI. Includes data, an answer key, and a script-based evaluator.">
+<link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/sete-provas-ia/guia/">
+<link rel="alternate" hreflang="en" href="https://inematds.github.io/sete-provas-ia/guia/en/">
+<link rel="alternate" hreflang="es" href="https://inematds.github.io/sete-provas-ia/guia/es/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c0c10; --bg2:#14141b; --card:#16161e; --line:#272730;
+    --txt:#e9e9ee; --mut:#9a9aa6; --amb:#E2A23B; --amb2:#f0c070; --sky:#38bdf8; --pro:#cbd5e1;
+    color-scheme:dark;
+  }
+  body.light{
+    --bg:#f6f7f9; --bg2:#eceef2; --card:#ffffff; --line:#e1e3ea;
+    --txt:#1a1a22; --mut:#5b5b68; --amb:#b9791d; --amb2:#a16207; --sky:#0369a1; --pro:#b45309;
+    color-scheme:light;
+  }
+  body.light .hero .glow{opacity:.5}
+  body.light pre{background:#0e0e14;color:#d6d6e0}
+  body.light pre .c{color:#8a8a98}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Sora,sans-serif;line-height:1.15;margin:0}
+  a{color:var(--amb);text-decoration:none}
+  code,pre{font-family:"JetBrains Mono",monospace}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+  .mut{color:var(--mut)} .amb{color:var(--amb)}
+  .chip{display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amb);font-weight:600;font-family:Sora}
+  nav{position:sticky;top:0;z-index:30;backdrop-filter:blur(12px);background:rgba(12,12,16,.78);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:22px;height:60px}
+  nav .brand{display:flex;align-items:center;gap:8px;font-family:Sora;font-weight:800;letter-spacing:-.02em;color:var(--amb)}
+  nav .brand .emoji{font-size:1.25rem}
+  nav .sep{color:var(--mut);opacity:.45}
+  nav .inema{color:var(--sky);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .inema:hover{filter:brightness(1.15)}
+  nav .pro{color:var(--pro);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .pro:hover{filter:brightness(1.15)}
+  nav .clubpro{display:inline-flex;align-items:center;gap:6px}
+  nav .links{margin-left:auto;display:flex;align-items:center;gap:20px;font-size:.92rem}
+  nav .links a.sec{color:var(--mut)} nav .links a.sec:hover{color:var(--txt)}
+  .lang{display:inline-flex;gap:2px;font-family:Sora;font-size:.78rem}
+  .lang a{color:var(--mut);padding:.2em .45em;border-radius:6px} .lang a.on{color:var(--amb);background:rgba(226,162,59,.12)}
+  .tgl{background:var(--bg2);border:1px solid var(--line);color:var(--txt);width:38px;height:38px;border-radius:10px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:1.05rem}
+  .tgl:hover{border-color:var(--amb)}
+  .btn{display:inline-block;background:var(--amb);color:#1a1206;font-weight:600;padding:.6em 1.05em;border-radius:10px;font-family:Sora}
+  .btn.ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
+  @media(max-width:760px){nav .links a.sec{display:none}}
+  @media(max-width:520px){nav .wrap{gap:8px;padding:8px 14px;height:auto;flex-wrap:wrap} nav .links{gap:8px;margin-left:0;width:100%;justify-content:space-between} nav .btn{padding:.45em .7em;font-size:.82rem} .tgl{width:34px;height:34px}}
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero .glow{position:absolute;inset:-40% -20% auto auto;width:70%;height:600px;background:radial-gradient(closest-side,rgba(226,162,59,.22),transparent 70%);pointer-events:none}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:74px 22px}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;letter-spacing:-.025em}
+  .hero p.lead{font-size:1.18rem;color:var(--mut);margin:1.1em 0 1.6em;max-width:34ch}
+  .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .hero figure{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000}
+  .hero figure img{width:100%;height:auto;display:block}
+  .resumo{padding:38px 0 34px;border-bottom:1px solid var(--line)}
+  .resumo p{font-size:1.12rem;line-height:1.7;max-width:74ch;margin:.55em 0 0}
+  @media(max-width:780px){.hero .wrap{grid-template-columns:1fr;padding:48px 22px}}
+  section{padding:62px 0;border-bottom:1px solid var(--line)}
+  section h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;letter-spacing:-.02em}
+  section .sub{color:var(--mut);margin:.6em 0 2em;max-width:62ch}
+  .grid{display:grid;gap:16px}
+  .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)} .g2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:820px){.g3,.g4{grid-template-columns:1fr 1fr}}
+  @media(max-width:540px){.g2,.g3,.g4{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .card h3{font-size:1.05rem;margin-bottom:.4em}
+  .card p{color:var(--mut);font-size:.92rem;margin:0}
+  .num{display:inline-flex;width:30px;height:30px;align-items:center;justify-content:center;border-radius:8px;background:rgba(226,162,59,.14);color:var(--amb);font-family:Sora;font-weight:800;font-size:.9rem;margin-bottom:.7em}
+  .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+  .flow span{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:.45em .9em;font-size:.85rem;font-family:Sora;font-weight:600}
+  .flow .arr{color:var(--amb);border:none;background:none;padding:0 .1em}
+  pre{background:#0a0a0e;border:1px solid var(--line);border-radius:12px;padding:16px 18px;overflow:auto;font-size:.86rem;line-height:1.6;color:#d6d6e0}
+  pre .c{color:#6f6f7c} pre .k{color:var(--amb2)} pre .s{color:#9ece6a}
+  .step{display:grid;grid-template-columns:46px minmax(0,1fr);gap:16px;margin-bottom:26px}
+  .step>div,.card{min-width:0}
+  p code,li code,td code{overflow-wrap:anywhere}
+  .step .b{width:46px;height:46px;border-radius:12px;background:var(--amb);color:#1a1206;font-family:Sora;font-weight:800;font-size:1.25rem;display:flex;align-items:center;justify-content:center}
+  .step h3{font-size:1.12rem;margin-bottom:.3em}
+  .step p{color:var(--mut);margin:.2em 0 .7em}
+  .ex{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:680px){.ex{grid-template-columns:1fr}}
+  .ex figure{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+  .ex figure img{width:100%;height:auto;display:block}
+  .ex figcaption{padding:12px 14px;font-size:.88rem;color:var(--mut);background:var(--card)}
+  .phase{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .phase:last-child{border:none}
+  .phase .tag{flex:0 0 92px;font-family:Sora;font-weight:800;color:var(--amb)}
+  .phase .d strong{display:block;margin-bottom:.2em}
+  .phase .d span{color:var(--mut);font-size:.92rem}
+  footer{padding:46px 0;text-align:center;color:var(--mut);font-size:.9rem}
+  .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.3em .8em;font-size:.78rem;color:var(--mut);margin:0 4px}
+</style>
+<style>
+  .prova{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:18px;min-width:0}
+  .prova-top{display:grid;grid-template-columns:46px minmax(0,1fr);gap:16px}
+  .prova-top .num{width:46px;height:46px;font-size:1.2rem;margin:0}
+  .prova h3{font-size:1.2rem;margin-bottom:.25em}
+  .prova p{margin:.2em 0;color:var(--mut)}
+  .prova .meta{font-size:.9rem}
+  .dificil{margin:14px 0;padding:12px 14px;border-left:3px solid var(--amb);background:var(--bg2);border-radius:0 10px 10px 0;font-size:.95rem}
+  .abas{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 10px}
+  .aba{font:600 .85rem Sora,sans-serif;background:var(--bg2);color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.45em .95em;cursor:pointer}
+  .aba.on{background:var(--amb);color:#1a1206;border-color:var(--amb)}
+  .painel{display:none;position:relative}
+  .painel.on{display:block}
+  .painel .quem{font-size:.85rem;margin:.2em 0 .5em}
+  pre.prompt{white-space:pre-wrap;word-break:break-word;max-height:360px;font-size:.82rem}
+  .copiar{position:absolute;right:10px;top:34px;font:600 .8rem Sora,sans-serif;background:var(--amb);color:#1a1206;border:0;border-radius:8px;padding:.45em .8em;cursor:pointer;z-index:2}
+  .forma{border-top:3px solid var(--amb)}
+  .nota{font-size:.9rem;color:var(--mut);border:1px dashed var(--line);border-radius:12px;padding:12px 14px;margin-top:14px}
+  table.t{width:100%;border-collapse:collapse;font-size:.92rem}
+  table.t th,table.t td{border-bottom:1px solid var(--line);padding:9px 8px;text-align:left;vertical-align:top}
+  table.t th{font-family:Sora;color:var(--amb);font-weight:600}
+  .tabela{overflow-x:auto}
+  @media(max-width:1060px){nav .links{gap:12px}}
+  @media(max-width:940px){nav .links a.sec{display:none}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="brand" href="#top"><span class="emoji">🧪</span> sete-provas-ia</a>
+  <span class="sep">|</span>
+  <span class="clubpro">
+    <a class="inema" href="https://inema.club" target="_blank" rel="noopener">INEMA.CLUB</a>
+    <span class="sep">-</span>
+    <a class="pro" href="https://inema.pro" target="_blank" rel="noopener">PRO</a>
+  </span>
+  <div class="links">
+    <a class="sec" href="#oque">What it is</a>
+    <a class="sec" href="#provas">The 7 tests</a>
+    <a class="sec" href="#guia">How to run</a>
+    <a class="sec" href="#avaliar">Evaluate</a>
+    <span class="lang"><a href="../">PT</a><a class="on" href="./">EN</a><a href="../es/">ES</a></span>
+    <button class="tgl" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">🌙</button>
+    <a class="btn" href="https://github.com/inematds/sete-provas-ia" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="glow"></div>
+  <div class="wrap">
+    <div>
+      <span class="chip">Test prompts · agent, chat, or person</span>
+      <h1>7 TESTS FOR <span class="amb">ANY AI</span></h1>
+      <p class="lead">The same request, presented the same way, to compare models, tools, or people. Includes an answer key and a script-based score.</p>
+      <div class="cta">
+        <a class="btn" href="#provas">See the 7 tests</a>
+        <a class="btn ghost" href="https://github.com/inematds/sete-provas-ia" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+    </div>
+    <figure><img src="../assets/banner-en.jpg" alt="Banner: 7 tests for any AI"></figure>
+  </div>
+</header>
+
+<section id="resumo" class="resumo"><div class="wrap">
+  <span class="chip">In brief</span>
+  <p>Seven ready-to-copy work requests: a sales page, a sales dashboard, a presentation, an animated explainer, a photo editor, a 3D game, and an agent hub. Each request comes in three formats: for an agent that works in a folder (Claude Code, Codex, Cursor), a chat window (Agnes, ChatGPT, Gemini), and a brief for a person, with no AI. Use them to compare models, choose a tool, or train a team. The data, answer key, and script-based evaluator are included; to try a test, simply copy the text. The evaluator requires Python 3.</p>
+</div></section>
+
+<section id="oque"><div class="wrap">
+  <span class="chip">What it is</span>
+  <h2>One test, three ways to run it</h2>
+  <p class="sub">The core request is the same in all three formats. Only the tool’s capabilities change: it can save files, respond in a chat, or be completed by hand.</p>
+  <figure style="margin:0 0 26px;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000"><img src="../assets/banner-grade-en.jpg" alt="The seven tests: sales page, dashboard, presentation, explainer, photo editor, and 3D game" loading="lazy" style="width:100%;display:block"></figure>
+  <div class="grid g3">
+    <div class="card forma"><h3>🗂️ Agent with a folder</h3><p>Claude Code, Codex, Cursor, Antigravity, Gemini CLI, OpenCode. The agent reads the data in the folder, saves the files, and writes an ENTREGA.md describing what it did.</p></div>
+    <div class="card forma"><h3>💬 Chat window</h3><p>Agnes, ChatGPT, Gemini, Claude.ai, DeepSeek, Grok, Copilot. No folder: the response is one complete HTML file, with the data included in the request.</p></div>
+    <div class="card forma"><h3>🧑‍💼 No AI</h3><p>The same request as a brief for a person or team, with a suggested time limit. Use it for a class, freelancer selection, or comparing people with machines.</p></div>
+  </div>
+  <div class="grid g3" style="margin-top:16px">
+    <div class="card"><h3>🖼️ Images are optional</h3><p>If the tool can generate images or video (for example, Higgsfield, Agnes, or Codex), it can use that ability. Otherwise, it can draw with code. No test depends on an image generator.</p></div>
+    <div class="card"><h3>🎯 Deliberate pitfalls</h3><p>The dashboard gets deliberately messy data; the presentation gets notes containing a changed price, a wrong calculation, and a number that must not be used.</p></div>
+    <div class="card"><h3>📏 Score without AI</h3><p>A script checks what can be measured (correct total, forbidden number, required tools), and a 10-point scorecard covers the rest.</p></div>
+  </div>
+</div></section>
+
+<section id="fluxo"><div class="wrap">
+  <span class="chip">How it works</span>
+  <h2>Set up, run, check, compare</h2>
+  <p class="sub">For a fair comparison, each participant gets the same test in the same format, in a separate folder.</p>
+  <div class="flow">
+    <span>Choose a test</span><span class="arr">→</span>
+    <span>Choose a format</span><span class="arr">→</span>
+    <span>Copy the prompt</span><span class="arr">→</span>
+    <span>Participant works independently</span><span class="arr">→</span>
+    <span>kit/avaliar.py</span><span class="arr">→</span>
+    <span>10-point scorecard</span>
+  </div>
+</div></section>
+
+<section id="provas"><div class="wrap">
+  <span class="chip">The 7 tests</span>
+  <h2>Choose a test and a format, then copy</h2>
+  <p class="sub">Each card has three versions of the same request. In “chat” format, tests 2 and 3 already include the data at the end of the text.</p>
+<!--PROVAS-->
+<article class="prova" id="prova-1"><div class="prova-top"><span class="num">1</span><div><h3>Sales page</h3><p>A coffee subscription brand, from scratch. The AI chooses the name, copy, and look.</p><p class="meta"><b>Main file:</b> <code>index.html</code> · <b>Suggested time (no AI):</b> 4 h</p></div></div><div class="dificil"><b>The hard part:</b> One goal: get the visitor to start a free trial. And one moment that makes them stop scrolling.</div><div class="abas"><button class="aba on" data-alvo="p1-agente">For an agent with a project folder</button><button class="aba" data-alvo="p1-chat">For a chat window</button><button class="aba" data-alvo="p1-pessoa">No AI: brief for one person or a team</button></div><div class="painel on" id="p1-agente"><p class="quem">For an agent with a project folder (Claude Code, Codex, Cursor, Antigravity, Gemini CLI, OpenCode)</p><button class="copiar" data-de="p1-agente-txt">Copy</button><pre class="prompt" id="p1-agente-txt"># Challenge 1: Sales page
+
+Create a sales page for a coffee subscription brand.
+
+You choose the brand name, copy, and look. The page has one goal: get the visitor to start a free trial. No link can take them away from that path.
+
+Create a moment that makes people stop scrolling: a scene (video or animation) controlled by scrolling. If the page doesn&#x27;t scroll, that scene opens the page.
+
+Main file: `index.html`. It must open with a double-click.
+
+## Polish
+- Make it truly beautiful: anyone glancing at it should stop scrolling.
+- Use the tools and skills you have (design, animation, image generator). You choose.
+
+## Images and video (optional)
+- If you have an image or video generator connected (for example: Higgsfield, Agnes, Codex, a local model), use it: at most 8 images and 1 short video, saved as files in your folder.
+- If you don&#x27;t, draw everything in code (SVG, CSS, canvas). The challenge counts just the same.
+- X-ray mode: the X key and a small button turn on outlines, using one color for each generated image or video and another for each animation made in code, with a small label on each one.
+
+## Rules
+- Work alone. Don&#x27;t ask questions. Finish in one go.
+- Work only inside your folder.
+- Save everything as files in the folder. Don&#x27;t use files from the internet.
+- Don&#x27;t publish, deploy, or post anything. Never play sound.
+- At the end, write ENTREGA.md in the folder: what you made, how to open it, and each generated image or video (file, what it shows, which tool made it).
+</pre></div><div class="painel" id="p1-chat"><p class="quem">For a chat window (Agnes, ChatGPT, Gemini, Claude.ai, DeepSeek, Grok, Copilot)</p><button class="copiar" data-de="p1-chat-txt">Copy</button><pre class="prompt" id="p1-chat-txt"># Challenge 1: Sales page
+
+Create a sales page for a coffee subscription brand.
+
+You choose the brand name, copy, and look. The page has one goal: get the visitor to start a free trial. No link can take them away from that path.
+
+Create a moment that makes people stop scrolling: a scene (video or animation) controlled by scrolling. If the page doesn&#x27;t scroll, that scene opens the page.
+
+Main file: `index.html`. It must open with a double-click.
+
+## Polish
+- Make it truly beautiful: anyone glancing at it should stop scrolling.
+- Use the tools and skills you have (design, animation, image generator). You choose.
+
+## Images (optional)
+- If this interface can generate images, generate at most 4 and give me each filename (img1.jpg, img2.jpg...), so I can save them next to the HTML. In the HTML, use &lt;img src=&quot;img1.jpg&quot;&gt; and show an SVG or CSS drawing instead if the file is missing, so the page never opens with a broken image.
+- If it can&#x27;t, draw everything in SVG or CSS inside the HTML. The challenge counts just the same.
+- X-ray mode: the X key and a small button turn on outlines, using one color for each image and another for each animation made in code, with a small label on each one.
+
+## How to deliver (you&#x27;re in a chat window, without a project folder)
+- Reply with ONE complete HTML file in a single code block, from &lt;!doctype html&gt; to &lt;/html&gt;, with the CSS and JavaScript inside.
+- Include the entire file. Don&#x27;t say &quot;the rest stays the same.&quot;
+- Don&#x27;t use files from the internet. Never play sound.
+- Don&#x27;t ask questions. Finish in one go.
+- After the code block, in up to 5 lines: what you made and how to open it.
+</pre></div><div class="painel" id="p1-pessoa"><p class="quem">No AI: brief for one person or a team</p><button class="copiar" data-de="p1-pessoa-txt">Copy</button><pre class="prompt" id="p1-pessoa-txt"># Challenge 1: Sales page
+
+**Suggested time:** 4 h · **Profile:** web designer or front-end developer (the final file is HTML)
+
+Create a sales page for a coffee subscription brand.
+
+You choose the brand name, copy, and look. The page has one goal: get the visitor to start a free trial. No link can take them away from that path.
+
+Create a moment that makes people stop scrolling: a scene (video or animation) controlled by scrolling. If the page doesn&#x27;t scroll, that scene opens the page.
+
+Main file: `index.html`. It must open with a double-click.
+
+## Polish
+- Make it truly beautiful: anyone glancing at it should stop scrolling.
+- Use whatever you like: design software, code, stock images or your own illustration.
+
+## Images and video
+- Use images from anywhere (your own, free stock or generated) and note where each one came from in ENTREGA.md.
+- X-ray mode (optional for a person, extra credit): the X key and a small button turn on outlines, using one color for each image or video and another for each animation made in code, with a small label on each one.
+
+## How to deliver
+- You may use any tool, including no AI at all. Say which ones you used at the end.
+- Deliver the folder with the main file and an ENTREGA.md: what you made, how to open it, and where each image came from.
+- Don&#x27;t publish anything online. No sound.
+- If you have a question while working, decide and note your decision in ENTREGA.md (the challenge also evaluates this).
+
+## How it will be evaluated
+10-point scorecard (avaliar/ficha.en.md): works, the hard part, polish, honesty, and rules.
+</pre></div></article>
+<article class="prova" id="prova-2"><div class="prova-top"><span class="num">2</span><div><h3>Sales dashboard</h3><p>90 days of sales from 4 cafés become a dashboard the owner can understand in 5 seconds.</p><p class="meta"><b>Main file:</b> <code>painel.html</code> · <b>Suggested time (no AI):</b> 4 h</p></div></div><div class="dificil"><b>The hard part:</b> The data is dirty on purpose. You have to clean it, show what you fixed, and let the owner click a number to see the rows behind it.</div><div class="abas"><button class="aba on" data-alvo="p2-agente">For an agent with a project folder</button><button class="aba" data-alvo="p2-chat">For a chat window</button><button class="aba" data-alvo="p2-pessoa">No AI: brief for one person or a team</button></div><div class="painel on" id="p2-agente"><p class="quem">For an agent with a project folder (Claude Code, Codex, Cursor, Antigravity, Gemini CLI, OpenCode)</p><button class="copiar" data-de="p2-agente-txt">Copy</button><pre class="prompt" id="p2-agente-txt"># Challenge 2: Sales dashboard
+
+Build a sales dashboard for the owner of a small chain of 4 cafés.
+
+The data is in `vendas.csv`: the orders for the period. The file is dirty on purpose. Clean it first and show what you fixed (the type of problem and how many rows had each one). Show the total revenue for the period.
+
+The owner should see what matters in 5 seconds and be able to click a number to see the rows that make up that number.
+
+Main file: `painel.html`. It must open with a double-click, so put the cleaned data inside the HTML.
+
+## Polish
+- Make it truly beautiful: anyone glancing at it should stop scrolling.
+- Use the tools and skills you have (design, animation, image generator). You choose.
+
+## Images and video (optional)
+- If you have an image or video generator connected (for example: Higgsfield, Agnes, Codex, a local model), use it: at most 8 images and 1 short video, saved as files in your folder.
+- If you don&#x27;t, draw everything in code (SVG, CSS, canvas). The challenge counts just the same.
+- X-ray mode: the X key and a small button turn on outlines, using one color for each generated image or video and another for each animation made in code, with a small label on each one.
+
+## Rules
+- Work alone. Don&#x27;t ask questions. Finish in one go.
+- Work only inside your folder.
+- Save everything as files in the folder. Don&#x27;t use files from the internet.
+- Don&#x27;t publish, deploy, or post anything. Never play sound.
+- At the end, write ENTREGA.md in the folder: what you made, how to open it, and each generated image or video (file, what it shows, which tool made it).
+</pre></div><div class="painel" id="p2-chat"><p class="quem">For a chat window (Agnes, ChatGPT, Gemini, Claude.ai, DeepSeek, Grok, Copilot)</p><button class="copiar" data-de="p2-chat-txt">Copy</button><pre class="prompt" id="p2-chat-txt"># Challenge 2: Sales dashboard
+
+Build a sales dashboard for the owner of a small chain of 4 cafés.
+
+The data is in `vendas-mini.csv`: the orders for the period. The file is dirty on purpose. Clean it first and show what you fixed (the type of problem and how many rows had each one). Show the total revenue for the period.
+
+The owner should see what matters in 5 seconds and be able to click a number to see the rows that make up that number.
+
+Main file: `painel.html`. It must open with a double-click, so put the cleaned data inside the HTML.
+
+## Polish
+- Make it truly beautiful: anyone glancing at it should stop scrolling.
+- Use the tools and skills you have (design, animation, image generator). You choose.
+
+## Images (optional)
+- If this interface can generate images, generate at most 4 and give me each filename (img1.jpg, img2.jpg...), so I can save them next to the HTML. In the HTML, use &lt;img src=&quot;img1.jpg&quot;&gt; and show an SVG or CSS drawing instead if the file is missing, so the page never opens with a broken image.
+- If it can&#x27;t, draw everything in SVG or CSS inside the HTML. The challenge counts just the same.
+- X-ray mode: the X key and a small button turn on outlines, using one color for each image and another for each animation made in code, with a small label on each one.
+
+## How to deliver (you&#x27;re in a chat window, without a project folder)
+- Reply with ONE complete HTML file in a single code block, from &lt;!doctype html&gt; to &lt;/html&gt;, with the CSS and JavaScript inside.
+- Include the entire file. Don&#x27;t say &quot;the rest stays the same.&quot;
+- Don&#x27;t use files from the internet. Never play sound.
+- Don&#x27;t ask questions. Finish in one go.
+- After the code block, in up to 5 lines: what you made and how to open it.
+
+The data is below, between the === lines. Put the data INSIDE the HTML.
+
+=== vendas-mini.csv ===
+pedido,data,loja,produto,qtd,preco,pagamento
+50053,2026-08-06,Beira-Rio,Gelado,4,13.50,cartao
+50082,2026-08-08,Centro,Café em grão 250g,1,39.90,pix
+50193,2026-08-15,Centro,Espresso,1,6.50,pix
+50042,2026-08-05,Rodoviária,Bolo de fubá,4,9.50,cartao
+50039,2026-08-05,Beira-Rio,Coado,2,8.00,pix
+50177,2026-08-14,Centro,Gelado,4,13.50,pix
+50130,2026-08-10,Alto da Serra,Gelado,4,13.50,dinheiro
+50070,2026-08-07,Beira-Rio,Café em grão 250g,4,39.90,pix
+50188,2026-08-14,Alto da Serra,Coado,1,8.00,pix
+50187,2026-08-14,Alto da Serra,Gelado,3,13.50,cartao
+50119,2026-08-10,Centro,Cappuccino,3,11.00,pix
+50020,2026-08-04,Beira-Rio,Latte,2,12.00,pix
+50207,2026-08-15,Alto da Serra,Latte,1,12.00,pix
+50114,2026-08-09,Alto da Serra,Gelado,4,13.50,dinheiro
+50146,2026-08-11,Alto da Serra,Pão de queijo,2,7.00,cartao
+50201,2026-08-15,Rodoviária,Cappuccino,3,11.00,pix
+50021,2026-08-04,Beira-Rio,Cappuccino,4,R$ 11.00,dinheiro
+50169,2026-08-13,Rodoviária,Cappuccino,2,11.00,cartao
+50026,2026-08-04,RODOVIÁRIA,Latte,3,12.00,cartao
+50091,2026-08-08,Rodoviária,Gelado,2,13.50,dinheiro
+50139,2026-08-11,Rodoviária,Café em grão 250g,1,39.90,cartao
+50058,2026-08-06,Rodoviária,Espresso,1,R$ 6.50,pix
+50190,2026-08-15,Centro,Café em grão 250g,2,39.90,dinheiro
+50135,2026-08-11,Centro,Pão de queijo,1,7.00,cartao
+50154,2026-08-12,Beira-Rio,Pão de queijo,1,7.00,dinheiro
+50079,2026-08-08,Centro,Espresso,3,6.50,cartao
+50045,2026-08-05,Alto da Serra,Bolo de fubá,2,9.50,dinheiro
+50129,10/08/2026,Alto da Serra,Bolo de fubá,2,9.50,cartao
+50024,2026-08-04,Rodoviária,Gelado,1,13.50,pix
+50141,2026-08-11,Rodoviária,Gelado,4,13.50,pix
+50003,2026-08-03,Centro,Latte,4,12.00,pix
+50199,2026-08-15,Beira-Rio,Pão de queijo,2,7.00,cartao
+50223,16/08/2026,Alto da Serra,Espresso,1,6.50,cartao
+50075,2026-08-07,Alto da Serra,Espresso,3,6.50,cartao
+50069,2026-08-07,Beira-Rio,Gelado,4,13.50,dinheiro
+50146,2026-08-11,Alto da Serra,Pão de queijo,2,7.00,cartao
+50106,2026-08-09,Rodoviária,Gelado,2,13.50,pix
+50208,2026-08-15,Alto da Serra,Coado,3,8.00,pix
+50049,2026-08-06,Centro,Cappuccino,3,11.00,cartao
+50209,2026-08-16,Centro,Coado,2,8.00,cartao
+50087,2026-08-08,Beira-Rio,Espresso,3,6.50,pix
+50124,2026-08-10,Rodoviária,Gelado,2,13.50,cartao
+50076,7 ago 2026,Alto da Serra,Latte,2,12.00,pix
+50040,2026-08-05,Beira-Rio,Café em grão 250g,3,39.90,cartao
+50145,2026-08-11,Alto da Serra,Café em grão 250g,3,39.90,pix
+50066,2026-08-07,Centro,Pão de queijo,2,7.00,cartao
+50183,14 ago 2026,Beira-Rio,Bolo de fubá,4,9.50,pix
+50152,2026-08-12,Beira-Rio,Coado,1,8.00,pix
+50035,2026-08-05,Centro,Bolo de fubá,3,9.50,dinheiro
+50222,2026-08-16,Alto da Serra,Gelado,1,13.50,cartao
+50140,2026-08-11,Rodoviária,Coado,3,8.00,pix
+50057,2026-08-06,Rodoviária,Latte,2,12.00,pix
+50068,2026-08-07,Beira-Rio,Latte,3,12.00,dinheiro
+50097,2026-08-09,Centro,Latte,1,12.00,pix
+50174,2026-08-13,Alto da Serra,Café em grão 250g,4,39.90,pix
+50088,08/08/2026,Beira-Rio,Coado,3,8.00,pix
+50202,2026-08-15,Rodoviária,Espresso,1,6.50,cartao
+50148,2026-08-12,Centro,Gelado,3,13.50,pix
+50110,2026-08-09,Rodoviária,Coado,1,8.00,pix
+50162,2026-08-13,Centro,Cappuccino,3,11.00,pix
+50134,2026-08-11,Centro,Pão de queijo,4,7.00,cartao
+50204,2026-08-15,Alto da Serra,Café em grão 250g,1,39.90,cartao
+50072,2026-08-07,Rodoviária,Latte,2,12.00,pix
+50167,13/08/2026,Beira-Rio,Café em grão 250g,1,39.90,pix
+50203,2026-08-15,Rodoviária,Latte,4,12.00,pix
+50016,2026-08-04,Centro,Bolo de fubá,3,9.50,pix
+50136,2026-08-11,Beira-Rio,Latte,2,12.00,pix
+50173,2026-08-13,Alto da Serra,Café em grão 250g,1,39.90,dinheiro
+50021,2026-08-04,Beira-Rio,Cappuccino,4,R$ 11.00,dinheiro
+50150,2026-08-12,Centro,Gelado,2,R$ 13.50,cartao
+50090,2026-08-08,Rodoviária,Pão de queijo,4,7.00,pix
+50116,2026-08-10,Centro,Espresso,1,6.50,cartao
+50120,2026-08-10,Beira-Rio,Pão de queijo,3,7.00,cartao
+50093,2026-08-08,Alto da Serra,Pão de queijo,4,7.00,pix
+50115,2026-08-10,Centro,Pão de queijo,3,7.00,pix
+50103,2026-08-09,Beira-Rio,Café em grão 250g,2,39.90,cartao
+50191,15 ago 2026,Centro,Bolo de fubá,4,9.50,cartao
+50099,2026-08-09,Centro,Latte,3,12.00,cartao
+50019,4 ago 2026,Centro,Gelado,2,13.50,pix
+50031,2026-08-05,Centro,Pão de queijo,3,7.00,pix
+50107,2026-08-09,Rodoviária,Coado,4,8.00,pix
+50059,2026-08-06,Rodoviária,Bolo de fubá,3,9.50,cartao
+50161,2026-08-13,Centro,Pão de queijo,4,7.00,pix
+50175,2026-08-13,Alto da Serra,Espresso,3,6.50,pix
+50019,4 ago 2026,Centro,Gelado,2,13.50,pix
+50164,13 ago 2026,Centro,Café em grão 250g,1,39.90,cartao
+50176,2026-08-14,Centro,Coado,4,8.00,pix
+50008,3 ago 2026,Beira-Rio,Bolo de fubá,1,9.50,cartao
+50221,16 ago 2026,Rodoviária,Latte,4,12.00,pix
+50143,2026-08-11,Rodoviária,Coado,4,8.00,pix
+50085,2026-08-08,Beira-Rio,Latte,1,12.00,cartao
+50030,2026-08-04,Alto da Serra,Gelado,2,R$ 13.50,pix
+50216,16/08/2026,Beira-Rio,Espresso,4,6.50,cartao
+50013,2026-08-03,Alto da Serra,Latte,1,12.00,pix
+50073,2026-08-07,Rodoviária,Café em grão 250g,4,39.90,cartao
+50038,2026-08-05,Beira-Rio,Cappuccino,4,11.00,pix
+50215,2026-08-16,Beira-Rio,Café em grão 250g,1,39.90,dinheiro
+50017,2026-08-04,Centro,Cappuccino,4,11.00,pix
+50163,2026-08-13,Centro,Espresso,3,6.50,cartao
+50056,2026-08-06,Beira-Rio,Latte,2,12.00,pix
+50184,14 ago 2026,Beira-Rio,Pão de queijo,4,7.00,pix
+50213,2026-08-16,Centro,Gelado,3,13.50,cartao
+50012,2026-08-03,Alto da Serra,Coado,1,8.00,pix
+50077,2026-08-07,Alto da Serra,Pão de queijo,1,7.00,cartao
+50158,2026-08-12,Alto da Serra,Latte,3,12.00,pix
+50065,2026-08-07,Centro,Espresso,3,6.50,cartao
+50100,09/08/2026,Centro,Café em grão 250g,4,39.90,pix
+50027,2026-08-04,Rodoviária,Cappuccino,1,11.00,cartao
+50205,15/08/2026,Alto da Serra,Pão de queijo,1,7.00,cartao
+50029,2026-08-04,Alto da Serra,Pão de queijo,4,7.00,pix
+50197,2026-08-15,beira-rio ,Café em grão 250g,1,39.90,pix
+50004,2026-08-03,Centro,Bolo de fubá,2,9.50,dinheiro
+50206,2026-08-15,ALTO DA SERRA,Café em grão 250g,2,39.90,pix
+50149,2026-08-12,Centro,Latte,4,12.00,pix
+50125,2026-08-10,Rodoviária,Latte,1,12.00,pix
+50032,2026-08-05,Centro,Bolo de fubá,4,9.50,pix
+50048,2026-08-05,Alto da Serra,Cappuccino,4,11.00,cartao
+50054,2026-08-06,Beira-Rio,Latte,3,12.00,cartao
+50217,2026-08-16,Beira-Rio,Gelado,4,13.50,pix
+50198,2026-08-15,Beira-Rio,Latte,3,12.00,pix
+50081,2026-08-08,Centro,Cappuccino,2,11.00,cartao
+50007,2026-08-03,Beira-Rio,Coado,3,&quot;8,00&quot;,cartao
+50179,2026-08-14,Centro,Gelado,1,13.50,cartao
+50144,2026-08-11,Alto da Serra,Espresso,4,6.50,cartao
+50015,2026-08-04,centro ,Pão de queijo,1,7.00,cartao
+50078,2026-08-08,Centro,Bolo de fubá,1,9.50,cartao
+50014,2026-08-03,Alto da Serra,Café em grão 250g,4,39.90,pix
+50156,2026-08-12,Rodoviária,Cappuccino,4,11.00,cartao
+50211,2026-08-16,Centro,Bolo de fubá,2,9.50,pix
+50155,2026-08-12,Rodoviária,Latte,2,12.00,dinheiro
+50055,2026-08-06,Beira-Rio,Cappuccino,1,11.00,cartao
+50101,2026-08-09,Centro,Latte,1,12.00,pix
+50127,2026-08-10,Rodoviária,Gelado,2,13.50,cartao
+50192,2026-08-15,Centro,Cappuccino,4,11.00,pix
+50047,2026-08-05,Alto da Serra,Bolo de fubá,1,9.50,cartao
+50165,2026-08-13,centro ,Latte,4,&quot;12,00&quot;,pix
+50123,2026-08-10,Beira-Rio,Coado,1,8.00,cartao
+50098,2026-08-09,Centro,Espresso,4,6.50,cartao
+50180,2026-08-14,Centro,Café em grão 250g,4,39.90,pix
+50157,2026-08-12,Alto da Serra,Cappuccino,2,11.00,cartao
+50166,13 ago 2026,Beira-Rio,Bolo de fubá,4,9.50,pix
+50122,2026-08-10,Beira-Rio,Café em grão 250g,1,39.90,pix
+50102,2026-08-09,Beira-Rio,Pão de queijo,1,7.00,cartao
+50214,2026-08-16,Centro,Espresso,1,6.50,pix
+50171,2026-08-13,Rodoviária,Coado,1,8.00,pix
+50151,2026-08-12,Centro,Cappuccino,3,11.00,cartao
+50117,2026-08-10,Centro,Gelado,2,13.50,pix
+50147,2026-08-12,Centro,Espresso,1,6.50,pix
+50109,2026-08-09,Rodoviária,Café em grão 250g,4,39.90,pix
+50050,2026-08-06,Centro,Cappuccino,2,11.00,pix
+50159,2026-08-12,Alto da Serra,Café em grão 250g,2,39.90,pix
+50025,2026-08-04,Rodoviária,Coado,1,8.00,pix
+50064,2026-08-07,Centro,Café em grão 250g,2,39.90,pix
+50033,05/08/2026,Centro,Café em grão 250g,1,39.90,cartao
+50006,03/08/2026,Beira-Rio,Espresso,4,6.50,pix
+50172,2026-08-13,Rodoviária,Coado,4,8.00,pix
+50060,2026-08-06,Rodoviária,Espresso,4,6.50,cartao
+50108,2026-08-09,Rodoviária,Coado,4,8.00,cartao
+50185,2026-08-14,Rodoviária,Espresso,4,6.50,cartao
+50212,2026-08-16,Centro,Latte,1,12.00,cartao
+50210,2026-08-16,Centro,Espresso,1,R$ 6.50,pix
+50132,2026-08-11,Centro,Café em grão 250g,3,39.90,dinheiro
+50126,2026-08-10,Rodoviária,Cappuccino,3,11.00,pix
+50061,2026-08-06,Alto da Serra,Latte,1,12.00,pix
+50133,2026-08-11,Centro,Espresso,1,6.50,dinheiro
+50044,2026-08-05,Rodoviária,Coado,2,8.00,cartao
+50080,2026-08-08,Centro,Café em grão 250g,4,39.90,dinheiro
+50112,2026-08-09,Alto da Serra,Pão de queijo,3,7.00,pix
+50018,2026-08-04,Centro,Pão de queijo,3,7.00,dinheiro
+50118,2026-08-10,Centro,Cappuccino,4,11.00,pix
+50002,2026-08-03,Centro,Cappuccino,3,11.00,pix
+50131,2026-08-11,Centro,Cappuccino,1,11.00,cartao
+50195,2026-08-15,Beira-Rio,Pão de queijo,3,7.00,cartao
+50052,2026-08-06,Centro,Gelado,1,13.50,cartao
+50168,2026-08-13,Beira-Rio,Coado,4,&quot;8,00&quot;,pix
+50096,2026-08-09,Centro,Cappuccino,1,11.00,cartao
+50063,2026-08-07,Centro,Latte,1,12.00,cartao
+50005,2026-08-03,Beira-Rio,Cappuccino,4,11.00,pix
+50092,2026-08-08,Rodoviária,Coado,2,8.00,cartao
+50051,2026-08-06,Centro,Bolo de fubá,4,9.50,pix
+50001,2026-08-03,Centro,Espresso,3,6.50,cartao
+50128,2026-08-10,Alto da Serra,Café em grão 250g,2,39.90,cartao
+50160,2026-08-12,Alto da Serra,Café em grão 250g,2,39.90,cartao
+50218,2026-08-16,Beira-Rio,Pão de queijo,2,7.00,pix
+50170,2026-08-13,Rodoviária,Cappuccino,2,11.00,pix
+50104,2026-08-09, Beira-Rio,Espresso,4,6.50,pix
+50037,2026-08-05,Beira-Rio,Bolo de fubá,1,9.50,pix
+50009,2026-08-03,Rodoviária,Gelado,1,13.50,cartao
+50062,2026-08-06,Alto da Serra,Bolo de fubá,3,9.50,dinheiro
+50224,16 ago 2026,Alto da Serra,Espresso,2,6.50,pix
+50022,2026-08-04,Beira-Rio,Cappuccino,3,11.00,pix
+50084,2026-08-08,Beira-Rio,Cappuccino,2,11.00,cartao
+50113,2026-08-09,Alto da Serra,Espresso,3,6.50,cartao
+50121,2026-08-10,Beira-Rio,Bolo de fubá,1,9.50,cartao
+50042,2026-08-05,Rodoviária,Bolo de fubá,4,9.50,cartao
+50036,2026-08-05,Beira-Rio,Café em grão 250g,2,39.90,pix
+50219,2026-08-16,Rodoviária,Latte,2,12.00,cartao
+50023,2026-08-04,Beira-Rio,Coado,1,8.00,pix
+50041,2026-08-05,Beira-Rio,Café em grão 250g,1,39.90,cartao
+50083,2026-08-08,Centro,Pão de queijo,1,7.00,cartao
+50095,2026-08-08,Alto da Serra,Gelado,2,13.50,pix
+50187,2026-08-14,Alto da Serra,Gelado,3,13.50,cartao
+50105,2026-08-09,Beira-Rio,Coado,4,8.00,cartao
+50220,2026-08-16,Rodoviária,Latte,3,12.00,cartao
+50153,2026-08-12,Beira-Rio,Bolo de fubá,2,9.50,cartao
+50142,2026-08-11,Rodoviária,Coado,3,8.00,cartao
+50194,2026-08-15,Centro,Cappuccino,2,11.00,cartao
+50034,2026-08-05,Centro,Pão de queijo,3,7.00,pix
+50067,2026-08-07,Beira-Rio,Coado,4,8.00,cartao
+50178,2026-08-14,Centro,Gelado,4,&quot;13,50&quot;,cartao
+50186,2026-08-14,Alto da Serra,Latte,4,12.00,cartao
+50189,2026-08-15,Centro,Café em grão 250g,4,39.90,pix
+50028,2026-08-04,Alto da Serra,Café em grão 250g,4,39.90,cartao
+50137,2026-08-11,Beira-Rio,Espresso,1,6.50,dinheiro
+50071,2026-08-07,beira-rio ,Espresso,4,6.50,cartao
+50138,2026-08-11,Beira-Rio,Cappuccino,2,11.00,dinheiro
+50181,14/08/2026, Beira-Rio,Coado,3,8.00,pix
+50043,2026-08-05,Rodoviária,Latte,4,12.00,cartao
+50182,2026-08-14,Beira-Rio,Espresso,1,6.50,dinheiro
+50196,2026-08-15,Beira-Rio,Espresso,4,6.50,pix
+50010,2026-08-03,Rodoviária,Café em grão 250g,1,39.90,pix
+50111,2026-08-09,Alto da Serra,Bolo de fubá,1,9.50,dinheiro
+50074,2026-08-07,Alto da Serra,Coado,4,8.00,dinheiro
+50086,2026-08-08,Beira-Rio,Cappuccino,2,11.00,pix
+50089,2026-08-08,Rodoviária,Coado,2,8.00,dinheiro
+50094,2026-08-08,Alto da Serra,Bolo de fubá,2,9.50,pix
+50046,2026-08-05,Alto da Serra,Latte,3,12.00,cartao
+50011,2026-08-03,Rodoviária,Bolo de fubá,1,9.50,cartao
+50200,2026-08-15,Rodoviária,Café em grão 250g,3,39.90,cartao
+90002,2026-08-06,Centro,TESTE - NAO CONTAR,99,1.00,pix
+90001,2026-10-26,Centro,TESTE - NAO CONTAR,99,1.00,pix
+=== end ===
+</pre></div><div class="painel" id="p2-pessoa"><p class="quem">No AI: brief for one person or a team</p><button class="copiar" data-de="p2-pessoa-txt">Copy</button><pre class="prompt" id="p2-pessoa-txt"># Challenge 2: Sales dashboard
+
+**Suggested time:** 4 h · **Profile:** data analyst with HTML, or front-end developer
+
+Build a sales dashboard for the owner of a small chain of 4 cafés.
+
+The data is in `vendas.csv`: the orders for the period. The file is dirty on purpose. Clean it first and show what you fixed (the type of problem and how many rows had each one). Show the total revenue for the period.
+
+The owner should see what matters in 5 seconds and be able to click a number to see the rows that make up that number.
+
+Main file: `painel.html`. It must open with a double-click, so put the cleaned data inside the HTML.
+
+## Polish
+- Make it truly beautiful: anyone glancing at it should stop scrolling.
+- Use whatever you like: design software, code, stock images or your own illustration.
+
+## Images and video
+- Use images from anywhere (your own, free stock or generated) and note where each one came from in ENTREGA.md.
+- X-ray mode (optional for a person, extra credit): the X key and a small button turn on outlines, using one color for each image or video and another for each animation made in code, with a small label on each one.
+
+## How to deliver
+- You may use any tool, including no AI at all. Say which ones you used at the end.
+- Deliver the folder with the main file and an ENTREGA.md: what you made, how to open it, and where each image came from.
+- Don&#x27;t publish anything online. No sound.
+- If you have a question while working, decide and note your decision in ENTREGA.md (the challenge also evaluates this).
+- The data file mentioned above comes with this brief, or is in the kit&#x27;s `dados/` folder (&quot;Download ZIP&quot; button on GitHub).
+
+## How it will be evaluated
+10-point scorecard (avaliar/ficha.en.md): works, the hard part, polish, honesty, and rules.
+</pre></div></article>
+<article class="prova" id="prova-3"><div class="prova-top"><span class="num">3</span><div><h3>Sales presentation</h3><p>A presentation to win the first office client, made from messy notes.</p><p class="meta"><b>Main file:</b> <code>apresentacao.html</code> · <b>Suggested time (no AI):</b> 3 h</p></div></div><div class="dificil"><b>The hard part:</b> The notes contain traps: a price that changed, a wrong calculation, and a number that must not be mentioned. Only numbers in the notes count.</div><div class="abas"><button class="aba on" data-alvo="p3-agente">For an agent with a project folder</button><button class="aba" data-alvo="p3-chat">For a chat window</button><button class="aba" data-alvo="p3-pessoa">No AI: brief for one person or a team</button></div><div class="painel on" id="p3-agente"><p class="quem">For an agent with a project folder (Claude Code, Codex, Cursor, Antigravity, Gemini CLI, OpenCode)</p><button class="copiar" data-de="p3-agente-txt">Copy</button><pre class="prompt" id="p3-agente-txt"># Challenge 3: Sales presentation
+
+Create a presentation that convinces the first office client to subscribe to whole-bean coffee.
+
+The messy sales meeting notes are in `notas.txt`. Use only numbers found in the notes, and mark on screen every number you had to calculate. Keep it short: a busy manager should say yes.
+
+Main file: `apresentacao.html`. It must open with a double-click. Use the keyboard arrow keys to move through the slides.
+
+## Polish
+- Make it truly beautiful: anyone glancing at it should stop scrolling.
+- Use the tools and skills you have (design, animation, image generator). You choose.
+
+## Images and video (optional)
+- If you have an image or video generator connected (for example: Higgsfield, Agnes, Codex, a local model), use it: at most 8 images and 1 short video, saved as files in your folder.
+- If you don&#x27;t, draw everything in code (SVG, CSS, canvas). The challenge counts just the same.
+- X-ray mode: the X key and a small button turn on outlines, using one color for each generated image or video and another for each animation made in code, with a small label on each one.
+
+## Rules
+- Work alone. Don&#x27;t ask questions. Finish in one go.
+- Work only inside your folder.
+- Save everything as files in the folder. Don&#x27;t use files from the internet.
+- Don&#x27;t publish, deploy, or post anything. Never play sound.
+- At the end, write ENTREGA.md in the folder: what you made, how to open it, and each generated image or video (file, what it shows, which tool made it).
+</pre></div><div class="painel" id="p3-chat"><p class="quem">For a chat window (Agnes, ChatGPT, Gemini, Claude.ai, DeepSeek, Grok, Copilot)</p><button class="copiar" data-de="p3-chat-txt">Copy</button><pre class="prompt" id="p3-chat-txt"># Challenge 3: Sales presentation
+
+Create a presentation that convinces the first office client to subscribe to whole-bean coffee.
+
+The messy sales meeting notes are in `notas.txt`. Use only numbers found in the notes, and mark on screen every number you had to calculate. Keep it short: a busy manager should say yes.
+
+Main file: `apresentacao.html`. It must open with a double-click. Use the keyboard arrow keys to move through the slides.
+
+## Polish
+- Make it truly beautiful: anyone glancing at it should stop scrolling.
+- Use the tools and skills you have (design, animation, image generator). You choose.
+
+## Images (optional)
+- If this interface can generate images, generate at most 4 and give me each filename (img1.jpg, img2.jpg...), so I can save them next to the HTML. In the HTML, use &lt;img src=&quot;img1.jpg&quot;&gt; and show an SVG or CSS drawing instead if the file is missing, so the page never opens with a broken image.
+- If it can&#x27;t, draw everything in SVG or CSS inside the HTML. The challenge counts just the same.
+- X-ray mode: the X key and a small button turn on outlines, using one color for each image and another for each animation made in code, with a small label on each one.
+
+## How to deliver (you&#x27;re in a chat window, without a project folder)
+- Reply with ONE complete HTML file in a single code block, from &lt;!doctype html&gt; to &lt;/html&gt;, with the CSS and JavaScript inside.
+- Include the entire file. Don&#x27;t say &quot;the rest stays the same.&quot;
+- Don&#x27;t use files from the internet. Never play sound.
+- Don&#x27;t ask questions. Finish in one go.
+- After the code block, in up to 5 lines: what you made and how to open it.
+
+The data is below, between the === lines. Put the data INSIDE the HTML.
+
+=== notas.txt ===
+notes - Grão do Morro - subscription idea for offices (typed during the call, messy)
+
+who: Marta (owner), Kenji (operations). me taking notes.
+
+- they want to sell whole-bean coffee to OFFICES, not just at the counter. 1st target = Vieira &amp; Sato Advogados (2 floors, near the Rodoviária shop)
+- office manager is Lúcia. she said people &quot;hate the pod machine&quot;
+- Vieira &amp; Sato has 120 people. Lúcia thinks 60% drink coffee every day
+- price Marta had in mind: R$ 95 per kg delivered...
+  &gt;&gt; UPDATE after the call: Marta sent a msg, use R$ 89 per kg and not 95. forget the 95
+- delivery every 2 weeks. grinder loaned for free if they sign for 6 months
+- people who drink coffee use about 0.5 kg per month (Kenji&#x27;s number, from the stores)
+- Grão do Morro roasts 2x a week, so the coffee arrives no more than 4 days after roasting
+- competitor: I THINK CaféJá charges about R$ 130 per kg?? not at all sure - DO NOT mention this
+- already have 3 offices in the pipeline: Vieira &amp; Sato, a design studio (15 people), an architecture firm (22 people)
+- Marta: &quot;3 offices, about 40 each, so 140 people&quot; (her math, check)
+- trial offer: first 2 weeks free, cancel whenever you want
+- what Lúcia wants: no mess, no contract trap, for the team to like it
+- next step Marta wants: a 20 min tasting at Vieira &amp; Sato on a Thursday morning
+- brand: warm, simple, a little funny. colors: cream + dark green + burnt orange
+=== end ===
+</pre></div><div class="painel" id="p3-pessoa"><p class="quem">No AI: brief for one person or a team</p><button class="copiar" data-de="p3-pessoa-txt">Copy</button><pre class="prompt" id="p3-pessoa-txt"># Challenge 3: Sales presentation
+
+**Suggested time:** 3 h · **Profile:** presentation designer with basic HTML, or front-end developer
+
+Create a presentation that convinces the first office client to subscribe to whole-bean coffee.
+
+The messy sales meeting notes are in `notas.txt`. Use only numbers found in the notes, and mark on screen every number you had to calculate. Keep it short: a busy manager should say yes.
+
+Main file: `apresentacao.html`. It must open with a double-click. Use the keyboard arrow keys to move through the slides.
+
+## Polish
+- Make it truly beautiful: anyone glancing at it should stop scrolling.
+- Use whatever you like: design software, code, stock images or your own illustration.
+
+## Images and video
+- Use images from anywhere (your own, free stock or generated) and note where each one came from in ENTREGA.md.
+- X-ray mode (optional for a person, extra credit): the X key and a small button turn on outlines, using one color for each image or video and another for each animation made in code, with a small label on each one.
+
+## How to deliver
+- You may use any tool, including no AI at all. Say which ones you used at the end.
+- Deliver the folder with the main file and an ENTREGA.md: what you made, how to open it, and where each image came from.
+- Don&#x27;t publish anything online. No sound.
+- If you have a question while working, decide and note your decision in ENTREGA.md (the challenge also evaluates this).
+- The data file mentioned above comes with this brief, or is in the kit&#x27;s `dados/` folder (&quot;Download ZIP&quot; button on GitHub).
+
+## How it will be evaluated
+10-point scorecard (avaliar/ficha.en.md): works, the hard part, polish, honesty, and rules.
+</pre></div></article>
+<article class="prova" id="prova-4"><div class="prova-top"><span class="num">4</span><div><h3>Animated explainer</h3><p>20 seconds explaining how an AI agent does a job. For a 10-year-old.</p><p class="meta"><b>Main file:</b> <code>explicativo.html</code> · <b>Suggested time (no AI):</b> 4 h</p></div></div><div class="dificil"><b>The hard part:</b> No voice. The story has to make sense through images alone, play on its own at 1920 x 1080, and loop.</div><div class="abas"><button class="aba on" data-alvo="p4-agente">For an agent with a project folder</button><button class="aba" data-alvo="p4-chat">For a chat window</button><button class="aba" data-alvo="p4-pessoa">No AI: brief for one person or a team</button></div><div class="painel on" id="p4-agente"><p class="quem">For an agent with a project folder (Claude Code, Codex, Cursor, Antigravity, Gemini CLI, OpenCode)</p><button class="copiar" data-de="p4-agente-txt">Copy</button><pre class="prompt" id="p4-agente-txt"># Challenge 4: Animated explainer
+
+Make a 20-second animated explainer: &quot;How an AI agent does a job for you.&quot;
+
+The viewer is 10 years old. No voice and no narration. You choose the style and story.
+
+Main file: `explicativo.html`. It must open with a double-click, play on its own at 1920 x 1080, and loop continuously.
+
+## Polish
+- Make it truly beautiful: anyone glancing at it should stop scrolling.
+- Use the tools and skills you have (design, animation, image generator). You choose.
+
+## Images and video (optional)
+- If you have an image or video generator connected (for example: Higgsfield, Agnes, Codex, a local model), use it: at most 8 images and 1 short video, saved as files in your folder.
+- If you don&#x27;t, draw everything in code (SVG, CSS, canvas). The challenge counts just the same.
+- X-ray mode: the X key and a small button turn on outlines, using one color for each generated image or video and another for each animation made in code, with a small label on each one.
+
+## Rules
+- Work alone. Don&#x27;t ask questions. Finish in one go.
+- Work only inside your folder.
+- Save everything as files in the folder. Don&#x27;t use files from the internet.
+- Don&#x27;t publish, deploy, or post anything. Never play sound.
+- At the end, write ENTREGA.md in the folder: what you made, how to open it, and each generated image or video (file, what it shows, which tool made it).
+</pre></div><div class="painel" id="p4-chat"><p class="quem">For a chat window (Agnes, ChatGPT, Gemini, Claude.ai, DeepSeek, Grok, Copilot)</p><button class="copiar" data-de="p4-chat-txt">Copy</button><pre class="prompt" id="p4-chat-txt"># Challenge 4: Animated explainer
+
+Make a 20-second animated explainer: &quot;How an AI agent does a job for you.&quot;
+
+The viewer is 10 years old. No voice and no narration. You choose the style and story.
+
+Main file: `explicativo.html`. It must open with a double-click, play on its own at 1920 x 1080, and loop continuously.
+
+## Polish
+- Make it truly beautiful: anyone glancing at it should stop scrolling.
+- Use the tools and skills you have (design, animation, image generator). You choose.
+
+## Images (optional)
+- If this interface can generate images, generate at most 4 and give me each filename (img1.jpg, img2.jpg...), so I can save them next to the HTML. In the HTML, use &lt;img src=&quot;img1.jpg&quot;&gt; and show an SVG or CSS drawing instead if the file is missing, so the page never opens with a broken image.
+- If it can&#x27;t, draw everything in SVG or CSS inside the HTML. The challenge counts just the same.
+- X-ray mode: the X key and a small button turn on outlines, using one color for each image and another for each animation made in code, with a small label on each one.
+
+## How to deliver (you&#x27;re in a chat window, without a project folder)
+- Reply with ONE complete HTML file in a single code block, from &lt;!doctype html&gt; to &lt;/html&gt;, with the CSS and JavaScript inside.
+- Include the entire file. Don&#x27;t say &quot;the rest stays the same.&quot;
+- Don&#x27;t use files from the internet. Never play sound.
+- Don&#x27;t ask questions. Finish in one go.
+- After the code block, in up to 5 lines: what you made and how to open it.
+</pre></div><div class="painel" id="p4-pessoa"><p class="quem">No AI: brief for one person or a team</p><button class="copiar" data-de="p4-pessoa-txt">Copy</button><pre class="prompt" id="p4-pessoa-txt"># Challenge 4: Animated explainer
+
+**Suggested time:** 4 h · **Profile:** motion designer or front-end developer (HTML/CSS animation)
+
+Make a 20-second animated explainer: &quot;How an AI agent does a job for you.&quot;
+
+The viewer is 10 years old. No voice and no narration. You choose the style and story.
+
+Main file: `explicativo.html`. It must open with a double-click, play on its own at 1920 x 1080, and loop continuously.
+
+## Polish
+- Make it truly beautiful: anyone glancing at it should stop scrolling.
+- Use whatever you like: design software, code, stock images or your own illustration.
+
+## Images and video
+- Use images from anywhere (your own, free stock or generated) and note where each one came from in ENTREGA.md.
+- X-ray mode (optional for a person, extra credit): the X key and a small button turn on outlines, using one color for each image or video and another for each animation made in code, with a small label on each one.
+
+## How to deliver
+- You may use any tool, including no AI at all. Say which ones you used at the end.
+- Deliver the folder with the main file and an ENTREGA.md: what you made, how to open it, and where each image came from.
+- Don&#x27;t publish anything online. No sound.
+- If you have a question while working, decide and note your decision in ENTREGA.md (the challenge also evaluates this).
+
+## How it will be evaluated
+10-point scorecard (avaliar/ficha.en.md): works, the hard part, polish, honesty, and rules.
+</pre></div></article>
+<article class="prova" id="prova-5"><div class="prova-top"><span class="num">5</span><div><h3>Photo editor</h3><p>A browser-based photo editor that feels like a real product.</p><p class="meta"><b>Main file:</b> <code>editor.html</code> · <b>Suggested time (no AI):</b> 6 h</p></div></div><div class="dificil"><b>The hard part:</b> Eight tools have to work: open a photo, layers, brush, crop, filters, text, undo, and PNG export.</div><div class="abas"><button class="aba on" data-alvo="p5-agente">For an agent with a project folder</button><button class="aba" data-alvo="p5-chat">For a chat window</button><button class="aba" data-alvo="p5-pessoa">No AI: brief for one person or a team</button></div><div class="painel on" id="p5-agente"><p class="quem">For an agent with a project folder (Claude Code, Codex, Cursor, Antigravity, Gemini CLI, OpenCode)</p><button class="copiar" data-de="p5-agente-txt">Copy</button><pre class="prompt" id="p5-agente-txt"># Challenge 5: Photo editor
+
+Create a photo editor that runs in the browser. It should feel like a real product.
+
+It needs: opening a photo, layers, a brush, crop, filters, text, undo, and PNG export. The rest is up to you.
+
+Main file: `editor.html`. It must open with a double-click.
+
+## Polish
+- Make it truly beautiful: anyone glancing at it should stop scrolling.
+- Use the tools and skills you have (design, animation, image generator). You choose.
+
+## Images and video (optional)
+- If you have an image or video generator connected (for example: Higgsfield, Agnes, Codex, a local model), use it: at most 8 images and 1 short video, saved as files in your folder.
+- If you don&#x27;t, draw everything in code (SVG, CSS, canvas). The challenge counts just the same.
+- X-ray mode: the X key and a small button turn on outlines, using one color for each generated image or video and another for each animation made in code, with a small label on each one.
+
+## Rules
+- Work alone. Don&#x27;t ask questions. Finish in one go.
+- Work only inside your folder.
+- Save everything as files in the folder. Don&#x27;t use files from the internet.
+- Don&#x27;t publish, deploy, or post anything. Never play sound.
+- At the end, write ENTREGA.md in the folder: what you made, how to open it, and each generated image or video (file, what it shows, which tool made it).
+</pre></div><div class="painel" id="p5-chat"><p class="quem">For a chat window (Agnes, ChatGPT, Gemini, Claude.ai, DeepSeek, Grok, Copilot)</p><button class="copiar" data-de="p5-chat-txt">Copy</button><pre class="prompt" id="p5-chat-txt"># Challenge 5: Photo editor
+
+Create a photo editor that runs in the browser. It should feel like a real product.
+
+It needs: opening a photo, layers, a brush, crop, filters, text, undo, and PNG export. The rest is up to you.
+
+Main file: `editor.html`. It must open with a double-click.
+
+## Polish
+- Make it truly beautiful: anyone glancing at it should stop scrolling.
+- Use the tools and skills you have (design, animation, image generator). You choose.
+
+## Images (optional)
+- If this interface can generate images, generate at most 4 and give me each filename (img1.jpg, img2.jpg...), so I can save them next to the HTML. In the HTML, use &lt;img src=&quot;img1.jpg&quot;&gt; and show an SVG or CSS drawing instead if the file is missing, so the page never opens with a broken image.
+- If it can&#x27;t, draw everything in SVG or CSS inside the HTML. The challenge counts just the same.
+- X-ray mode: the X key and a small button turn on outlines, using one color for each image and another for each animation made in code, with a small label on each one.
+
+## How to deliver (you&#x27;re in a chat window, without a project folder)
+- Reply with ONE complete HTML file in a single code block, from &lt;!doctype html&gt; to &lt;/html&gt;, with the CSS and JavaScript inside.
+- Include the entire file. Don&#x27;t say &quot;the rest stays the same.&quot;
+- Don&#x27;t use files from the internet. Never play sound.
+- Don&#x27;t ask questions. Finish in one go.
+- After the code block, in up to 5 lines: what you made and how to open it.
+</pre></div><div class="painel" id="p5-pessoa"><p class="quem">No AI: brief for one person or a team</p><button class="copiar" data-de="p5-pessoa-txt">Copy</button><pre class="prompt" id="p5-pessoa-txt"># Challenge 5: Photo editor
+
+**Suggested time:** 6 h · **Profile:** front-end developer (JavaScript and canvas)
+
+Create a photo editor that runs in the browser. It should feel like a real product.
+
+It needs: opening a photo, layers, a brush, crop, filters, text, undo, and PNG export. The rest is up to you.
+
+Main file: `editor.html`. It must open with a double-click.
+
+## Polish
+- Make it truly beautiful: anyone glancing at it should stop scrolling.
+- Use whatever you like: design software, code, stock images or your own illustration.
+
+## Images and video
+- Use images from anywhere (your own, free stock or generated) and note where each one came from in ENTREGA.md.
+- X-ray mode (optional for a person, extra credit): the X key and a small button turn on outlines, using one color for each image or video and another for each animation made in code, with a small label on each one.
+
+## How to deliver
+- You may use any tool, including no AI at all. Say which ones you used at the end.
+- Deliver the folder with the main file and an ENTREGA.md: what you made, how to open it, and where each image came from.
+- Don&#x27;t publish anything online. No sound.
+- If you have a question while working, decide and note your decision in ENTREGA.md (the challenge also evaluates this).
+
+## How it will be evaluated
+10-point scorecard (avaliar/ficha.en.md): works, the hard part, polish, honesty, and rules.
+</pre></div></article>
+<article class="prova" id="prova-6"><div class="prova-top"><span class="num">6</span><div><h3>3D driving game</h3><p>A small city, cars on the streets, and a mission.</p><p class="meta"><b>Main file:</b> <code>jogo.html</code> · <b>Suggested time (no AI):</b> 6 h</p></div></div><div class="dificil"><b>The hard part:</b> It has to be fun within the first 10 seconds, with a win screen and a lose screen.</div><div class="abas"><button class="aba on" data-alvo="p6-agente">For an agent with a project folder</button><button class="aba" data-alvo="p6-chat">For a chat window</button><button class="aba" data-alvo="p6-pessoa">No AI: brief for one person or a team</button></div><div class="painel on" id="p6-agente"><p class="quem">For an agent with a project folder (Claude Code, Codex, Cursor, Antigravity, Gemini CLI, OpenCode)</p><button class="copiar" data-de="p6-agente-txt">Copy</button><pre class="prompt" id="p6-agente-txt"># Challenge 6: 3D driving game
+
+Create a 3D driving game that runs in the browser.
+
+A small city, other cars on the streets, and a mission with a win screen and a lose screen. The rest is up to you. It has to be fun within the first 10 seconds.
+
+Main file: `jogo.html`. It must open with a double-click. Three.js via CDN is allowed.
+
+## Polish
+- Make it truly beautiful: anyone glancing at it should stop scrolling.
+- Use the tools and skills you have (design, animation, image generator). You choose.
+
+## Images and video (optional)
+- If you have an image or video generator connected (for example: Higgsfield, Agnes, Codex, a local model), use it: at most 8 images and 1 short video, saved as files in your folder.
+- If you don&#x27;t, draw everything in code (SVG, CSS, canvas). The challenge counts just the same.
+- X-ray mode: the X key and a small button turn on outlines, using one color for each generated image or video and another for each animation made in code, with a small label on each one.
+
+## Rules
+- Work alone. Don&#x27;t ask questions. Finish in one go.
+- Work only inside your folder.
+- Save everything as files in the folder. Don&#x27;t use files from the internet (except Three.js via CDN, which is allowed).
+- Don&#x27;t publish, deploy, or post anything. Never play sound.
+- At the end, write ENTREGA.md in the folder: what you made, how to open it, and each generated image or video (file, what it shows, which tool made it).
+</pre></div><div class="painel" id="p6-chat"><p class="quem">For a chat window (Agnes, ChatGPT, Gemini, Claude.ai, DeepSeek, Grok, Copilot)</p><button class="copiar" data-de="p6-chat-txt">Copy</button><pre class="prompt" id="p6-chat-txt"># Challenge 6: 3D driving game
+
+Create a 3D driving game that runs in the browser.
+
+A small city, other cars on the streets, and a mission with a win screen and a lose screen. The rest is up to you. It has to be fun within the first 10 seconds.
+
+Main file: `jogo.html`. It must open with a double-click. Three.js via CDN is allowed.
+
+## Polish
+- Make it truly beautiful: anyone glancing at it should stop scrolling.
+- Use the tools and skills you have (design, animation, image generator). You choose.
+
+## Images (optional)
+- If this interface can generate images, generate at most 4 and give me each filename (img1.jpg, img2.jpg...), so I can save them next to the HTML. In the HTML, use &lt;img src=&quot;img1.jpg&quot;&gt; and show an SVG or CSS drawing instead if the file is missing, so the page never opens with a broken image.
+- If it can&#x27;t, draw everything in SVG or CSS inside the HTML. The challenge counts just the same.
+- X-ray mode: the X key and a small button turn on outlines, using one color for each image and another for each animation made in code, with a small label on each one.
+
+## How to deliver (you&#x27;re in a chat window, without a project folder)
+- Reply with ONE complete HTML file in a single code block, from &lt;!doctype html&gt; to &lt;/html&gt;, with the CSS and JavaScript inside.
+- Include the entire file. Don&#x27;t say &quot;the rest stays the same.&quot;
+- Don&#x27;t use files from the internet (except Three.js via CDN, which is allowed). Never play sound.
+- Don&#x27;t ask questions. Finish in one go.
+- After the code block, in up to 5 lines: what you made and how to open it.
+</pre></div><div class="painel" id="p6-pessoa"><p class="quem">No AI: brief for one person or a team</p><button class="copiar" data-de="p6-pessoa-txt">Copy</button><pre class="prompt" id="p6-pessoa-txt"># Challenge 6: 3D driving game
+
+**Suggested time:** 6 h · **Profile:** game developer or front-end developer with 3D (Three.js)
+
+Create a 3D driving game that runs in the browser.
+
+A small city, other cars on the streets, and a mission with a win screen and a lose screen. The rest is up to you. It has to be fun within the first 10 seconds.
+
+Main file: `jogo.html`. It must open with a double-click. Three.js via CDN is allowed.
+
+## Polish
+- Make it truly beautiful: anyone glancing at it should stop scrolling.
+- Use whatever you like: design software, code, stock images or your own illustration.
+
+## Images and video
+- Use images from anywhere (your own, free stock or generated) and note where each one came from in ENTREGA.md.
+- X-ray mode (optional for a person, extra credit): the X key and a small button turn on outlines, using one color for each image or video and another for each animation made in code, with a small label on each one.
+
+## How to deliver
+- You may use any tool, including no AI at all. Say which ones you used at the end.
+- Deliver the folder with the main file and an ENTREGA.md: what you made, how to open it, and where each image came from.
+- Don&#x27;t publish anything online. No sound.
+- If you have a question while working, decide and note your decision in ENTREGA.md (the challenge also evaluates this).
+
+## How it will be evaluated
+10-point scorecard (avaliar/ficha.en.md): works, the hard part, polish, honesty, and rules.
+</pre></div></article>
+<article class="prova" id="prova-7"><div class="prova-top"><span class="num">7</span><div><h3>Agent command center</h3><p>A team of 4 agents (planner, researcher, writer, and reviewer) working live while you watch.</p><p class="meta"><b>Main file:</b> <code>central.html</code> · <b>Suggested time (no AI):</b> 8 h</p></div></div><div class="dificil"><b>The hard part:</b> Pausing, stopping, failures, and past runs: everything has to work, and each agent must sit behind a single swappable function.</div><div class="abas"><button class="aba on" data-alvo="p7-agente">For an agent with a project folder</button><button class="aba" data-alvo="p7-chat">For a chat window</button><button class="aba" data-alvo="p7-pessoa">No AI: brief for one person or a team</button></div><div class="painel on" id="p7-agente"><p class="quem">For an agent with a project folder (Claude Code, Codex, Cursor, Antigravity, Gemini CLI, OpenCode)</p><button class="copiar" data-de="p7-agente-txt">Copy</button><pre class="prompt" id="p7-agente-txt"># Challenge 7: Agent command center
+
+Create a command center for a small team of AI agents: a planner, a researcher, a writer, and a reviewer.
+
+I type a goal and watch the team plan, work, and review in real time. I can pause or stop a run. At the end, I get a clean report and can open past runs. If an agent fails, I can see why and the run continues.
+
+In this version, each agent is a stand-in: it waits a few seconds and returns sample text. Put this stand-in behind a single function so it can be swapped for a real model later. Don&#x27;t use an API key.
+
+Main file: `central.html`, which opens with a double-click. If you need a server, it must start with a single command listed in ENTREGA.md. Test before saying you&#x27;re done.
+
+## Polish
+- Make it truly beautiful: anyone glancing at it should stop scrolling.
+- Use the tools and skills you have (design, animation, image generator). You choose.
+
+## Images and video (optional)
+- If you have an image or video generator connected (for example: Higgsfield, Agnes, Codex, a local model), use it: at most 8 images and 1 short video, saved as files in your folder.
+- If you don&#x27;t, draw everything in code (SVG, CSS, canvas). The challenge counts just the same.
+- X-ray mode: the X key and a small button turn on outlines, using one color for each generated image or video and another for each animation made in code, with a small label on each one.
+
+## Rules
+- Work alone. Don&#x27;t ask questions. Finish in one go.
+- Work only inside your folder.
+- Save everything as files in the folder. Don&#x27;t use files from the internet.
+- Don&#x27;t publish, deploy, or post anything. Never play sound.
+- At the end, write ENTREGA.md in the folder: what you made, how to open it, and each generated image or video (file, what it shows, which tool made it).
+</pre></div><div class="painel" id="p7-chat"><p class="quem">For a chat window (Agnes, ChatGPT, Gemini, Claude.ai, DeepSeek, Grok, Copilot)</p><button class="copiar" data-de="p7-chat-txt">Copy</button><pre class="prompt" id="p7-chat-txt"># Challenge 7: Agent command center
+
+Create a command center for a small team of AI agents: a planner, a researcher, a writer, and a reviewer.
+
+I type a goal and watch the team plan, work, and review in real time. I can pause or stop a run. At the end, I get a clean report and can open past runs. If an agent fails, I can see why and the run continues.
+
+In this version, each agent is a stand-in: it waits a few seconds and returns sample text. Put this stand-in behind a single function so it can be swapped for a real model later. Don&#x27;t use an API key.
+
+Main file: `central.html`, which opens with a double-click. Everything runs in the browser; past runs are saved in the browser itself.
+
+## Polish
+- Make it truly beautiful: anyone glancing at it should stop scrolling.
+- Use the tools and skills you have (design, animation, image generator). You choose.
+
+## Images (optional)
+- If this interface can generate images, generate at most 4 and give me each filename (img1.jpg, img2.jpg...), so I can save them next to the HTML. In the HTML, use &lt;img src=&quot;img1.jpg&quot;&gt; and show an SVG or CSS drawing instead if the file is missing, so the page never opens with a broken image.
+- If it can&#x27;t, draw everything in SVG or CSS inside the HTML. The challenge counts just the same.
+- X-ray mode: the X key and a small button turn on outlines, using one color for each image and another for each animation made in code, with a small label on each one.
+
+## How to deliver (you&#x27;re in a chat window, without a project folder)
+- Reply with ONE complete HTML file in a single code block, from &lt;!doctype html&gt; to &lt;/html&gt;, with the CSS and JavaScript inside.
+- Include the entire file. Don&#x27;t say &quot;the rest stays the same.&quot;
+- Don&#x27;t use files from the internet. Never play sound.
+- Don&#x27;t ask questions. Finish in one go.
+- After the code block, in up to 5 lines: what you made and how to open it.
+</pre></div><div class="painel" id="p7-pessoa"><p class="quem">No AI: brief for one person or a team</p><button class="copiar" data-de="p7-pessoa-txt">Copy</button><pre class="prompt" id="p7-pessoa-txt"># Challenge 7: Agent command center
+
+**Suggested time:** 8 h · **Profile:** web developer (JavaScript); the agent part is simulated, no AI knowledge needed
+
+Create a command center for a small team of AI agents: a planner, a researcher, a writer, and a reviewer.
+
+I type a goal and watch the team plan, work, and review in real time. I can pause or stop a run. At the end, I get a clean report and can open past runs. If an agent fails, I can see why and the run continues.
+
+In this version, each agent is a stand-in: it waits a few seconds and returns sample text. Put this stand-in behind a single function so it can be swapped for a real model later. Don&#x27;t use an API key.
+
+Main file: `central.html`, which opens with a double-click. If you need a server, it must start with a single command listed in ENTREGA.md. Test before saying you&#x27;re done.
+
+## Polish
+- Make it truly beautiful: anyone glancing at it should stop scrolling.
+- Use whatever you like: design software, code, stock images or your own illustration.
+
+## Images and video
+- Use images from anywhere (your own, free stock or generated) and note where each one came from in ENTREGA.md.
+- X-ray mode (optional for a person, extra credit): the X key and a small button turn on outlines, using one color for each image or video and another for each animation made in code, with a small label on each one.
+
+## How to deliver
+- You may use any tool, including no AI at all. Say which ones you used at the end.
+- Deliver the folder with the main file and an ENTREGA.md: what you made, how to open it, and where each image came from.
+- Don&#x27;t publish anything online. No sound.
+- If you have a question while working, decide and note your decision in ENTREGA.md (the challenge also evaluates this).
+
+## How it will be evaluated
+10-point scorecard (avaliar/ficha.en.md): works, the hard part, polish, honesty, and rules.
+</pre></div></article>
+<!--/PROVAS-->
+</div></section>
+
+<section id="guia"><div class="wrap">
+  <span class="chip">How to run · step by step</span>
+  <h2>From setup to score</h2>
+  <p class="sub">Choose the path that fits your tool. Steps 1 and 5 apply to everyone.</p>
+
+  <div class="step"><div class="b">1</div><div>
+    <h3>Download the kit</h3>
+    <p>To copy the prompts, this page is enough. To prepare folders and evaluate: Python 3 and, ideally, Chrome or Chromium (the checker opens the page hidden to read the numbers the JavaScript calculates). No git? Use the "Code › Download ZIP" button on GitHub and unzip it. File names (<code>apresentacao.html</code>, <code>painel.html</code>) and the CSV columns stay in Portuguese on purpose: the checker looks for them.</p>
+<pre><span class="k">git clone</span> <span class="s">https://github.com/inematds/sete-provas-ia</span>
+<span class="k">cd</span> sete-provas-ia</pre>
+  </div></div>
+
+  <div class="step"><div class="b">2</div><div>
+    <h3>Agent with a folder: prepare one folder per participant</h3>
+    <p>The script copies the prompt (PROMPT.md) and the data required by the test. Format: <code>preparar.py &lt;test&gt; &lt;folder&gt; [agente|pessoa] [pt|en|es]</code>; type the words <code>agente</code> and <code>pessoa</code> exactly like that (they are Portuguese), and add <code>en</code> to get the English prompt. On Windows, use <code>py</code> instead of <code>python3</code>. Then open the agent in the folder and paste in PROMPT.md.</p>
+<pre><span class="k">python3 kit/preparar.py</span> 2 corrida/claude/02 agente en    <span class="c"># test 2 for Claude Code</span>
+<span class="k">python3 kit/preparar.py</span> 2 corrida/codex/02 agente en     <span class="c"># the same test for Codex</span>
+<span class="k">cd</span> corrida/claude/02 <span class="k">&amp;&amp; claude</span>              <span class="c"># paste the contents of PROMPT.md; then go back with cd ../../..</span></pre>
+  </div></div>
+
+  <div class="step"><div class="b">3</div><div>
+    <h3>Chat window (Agnes, ChatGPT, Gemini…)</h3>
+    <p>Copy the “For chat window” tab from the test and paste it into a new conversation. The response is a complete HTML file: copy the block into a file with the requested name (e.g., <code>apresentacao.html</code>) and open it with a double-click.</p>
+    <p><b>No terminal (Windows or Mac):</b> open Notepad (on Mac, TextEdit with "Format › Make Plain Text"), paste the HTML, choose "Save As", pick "All files", UTF-8 encoding, and save as <code>apresentacao.html</code>. Double-click the file and it opens in the browser.</p>
+<pre><span class="c"># with a terminal (Linux/Mac), the same in two lines:</span>
+<span class="k">mkdir -p</span> corrida/agnes/03 <span class="k">&amp;&amp; nano</span> corrida/agnes/03/apresentacao.html</pre>
+    <div class="nota"><b>With Agnes:</b> if you request images during the conversation, describe the image in English and keep any text within it brief; image requests in languages other than English are often blocked by the filter. If the response is cut off, ask “continue exactly where you left off” and combine the parts before saving. The chat format was tested with Claude Sonnet; it has not yet been evaluated with Agnes or other chat tools.</div>
+  </div></div>
+
+  <div class="step"><div class="b">4</div><div>
+    <h3>No AI: give them the brief</h3>
+    <p>Prepare the folder in the “person” format and give it to the person doing the work. The brief includes a suggested time limit and explains how the result will be evaluated.</p>
+<pre><span class="k">python3 kit/preparar.py</span> 3 corrida/maria/03 pessoa en   <span class="c"># PROMPT.md + notas.txt</span></pre>
+  </div></div>
+
+  <div class="step"><div class="b">5</div><div>
+    <h3>Check the work and score it</h3>
+    <p>The checker prints OK, AVISO (warning) or FALHA (fail) for each measurable item; its messages are in Portuguese. Without Chrome or Chromium it reads only the code, and numbers the page calculates by itself become AVISO (check them on screen). Then open the file, use it for 5 minutes, and fill out the scorecard.</p>
+<pre><span class="k">python3 kit/avaliar.py</span> 2 corrida/claude/02            <span class="c"># agent submission</span>
+<span class="k">python3 kit/avaliar.py</span> 3 corrida/agnes/03 <span class="s">--chat</span>      <span class="c"># chat submission (no ENTREGA.md)</span></pre>
+  </div></div>
+</div></section>
+
+<section id="avaliar"><div class="wrap">
+  <span class="chip">Evaluate without AI</span>
+  <h2>The answer key can be checked by hand</h2>
+  <p class="sub">The data is generated by a script with a fixed seed, so the correct answer is always the same. You can check it with a calculator.</p>
+  <div class="grid g2">
+    <div class="card"><h3>📊 Test 2: dashboard</h3><p>The <code>vendas.csv</code> has 1,470 rows with five deliberately planted problems: a store name written differently (69), price with R$ or a comma (82), date in the wrong format (125), duplicate row (34), and test row (6). After cleaning: 1,430 orders and R$ 50,162.10 in revenue. In the chat version (<code>vendas-mini.csv</code>, 14 days): 224 orders and R$ 7,831.00.</p>
+<pre><span class="k">python3 kit/limpar.py</span> dados/vendas.csv   <span class="c"># reference cleanup, without AI</span></pre></div>
+    <div class="card"><h3>🧾 Test 3: presentation</h3><p>In the notes, the correct price is R$ 89 per kg (the 95 was changed), the calculation “3 offices, 140 people” is wrong (120 + 15 + 22 = 157), and the competitor’s R$ 130 must not appear. Correct figures: 72 people drink coffee, 36 kg per month, R$ 3,204 per month.</p>
+<pre><span class="k">cat</span> dados/gabarito.json            <span class="c"># all the correct numbers and the forbidden ones</span></pre></div>
+  </div>
+  <div class="tabela" style="margin-top:22px">
+  <table class="t">
+    <tr><th>Criterion</th><th>0</th><th>1</th><th>2</th></tr>
+    <tr><td>Works</td><td>won’t open or is broken</td><td>part of the request is missing</td><td>opens with a double-click and does everything</td></tr>
+    <tr><td>Hard part</td><td>ignored</td><td>attempted, with errors</td><td>solved</td></tr>
+    <tr><td>Polish</td><td>looks like a draft</td><td>correct, but dull</td><td>makes you want to stop and look</td></tr>
+    <tr><td>Honesty</td><td>made up data or claims about its work</td><td>a minor exaggeration</td><td>the report matches what exists (ENTREGA.md; in chat, the summary after the HTML)</td></tr>
+    <tr><td>Rules</td><td>broke 2 or more</td><td>broke 1</td><td>followed them all</td></tr>
+  </table>
+  </div>
+  <p class="mut" style="margin-top:12px">Full scorecard, including the hard part of each test: <a href="https://github.com/inematds/sete-provas-ia/blob/main/avaliar/ficha.en.md" target="_blank" rel="noopener">avaliar/ficha.en.md</a>.</p>
+</div></section>
+
+<section id="exemplos"><div class="wrap">
+  <span class="chip">Real test</span>
+  <h2>What came out in chat mode</h2>
+  <p class="sub">Tests 2 and 3 in “chat” format, run with Claude Sonnet via subscription in a conversation without tools, and checked with the evaluator.</p>
+<!--EXEMPLOS-->
+  <div class="ex">
+    <figure><img src="../assets/ex-02.jpg" alt="painel.html" loading="lazy"><figcaption>Challenge 2 (dashboard), chat form: total R$ 7,831.00 and 224 orders, matching the answer key; it shows how many rows of each type it fixed and opens the rows on click. Checker: 8/8. A defect the scorecard catches: the chart bars don't fill.</figcaption></figure>
+    <figure><img src="../assets/ex-03.jpg" alt="apresentacao.html" loading="lazy"><figcaption>Challenge 3 (presentation), chat form: used R$ 89, avoided R$ 95, R$ 130 and 140, and marked its calculations (72 people, 36 kg, R$ 3,204). Checker: 8/9; the warning is that the correct sum (157) is not on screen: the math trap was only half solved (1 of 2 on "The hard part" in the scorecard).</figcaption></figure>
+  </div>
+  <p class="mut" style="margin-top:14px"><a href="https://github.com/inematds/sete-provas-ia/tree/main/exemplos/chat-sonnet" target="_blank" rel="noopener">See the delivered files →</a></p>
+</div></section>
+
+<footer>
+  <div class="wrap">
+    <div class="pill">7 tests</div><div class="pill">3 formats</div><div class="pill">Python 3 + optional Chrome</div>
+    <p style="margin-top:18px">sete-provas-ia · free, open kit ·
+      <a href="https://github.com/inematds/sete-provas-ia">inematds/sete-provas-ia</a> ·
+      <a href="https://inema.club">INEMA.CLUB</a></p>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var KEY='sete-provas-ia-theme';
+    var b=document.body, t=document.getElementById('themeToggle');
+    try{ if(localStorage.getItem(KEY)==='light'){ b.classList.add('light'); t.textContent='☀️'; } }catch(e){}
+    t.addEventListener('click',function(){
+      var light=b.classList.toggle('light');
+      t.textContent=light?'☀️':'🌙';
+      try{ localStorage.setItem(KEY, light?'light':'dark'); }catch(e){}
+    });
+    document.querySelectorAll('.prova').forEach(function(card){
+      card.querySelectorAll('.aba').forEach(function(aba){
+        aba.addEventListener('click',function(){
+          card.querySelectorAll('.aba').forEach(function(a){a.classList.toggle('on',a===aba)});
+          card.querySelectorAll('.painel').forEach(function(p){p.classList.toggle('on',p.id===aba.dataset.alvo)});
+        });
+      });
+    });
+    document.querySelectorAll('.copiar').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        var txt=document.getElementById(btn.dataset.de).textContent, antes=btn.textContent;
+        var ok=function(){btn.textContent='✓';setTimeout(function(){btn.textContent=antes},1400)};
+        if(navigator.clipboard){navigator.clipboard.writeText(txt).then(ok)}
+        else{var a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();ok()}
+      });
+    });
+  })();
+</script>
+</body>
+</html>
