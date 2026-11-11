@@ -13,3 +13,5 @@ Kit público: 7 prompts de teste em 3 formas (agente, chat, pessoa) e 3 idiomas,
 Quando eu for corrigido, ou perceber um erro meu: antes de seguir, acrescentar a lição como regra de uma linha no TOPO da seção Lessons abaixo.
 
 ## Lessons
+- Conferir número em HTML gerado por IA: o total costuma ser calculado pelo JavaScript; ler o DOM renderizado (Chromium headless), nunca só o código, senão dá FALHA falsa (prova 2, 11/11/2026).
+- Chromium snap não lê /tmp nem pasta com ponto: renderizar a partir de uma pasta visível na home (11/11/2026).
